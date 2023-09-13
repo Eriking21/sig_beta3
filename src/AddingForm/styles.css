@@ -1,0 +1,125 @@
+form.addingForm {
+  padding: 1.75em;
+  font-size: 1.4rem;
+  transition: transform 0.6s;
+}
+
+.addingForm label,
+.addingForm span.error {
+  display: block;
+}
+
+.addingForm h2.title {
+  color: #93cbdd;
+  word-spacing: 0.15em;
+  text-align: start;
+  font-size: 2rem;
+  margin-top: 0.25em;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
+.addingForm label {
+  font-size: 1.4rem;
+  padding-bottom: 0.2em;
+  color: rgba(44, 51, 53, 0.707);
+  font-weight: 600;
+  width: 100%;
+}
+
+.addingForm :focus {
+  outline: none;
+}
+
+.addingForm button,
+.addingForm input[type="submit"] {
+  justify-content: center;
+  padding: 0.45rem 1.8rem;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.addingForm div.Flexible_Wrapper button {
+  color: #93cbdd;
+  background-color: #dcdddd77;
+}
+.addingForm .Flexible_Wrapper button:hover {
+  background-color: #effaff;
+}
+
+.addingForm div.Flexible_Wrapper button.selected,
+.addingForm input[type="submit"] {
+  background-color: #93cbdd;
+  color: rgb(255, 255, 255);
+}
+
+.addingForm div.Flexible_Wrapper element,
+.addingForm div.Flexible_Wrapper select,
+.addingForm div.Flexible_Wrapper span,
+.addingForm div.Flexible_Wrapper input {
+  display: inline;
+  color: black;
+  font-size: 1.15rem;
+  border: none;
+  outline: none;
+  border-width: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.addingForm button,
+.addingForm div.Flexible_Wrapper div.Flexible_Wrapper,
+.addingForm div.Selection div.Flexible_Wrapper,
+.addingForm div.TextField div.Flexible_Wrapper {
+  padding: 0.45rem 0.8rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #effaff77;
+}
+
+.addingForm div div.Flexible_Wrapper:hover {
+  background-color: #effaff;
+  border-color: #5776818b;
+}
+
+.addingForm div.Flexible_Wrapper div.Flexible_Wrapper:focus-within,
+.addingForm div.Selection div.Flexible_Wrapper:focus-within,
+.addingForm div.TextField div.Flexible_Wrapper:focus-within {
+  background-color: #effaff;
+  border-color: #93cbdd;
+}
+
+.addingForm div.Selection div.Flexible_Wrapper select,
+.addingForm div.Flexible_Wrapper input {
+  flex: 1;
+  display: block;
+}
+.addingForm div.Flexible_Wrapper input[type="number"] {
+  text-align: end;
+}
+.addingForm div.Flexible_Wrapper select {
+  text-align: center;
+}
+
+.addingForm div.Selection,
+.addingForm div.TextField {
+  padding-bottom: 1.5rem;
+}
+.addingForm button {
+  height: 2.5rem;
+}
+.addingForm .Flexible_Wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.InputBorder {
+  border-radius: 0.4rem;
+  border-color: rgba(95, 135, 143, 0.384);
+  border-style: solid;
+  border-width: 2px;
+}
