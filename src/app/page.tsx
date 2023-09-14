@@ -14,7 +14,7 @@ export default async function HomePage() {
   return (
     <>
       <ArcGISMap data={val}></ArcGISMap>
-      <SideBar></SideBar>
+      <SideBar ></SideBar>
       <AddMenu />
     </>
   );

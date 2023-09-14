@@ -2,14 +2,16 @@ import { FaCircle } from "react-icons/fa";
 import "./styles.css";
 import { useRef } from "react";
 import { PowerItem } from "../../utility/options";
+import { TRAFO, SUB } from "../../../data/types";
 
 interface _ {
   activeNode: ReturnType<typeof useRef<HTMLDivElement>>;
   index?: number;
+  attributes: TRAFO["attributes"] | SUB["attributes"];
 }
 
-const SearchItem = ({ activeNode, index = 0 }: _) => {
-  const imgStyle = { alignSelf: "center", margin: ".5rem", height: "50%" };
+const SearchItem = ({ activeNode, index = 0, attributes }: _) => {
+  const imgStyle = { alignSelf: "center", margin: ".5rem", height: "60%", width:"1.35rem" };
 
   function ag(event: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
     if (
@@ -41,9 +43,13 @@ const SearchItem = ({ activeNode, index = 0 }: _) => {
       onClick={ag}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}
-      <img style={imgStyle} alt={index.toString()} src={PowerItem[index].src} />
-      <span style={{ flex: "1", textAlign: "start", alignSelf: "center" }}>
-        Title
+      <img
+        style={imgStyle}
+        alt={index.toString()}
+        src={PowerItem[attributes.Object_type].src}
+      />
+      <span style={{ flex: "1", textAlign: "start", alignSelf: "center", overflow:"hidden" }}>
+        {attributes.identificação}
       </span>
       <FaCircle style={imgStyle} color="#80ed80" />
     </div>

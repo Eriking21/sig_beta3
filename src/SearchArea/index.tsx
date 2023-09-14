@@ -15,5 +15,7 @@ export const SearchArea = ({ children }: _) => {
     alignItems: "center",
     overflow: "hidden",
   };
-  return <div {...{style}}>{children}</div>;
+  return <div {...{style}}>
+    {children}
+  </div>;
 };

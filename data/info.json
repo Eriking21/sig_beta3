@@ -2,8 +2,9 @@
   {
     "geometry": { "type":"point", "latitude": -8.83620644, "longitude": 13.23321944 },
     "attributes": {
+      "Object_type":0,
       "FID": 0,
-      "Susbestação": "SE_Maianga",
+      "identificação": "SE_Maianga",
       "H": 10,
       "País": "Angola",
       "Província": "Luanda",
@@ -21,8 +22,9 @@
   {
     "geometry": { "type":"point", "latitude": -8.83670077, "longitude": 13.23259898 },
     "attributes": {
+      "Object_type": 0,
       "FID": 1,
-      "Susbestação": "SE_Marteres",
+      "identificação": "SE_Marteres",
       "H": 10,
       "País": "Angola",
       "Província": "Luanda",

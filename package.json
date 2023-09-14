@@ -1,5 +1,5 @@
 {
-  "name": "powertrace",
+  "name": "sig_consumo_de_energia",
   "version": "0.1.0",
   "private": true,
   "scripts": {

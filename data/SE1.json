@@ -1,0 +1,391 @@
+[
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84299106,
+      "longitude": 13.24364972
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 5,
+      "OBJECTID": 6,
+      "parent_id": 0,
+      "identificação": "PT_CL_CATOLICA",
+      "H": 95,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Cassequel_do_Lorenco",
+      "Rua": "Rua_17",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "630KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Alvenaria"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8438058,
+      "longitude": 13.24001892
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 6,
+      "OBJECTID": 7,
+      "parent_id": 0,
+      "identificação": "PT_CL_21J",
+      "H": 96,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Cassenda",
+      "Rua": "Rua_Avenida_21_de_Janeiro",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "630KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Alvenaria"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84205295,
+      "longitude": 13.23449145
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 7,
+      "OBJECTID": 8,
+      "parent_id": 0,
+      "identificação": "PT_MK_R15",
+      "H": 99,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua__17",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_30mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8436275,
+      "longitude": 13.236711
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 8,
+      "OBJECTID": 9,
+      "parent_id": 0,
+      "identificação": "PT_MK_R16",
+      "H": 119,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua_16",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83976881,
+      "longitude": 13.23710205
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 9,
+      "OBJECTID": 10,
+      "parent_id": 0,
+      "identificação": "PT_MK_R12",
+      "H": 120,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua_12",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "630KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Alvenaria"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83840909,
+      "longitude": 13.23634496
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 10,
+      "OBJECTID": 11,
+      "parent_id": 0,
+      "identificação": "PT_MK_R5",
+      "H": 123,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua_05",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83882849,
+      "longitude": 13.23517037
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 11,
+      "OBJECTID": 12,
+      "parent_id": 0,
+      "identificação": "PT_MK_R13",
+      "H": 121,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua_16",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83468017,
+      "longitude": 13.24512528
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 31,
+      "OBJECTID": 33,
+      "parent_id": 0,
+      "identificação": "PT500P_TOYOTA_RML",
+      "H": 58,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_da_Madeira",
+      "Rua": "Rua_NGola_MBandi",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "630KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Alvenaria"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83428409,
+      "longitude": 13.2435637
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 32,
+      "OBJECTID": 34,
+      "parent_id": 0,
+      "identificação": "PT_514P_BPC_QG",
+      "H": 10,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_da_Madeira",
+      "Rua": "Rua_NGola_MBandi",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83541564,
+      "longitude": 13.24966673
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 29,
+      "OBJECTID": 31,
+      "parent_id": 0,
+      "identificação": "PT_379S_BAIRRO_POLICIA",
+      "H": 84,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_da_Policia",
+      "Rua": "Rua_B",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83339697,
+      "longitude": 13.24719474
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 27,
+      "OBJECTID": 28,
+      "parent_id": 0,
+      "identificação": "PT679S_SEMINARIO",
+      "H": 94,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_da_Madeira",
+      "Rua": "Rua_Joao_Paulo_II",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "EFACEC",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84363171,
+      "longitude": 13.23376582
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 36,
+      "OBJECTID": 38,
+      "parent_id": 0,
+      "identificação": "PT_MK_20",
+      "H": 89,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_Marteres_do_Kifangondo",
+      "Rua": "Rua_Avenida_Revolucao_de_Outubro",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "PRESUL",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  }, {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83596889,
+      "longitude": 13.2539182
+    },
+    "attributes": {
+      "Object_type":1,
+      "FID": 50,
+      "OBJECTID": 0,
+      "parent_id": 0,
+      "identificação": "PT_BAIRRO_DA_POLICIA",
+      "H": 95,
+      "Pais": "Angola",
+      "Província": "Luanda",
+      "Municipio": "Luanda",
+      "Distrito": "Maianga",
+      "Bairro": "Bairro_da_Policia",
+      "Rua": "Rua",
+      "Empresa": "ENDE_EP",
+      "Fabricante": "",
+      "Ano": 2000,
+      "Potência": "400KVA",
+      "Frequência": "50Hz",
+      "Ligação": ["Triangulo", "Estrela"],
+      "U": ["15KV", "400V"],
+      "Tipo": ["Trifasico", "Monobloco"],
+      "secção_mm2": "VAV_300mm2"
+    }
+  }
+]

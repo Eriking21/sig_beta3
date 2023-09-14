@@ -1,6 +1,7 @@
 export interface SUB {
-  geometry: { type: "point", latitude: number; longitude: number };
+  geometry: { type: "point"; latitude: number; longitude: number };
   attributes: {
+    Object_type: 0|1|2;
     FID: number;
     identificação: string;
     H?: number;
@@ -21,6 +22,7 @@ export interface SUB {
 export interface TRAFO {
   geometry: { type: "point"; latitude: number; longitude: number };
   attributes: {
+    Object_type: 0 | 1 | 2;
     FID: number;
     OBJECTID: 51;
     parent_id: number;

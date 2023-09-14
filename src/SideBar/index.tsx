@@ -4,12 +4,13 @@ import { CopyRight, language, Language } from "@/utility/Language";
 import { useState } from "react";
 import Resizer from "./resizer";
 import AddingForm from "@/AddingForm";
+import { Data } from "../../data/types";
 
 const Logo = ({ isLarge = true }) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img
-    src="/powerTrace.png"
-    alt="Power Trace"
+    src="/SIG_consumo.png"
+    alt="SIG Logo"
     style={{
       height: isLarge ? "11%" : "2.5em",
       margin: isLarge
@@ -20,10 +21,7 @@ const Logo = ({ isLarge = true }) => (
   />
 );
 
-interface _ {
-  children?: React.ReactNode;
-}
-export default function SideBar({ children }: _) {
+export default function SideBar() {
   const [write, setLanguage] = useState<Language>(language["PT"]);
   return (
     <>
