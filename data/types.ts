@@ -1,8 +1,7 @@
 export interface SUB {
-  Latitude: number;
-  Longitude: number;
+  geometry: { type: "point", latitude: number; longitude: number };
   attributes: {
-    ID: number;
+    FID: number;
     identificação: string;
     H?: number;
     País: string;
@@ -20,11 +19,11 @@ export interface SUB {
 }
 
 export interface TRAFO {
-  Latitude: number;
-  Longitude: number;
+  geometry: { type: "point"; latitude: number; longitude: number };
   attributes: {
-    ID: number;
+    FID: number;
     OBJECTID: 51;
+    parent_id: number;
     identificação: string;
     H?: number;
     País: string;
@@ -44,3 +43,8 @@ export interface TRAFO {
     secção: [string, string] | string;
   };
 }
+
+export type Data = {
+  subs: SUB[];
+  trafos: { [key: `SE${number}`]: TRAFO[] };
+};

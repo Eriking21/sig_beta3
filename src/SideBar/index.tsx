@@ -29,7 +29,7 @@ export default function SideBar({ children }: _) {
     <>
       <Resizer />
       <aside
-        className="bg-grad-erim flex flex-col overflow-hidden "
+        className="bg-grad-erim flex flex-col overflow-hidden relative"
         style={{
           display: "flex",
           transform: "none",
@@ -39,13 +39,13 @@ export default function SideBar({ children }: _) {
           left: 0,
         }}
       >
+        <AddingForm write={write} />
         <Logo />
         <SearchArea>
           <SearchBar />
           <SearchBox />
         </SearchArea>
         {<CopyRight {...write} />}
-        <AddingForm write={write} />
       </aside>
     </>
   );

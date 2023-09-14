@@ -1,7 +1,6 @@
 [
   {
-    "Latitude": "-8,83620644",
-    "Longitude": "13,23321944",
+    "geometry": { "type":"point", "latitude": -8.83620644, "longitude": 13.23321944 },
     "attributes": {
       "FID": 0,
       "Susbestação": "SE_Maianga",
@@ -14,14 +13,13 @@
       "Rua": "Avenida_Comandante_Gika",
       "Ano": 1990,
       "Empresa": "ENDE_EP",
-      "P": ["50MVA","40MVA"],
-      "V":[ "60kV", "15kV"],
+      "P": ["50MVA", "40MVA"],
+      "V": ["60kV", "15kV"],
       "Seccão ": "300 - 400"
     }
   },
   {
-    "Latitude": "-8,83670077",
-    "Longitude": "13,23259898",
+    "geometry": { "type":"point", "latitude": -8.83670077, "longitude": 13.23259898 },
     "attributes": {
       "FID": 1,
       "Susbestação": "SE_Marteres",
@@ -34,7 +32,7 @@
       "Rua": "01_MARTERES_KIFANGONDO",
       "Ano": 2018,
       "Empresa": "ENDE_EP",
-      "P": ["50MVA","40MVA"],
+      "P": ["50MVA", "40MVA"],
       "V": ["60kV", "15kV"],
       "Seccão": "300 - 400"
     }

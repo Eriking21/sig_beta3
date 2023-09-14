@@ -3,7 +3,7 @@ import React, { ChangeEvent, useState, ReactNode, CSSProperties } from "react";
 import { _S_, showSelections, _T_, Language } from "../utility/Language";
 import { TbDelta } from "react-icons/tb";
 import { FaY } from "react-icons/fa6";
-export { CoordField } from "./coordfield";
+//export { CoordField } from "./coordfield";
 
 export const Flexible_with_border = {
   className: "InputBorder Flexible_Wrapper",

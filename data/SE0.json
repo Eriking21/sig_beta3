@@ -1,10 +1,10 @@
 [
   {
-    "Latitude": -8.8450791,
-    "Longitude": 13.22628692,
+    "geometry": { "type":"point", "latitude": -8.8450791, "longitude": 13.22628692 },
     "attributes": {
-      "ID": 0,
+      "FID": 0,
       "OBJECTID": 1,
+      "parent_id": 0,
       "Identificação": "PT_509S_R17",
       "H": 102,
       "Pais": "Angola",
@@ -18,18 +18,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83986117,
-    "Longitude": 13.22792989,
+    "geometry": { "type":"point", "latitude": -8.83986117, "longitude": 13.22792989 },
     "attributes": {
-      "ID": 1,
+      "FID": 1,
       "OBJECTID": 2,
+      "parent_id": 0,
       "Identificação": "PT_LB_ENGENHARIA",
       "H": 97,
       "Pais": "Angola",
@@ -43,18 +43,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8412163,
-    "Longitude": 13.2315412,
+    "geometry": { "type":"point", "latitude": -8.8412163, "longitude": 13.2315412 },
     "attributes": {
-      "ID": 2,
+      "FID": 2,
       "OBJECTID": 3,
+      "parent_id": 0,
       "Identificação": "PT_BLCASSENDA_R02",
       "H": 96,
       "Pais": "Angola",
@@ -68,18 +68,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84316936,
-    "Longitude": 13.22966844,
+    "geometry": { "type":"point", "latitude": -8.84316936, "longitude": 13.22966844 },
     "attributes": {
-      "ID": 3,
+      "FID": 3,
       "OBJECTID": 4,
+      "parent_id": 0,
       "Identificação": "PT_CASSENDA_R8",
       "H": 94,
       "Pais": "Angola",
@@ -93,18 +93,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84437633,
-    "Longitude": 13.22679932,
+    "geometry": { "type":"point", "latitude": -8.84437633, "longitude": 13.22679932 },
     "attributes": {
-      "ID": 4,
+      "FID": 4,
       "OBJECTID": 5,
+      "parent_id": 0,
       "Identificação": "PT_ADM_CASSENDA",
       "H": 98,
       "Pais": "Angola",
@@ -118,18 +118,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84299106,
-    "Longitude": 13.24364972,
+    "geometry": { "type":"point", "latitude": -8.84299106, "longitude": 13.24364972 },
     "attributes": {
-      "ID": 5,
+      "FID": 5,
       "OBJECTID": 6,
+      "parent_id": 0,
       "Identificação": "PT_CL_CATOLICA",
       "H": 95,
       "Pais": "Angola",
@@ -143,18 +143,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8438058,
-    "Longitude": 13.24001892,
+    "geometry": { "type":"point", "latitude": -8.8438058, "longitude": 13.24001892 },
     "attributes": {
-      "ID": 6,
+      "FID": 6,
       "OBJECTID": 7,
+      "parent_id": 0,
       "Identificação": "PT_CL_21J",
       "H": 96,
       "Pais": "Angola",
@@ -168,18 +168,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84205295,
-    "Longitude": 13.23449145,
+    "geometry": { "type":"point", "latitude": -8.84205295, "longitude": 13.23449145 },
     "attributes": {
-      "ID": 7,
+      "FID": 7,
       "OBJECTID": 8,
+      "parent_id": 0,
       "Identificação": "PT_MK_R15",
       "H": 99,
       "Pais": "Angola",
@@ -193,18 +193,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_30mm2"
     }
   },
   {
-    "Latitude": -8.8436275,
-    "Longitude": 13.236711,
+    "geometry": { "type":"point", "latitude": -8.8436275, "longitude": 13.236711 },
     "attributes": {
-      "ID": 8,
+      "FID": 8,
       "OBJECTID": 9,
+      "parent_id": 0,
       "Identificação": "PT_MK_R16",
       "H": 119,
       "Pais": "Angola",
@@ -218,18 +218,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83976881,
-    "Longitude": 13.23710205,
+    "geometry": { "type":"point", "latitude": -8.83976881, "longitude": 13.23710205 },
     "attributes": {
-      "ID": 9,
+      "FID": 9,
       "OBJECTID": 10,
+      "parent_id": 0,
       "Identificação": "PT_MK_R12",
       "H": 120,
       "Pais": "Angola",
@@ -243,18 +243,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83840909,
-    "Longitude": 13.23634496,
+    "geometry": { "type":"point", "latitude": -8.83840909, "longitude": 13.23634496 },
     "attributes": {
-      "ID": 10,
+      "FID": 10,
       "OBJECTID": 11,
+      "parent_id": 0,
       "Identificação": "PT_MK_R5",
       "H": 123,
       "Pais": "Angola",
@@ -268,18 +268,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83882849,
-    "Longitude": 13.23517037,
+    "geometry": { "type":"point", "latitude": -8.83882849, "longitude": 13.23517037 },
     "attributes": {
-      "ID": 11,
+      "FID": 11,
       "OBJECTID": 12,
+      "parent_id": 0,
       "Identificação": "PT_MK_R13",
       "H": 121,
       "Pais": "Angola",
@@ -293,18 +293,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83400707,
-    "Longitude": 13.23079386,
+    "geometry": { "type":"point", "latitude": -8.83400707, "longitude": 13.23079386 },
     "attributes": {
-      "ID": 12,
+      "FID": 12,
       "OBJECTID": 13,
+      "parent_id": 0,
       "Identificação": "PT_761S_NOTARIO_EFACEC",
       "H": 89,
       "Pais": "Angola",
@@ -318,18 +318,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83243499,
-    "Longitude": 13.23101951,
+    "geometry": { "type":"point", "latitude": -8.83243499, "longitude": 13.23101951 },
     "attributes": {
-      "ID": 13,
+      "FID": 13,
       "OBJECTID": 14,
+      "parent_id": 0,
       "Identificação": "PT_HOTEL_PALANCA",
       "H": 77,
       "Pais": "Angola",
@@ -343,18 +343,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82841542,
-    "Longitude": 13.22988429,
+    "geometry": { "type":"point", "latitude": -8.82841542, "longitude": 13.22988429 },
     "attributes": {
-      "ID": 14,
+      "FID": 14,
       "OBJECTID": 15,
+      "parent_id": 0,
       "Identificação": "PT_SUITE_HOTEL_MAIANGA",
       "H": 58,
       "Pais": "Angola",
@@ -368,18 +368,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8276026,
-    "Longitude": 13.23006996,
+    "geometry": { "type":"point", "latitude": -8.8276026, "longitude": 13.23006996 },
     "attributes": {
-      "ID": 15,
+      "FID": 15,
       "OBJECTID": 16,
+      "parent_id": 0,
       "Identificação": "PT_CENTRO_MEDICO_MAIANGA",
       "H": 56,
       "Pais": "Angola",
@@ -393,18 +393,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82751325,
-    "Longitude": 13.22837972,
+    "geometry": { "type":"point", "latitude": -8.82751325, "longitude": 13.22837972 },
     "attributes": {
-      "ID": 16,
+      "FID": 16,
       "OBJECTID": 17,
+      "parent_id": 0,
       "Identificação": "PT_764S_RIO_SECO",
       "H": 54,
       "Pais": "Angola",
@@ -418,18 +418,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82669344,
-    "Longitude": 13.22708383,
+    "geometry": { "type":"point", "latitude": -8.82669344, "longitude": 13.22708383 },
     "attributes": {
-      "ID": 17,
+      "FID": 17,
       "OBJECTID": 18,
+      "parent_id": 0,
       "Identificação": "PT_CODEM",
       "H": 55,
       "Pais": "Angola",
@@ -443,18 +443,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82510176,
-    "Longitude": 13.22890024,
+    "geometry": { "type":"point", "latitude": -8.82510176, "longitude": 13.22890024 },
     "attributes": {
-      "ID": 18,
+      "FID": 18,
       "OBJECTID": 19,
+      "parent_id": 0,
       "Identificação": "PT_LARGO_JOAO_SECA",
       "H": 60,
       "Pais": "Angola",
@@ -468,18 +468,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8241125,
-    "Longitude": 13.23001388,
+    "geometry": { "type":"point", "latitude": -8.8241125, "longitude": 13.23001388 },
     "attributes": {
-      "ID": 19,
+      "FID": 19,
       "OBJECTID": 20,
+      "parent_id": 0,
       "Identificação": "PT188S_HOTEL_FLAMINGO",
       "H": 67,
       "Pais": "Angola",
@@ -493,18 +493,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82564777,
-    "Longitude": 13.23156997,
+    "geometry": { "type":"point", "latitude": -8.82564777, "longitude": 13.23156997 },
     "attributes": {
-      "ID": 20,
+      "FID": 20,
       "OBJECTID": 21,
+      "parent_id": 0,
       "Identificação": "PT_28_DE_MAIO",
       "H": 70,
       "Pais": "Angola",
@@ -518,18 +518,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82733034,
-    "Longitude": 13.23368892,
+    "geometry": { "type":"point", "latitude": -8.82733034, "longitude": 13.23368892 },
     "attributes": {
-      "ID": 21,
+      "FID": 21,
       "OBJECTID": 22,
+      "parent_id": 0,
       "Identificação": "PT_ZONA_VERDE",
       "H": 74,
       "Pais": "Angola",
@@ -543,18 +543,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82870832,
-    "Longitude": 13.23256434,
+    "geometry": { "type":"point", "latitude": -8.82870832, "longitude": 13.23256434 },
     "attributes": {
-      "ID": 22,
+      "FID": 22,
       "OBJECTID": 23,
+      "parent_id": 0,
       "Identificação": "PT_BIG_ONE_ZONAVERDE",
       "H": 75,
       "Pais": "Angola",
@@ -568,18 +568,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82903606,
-    "Longitude": 13.23304453,
+    "geometry": { "type":"point", "latitude": -8.82903606, "longitude": 13.23304453 },
     "attributes": {
-      "ID": 23,
+      "FID": 23,
       "OBJECTID": 24,
+      "parent_id": 0,
       "Identificação": "PT_RODEL_ALVALADE",
       "H": 77,
       "Pais": "Angola",
@@ -593,18 +593,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83086184,
-    "Longitude": 13.23101792,
+    "geometry": { "type":"point", "latitude": -8.83086184, "longitude": 13.23101792 },
     "attributes": {
-      "ID": 24,
+      "FID": 24,
       "OBJECTID": 25,
+      "parent_id": 0,
       "Identificação": "PT_PREDIO_ENSA",
       "H": 72,
       "Pais": "Angola",
@@ -618,18 +618,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83024664,
-    "Longitude": 13.23092996,
+    "geometry": { "type":"point", "latitude": -8.83024664, "longitude": 13.23092996 },
     "attributes": {
-      "ID": 25,
+      "FID": 25,
       "OBJECTID": 26,
+      "parent_id": 0,
       "Identificação": "PT098S PREDIO_BELAVISTA",
       "H": 74,
       "Pais": "Angola",
@@ -643,18 +643,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8453605,
-    "Longitude": 13.23034881,
+    "geometry": { "type":"point", "latitude": -8.8453605, "longitude": 13.23034881 },
     "attributes": {
-      "ID": 26,
+      "FID": 26,
       "OBJECTID": 27,
+      "parent_id": 0,
       "Identificação": "PT_CASSENDA",
       "H": 58,
       "Pais": "Angola",
@@ -668,18 +668,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83339697,
-    "Longitude": 13.24719474,
+    "geometry": { "type":"point", "latitude": -8.83339697, "longitude": 13.24719474 },
     "attributes": {
-      "ID": 27,
+      "FID": 27,
       "OBJECTID": 28,
+      "parent_id": 0,
       "Identificação": "PT679S_SEMINARIO",
       "H": 94,
       "Pais": "Angola",
@@ -693,18 +693,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83238333,
-    "Longitude": 13.24890841,
+    "geometry": { "type":"point", "latitude": -8.83238333, "longitude": 13.24890841 },
     "attributes": {
-      "ID": 28,
+      "FID": 28,
       "OBJECTID": 29,
+      "parent_id": 0,
       "Identificação": "PT_BAIRRO_DA_MADEIRA_01",
       "H": 86,
       "Pais": "Angola",
@@ -718,18 +718,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83541564,
-    "Longitude": 13.24966673,
+    "geometry": { "type":"point", "latitude": -8.83541564, "longitude": 13.24966673 },
     "attributes": {
-      "ID": 29,
+      "FID": 29,
       "OBJECTID": 31,
+      "parent_id": 0,
       "Identificação": "PT_379S_BAIRRO_POLICIA",
       "H": 84,
       "Pais": "Angola",
@@ -743,18 +743,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83257637,
-    "Longitude": 13.24958923,
+    "geometry": { "type":"point", "latitude": -8.83257637, "longitude": 13.24958923 },
     "attributes": {
-      "ID": 30,
+      "FID": 30,
       "OBJECTID": 32,
+      "parent_id": 0,
       "Identificação": "PT_BAIRRO_DA_MADEIRA",
       "H": 95,
       "Pais": "Angola",
@@ -768,18 +768,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83468017,
-    "Longitude": 13.24512528,
+    "geometry": { "type":"point", "latitude": -8.83468017, "longitude": 13.24512528 },
     "attributes": {
-      "ID": 31,
+      "FID": 31,
       "OBJECTID": 33,
+      "parent_id": 0,
       "Identificação": "PT500P_TOYOTA_RML",
       "H": 58,
       "Pais": "Angola",
@@ -793,18 +793,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83428409,
-    "Longitude": 13.2435637,
+    "geometry": { "type":"point", "latitude": -8.83428409, "longitude": 13.2435637 },
     "attributes": {
-      "ID": 32,
+      "FID": 32,
       "OBJECTID": 34,
+      "parent_id": 0,
       "Identificação": "PT_514P_BPC_QG",
       "H": 10,
       "Pais": "Angola",
@@ -818,18 +818,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.82909536,
-    "Longitude": 13.247615,
+    "geometry": { "type":"point", "latitude": -8.82909536, "longitude": 13.247615 },
     "attributes": {
-      "ID": 33,
+      "FID": 33,
       "OBJECTID": 35,
+      "parent_id": 0,
       "Identificação": "PT_IMEL_BFA",
       "H": 56,
       "Pais": "Angola",
@@ -843,18 +843,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83266376,
-    "Longitude": 13.23736306,
+    "geometry": { "type":"point", "latitude": -8.83266376, "longitude": 13.23736306 },
     "attributes": {
-      "ID": 34,
+      "FID": 34,
       "OBJECTID": 36,
+      "parent_id": 0,
       "Identificação": "PT528S_BAIRO_MILITAR",
       "H": 53,
       "Pais": "Angola",
@@ -868,18 +868,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83191797,
-    "Longitude": 13.23642127,
+    "geometry": { "type":"point", "latitude": -8.83191797, "longitude": 13.23642127 },
     "attributes": {
-      "ID": 35,
+      "FID": 35,
       "OBJECTID": 37,
+      "parent_id": 0,
       "Identificação": "PT_BANCO_PINTO_SOTTO_MAIOR",
       "H": 64,
       "Pais": "Angola",
@@ -893,18 +893,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84363171,
-    "Longitude": 13.23376582,
+    "geometry": { "type":"point", "latitude": -8.84363171, "longitude": 13.23376582 },
     "attributes": {
-      "ID": 36,
+      "FID": 36,
       "OBJECTID": 38,
+      "parent_id": 0,
       "Identificação": "PT_MK_20",
       "H": 89,
       "Pais": "Angola",
@@ -918,18 +918,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8342062,
-    "Longitude": 13.22319389,
+    "geometry": { "type":"point", "latitude": -8.8342062, "longitude": 13.22319389 },
     "attributes": {
-      "ID": 37,
+      "FID": 37,
       "OBJECTID": 39,
+      "parent_id": 0,
       "Identificação": "PT_LOTE03",
       "H": 35,
       "Pais": "Angola",
@@ -943,18 +943,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83616025,
-    "Longitude": 13.22153928,
+    "geometry": { "type":"point", "latitude": -8.83616025, "longitude": 13.22153928 },
     "attributes": {
-      "ID": 38,
+      "FID": 38,
       "OBJECTID": 40,
+      "parent_id": 0,
       "Identificação": "PT_LOTE09",
       "H": 40,
       "Pais": "Angola",
@@ -968,18 +968,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83740217,
-    "Longitude": 13.2241421,
+    "geometry": { "type":"point", "latitude": -8.83740217, "longitude": 13.2241421 },
     "attributes": {
-      "ID": 39,
+      "FID": 39,
       "OBJECTID": 41,
+      "parent_id": 0,
       "Identificação": "PT_LOTE22",
       "H": 53,
       "Pais": "Angola",
@@ -993,18 +993,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83536381,
-    "Longitude": 13.22327015,
+    "geometry": { "type":"point", "latitude": -8.83536381, "longitude": 13.22327015 },
     "attributes": {
-      "ID": 40,
+      "FID": 40,
       "OBJECTID": 42,
+      "parent_id": 0,
       "Identificação": "PT_LOTE05",
       "H": 74,
       "Pais": "Angola",
@@ -1018,18 +1018,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83532997,
-    "Longitude": 13.22376116,
+    "geometry": { "type":"point", "latitude": -8.83532997, "longitude": 13.22376116 },
     "attributes": {
-      "ID": 41,
+      "FID": 41,
       "OBJECTID": 43,
+      "parent_id": 0,
       "Identificação": "PT_LOTE06",
       "H": 76,
       "Pais": "Angola",
@@ -1043,18 +1043,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84070876,
-    "Longitude": 13.22172653,
+    "geometry": { "type":"point", "latitude": -8.84070876, "longitude": 13.22172653 },
     "attributes": {
-      "ID": 42,
+      "FID": 42,
       "OBJECTID": 44,
+      "parent_id": 0,
       "Identificação": "PT_582S",
       "H": 77,
       "Pais": "Angola",
@@ -1068,18 +1068,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84154525,
-    "Longitude": 13.21891374,
+    "geometry": { "type":"point", "latitude": -8.84154525, "longitude": 13.21891374 },
     "attributes": {
-      "ID": 43,
+      "FID": 43,
       "OBJECTID": 45,
+      "parent_id": 0,
       "Identificação": "PT_UP",
       "H": 58,
       "Pais": "Angola",
@@ -1093,18 +1093,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Alvenaria"],
+      "Tipo": ["Trifasico", "Alvenaria"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83539462,
-    "Longitude": 13.22786943,
+    "geometry": { "type":"point", "latitude": -8.83539462, "longitude": 13.22786943 },
     "attributes": {
-      "ID": 44,
+      "FID": 44,
       "OBJECTID": 46,
+      "parent_id": 0,
       "Identificação": "PT_PRENDA",
       "H": 95,
       "Pais": "Angola",
@@ -1118,18 +1118,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83976276,
-    "Longitude": 13.22623964,
+    "geometry": { "type":"point", "latitude": -8.83976276, "longitude": 13.22623964 },
     "attributes": {
-      "ID": 45,
+      "FID": 45,
       "OBJECTID": 47,
+      "parent_id": 0,
       "Identificação": "PT_LB_ENGENHARIA",
       "H": 97,
       "Pais": "Angola",
@@ -1143,18 +1143,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84619782,
-    "Longitude": 13.22388179,
+    "geometry": { "type":"point", "latitude": -8.84619782, "longitude": 13.22388179 },
     "attributes": {
-      "ID": 46,
+      "FID": 46,
       "OBJECTID": 48,
+      "parent_id": 0,
       "Identificação": "PT_SAGRADA_ESPERANCA",
       "H": 89,
       "Pais": "Angola",
@@ -1168,18 +1168,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84506025,
-    "Longitude": 13.21850598,
+    "geometry": { "type":"point", "latitude": -8.84506025, "longitude": 13.21850598 },
     "attributes": {
-      "ID": 47,
+      "FID": 47,
       "OBJECTID": 49,
+      "parent_id": 0,
       "Identificação": "PT_FILICIO_01",
       "H": 73,
       "Pais": "Angola",
@@ -1193,18 +1193,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.8451712,
-    "Longitude": 13.21522396,
+    "geometry": { "type":"point", "latitude": -8.8451712, "longitude": 13.21522396 },
     "attributes": {
-      "ID": 48,
+      "FID": 48,
       "OBJECTID": 50,
+      "parent_id": 0,
       "Identificação": "PT_FILICIO_02",
       "H": 60,
       "Pais": "Angola",
@@ -1218,18 +1218,18 @@
       "Ano": 2000,
       "Potência": "630KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.84324419,
-    "Longitude": 13.2282864,
+    "geometry": { "type":"point", "latitude": -8.84324419, "longitude": 13.2282864 },
     "attributes": {
-      "ID": 49,
+      "FID": 49,
       "OBJECTID": 51,
+      "parent_id": 0,
       "Identificação": "PT_RUA_13",
       "H": 77,
       "Pais": "Angola",
@@ -1243,18 +1243,18 @@
       "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   },
   {
-    "Latitude": -8.83596889,
-    "Longitude": 13.2539182,
+    "geometry": { "type":"point", "latitude": -8.83596889, "longitude": 13.2539182 },
     "attributes": {
-      "ID": 50,
+      "FID": 50,
       "OBJECTID": 0,
+      "parent_id": 0,
       "Identificação": "PT_BAIRRO_DA_POLICIA",
       "H": 95,
       "Pais": "Angola",
@@ -1265,12 +1265,12 @@
       "Rua": "Rua",
       "Empresa": "ENDE_EP",
       "Fabricante": "",
-      "Ano": 20000,
+      "Ano": 2000,
       "Potência": "400KVA",
       "Frequência": "50Hz",
-      "Ligação": ["Triangulo","Estrela"],
+      "Ligação": ["Triangulo", "Estrela"],
       "U": ["15KV", "400V"],
-      "Tipo": ["Trifasico","Monobloco"],
+      "Tipo": ["Trifasico", "Monobloco"],
       "secção_mm2": "VAV_300mm2"
     }
   }

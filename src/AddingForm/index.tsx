@@ -10,11 +10,13 @@ interface _ {
   write: Language;
 }
 const AddingForm = ({ write }: _) => {
-  const formIndex = setForm.useListener()
+  const formIndex = setForm.useListener();
   return (
     <form
       style={{
-        top:0,
+        width: "inherit",
+        height: "inherit",
+        position: "absolute",
         transform: formIndex === undefined ? "translateX(-100%)" : "",
         background: "white",
       }}

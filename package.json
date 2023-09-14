@@ -17,6 +17,7 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "esri": "0.0.1-security",
     "esri-loader": "^3.7.0",
     "fs": "0.0.1-security",
     "next": "13.4.19",
