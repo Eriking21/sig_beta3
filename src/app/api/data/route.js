@@ -6,7 +6,7 @@ import { SUB, TRAFO } from "../../../../data/types";
 export async function GET(request) {
   //fs.appendFile("./oi_estou_aqui","mike")
   const subs = await fs.readFile("./data/info.json", { encoding: "utf8" });
-const trafo = await fs.readFile(`./data/SE${sub.attributes.ID}/info.json`, {
+const trafo = await fs.readFile(`./data/SE${sub.attributes.ID}.json`, {
   encoding: "utf8",
 });
   // const trafos = JSON.parse(subs).map(async (sub, index) => {

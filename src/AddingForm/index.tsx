@@ -2,7 +2,7 @@
 import "./styles.css";
 export * from "./Inputs";
 import { setForm } from "@/AddMenu";
-import { CoordField } from "./coordfield";
+//import { CoordField } from "./coordfield";
 import { Input, Language } from "../utility/Language";
 import { TextField, VoltField, Selection } from "./Inputs";
 
@@ -64,7 +64,7 @@ const AddingForm = ({ write }: _) => {
         {write.Map_object[formIndex!]}
       </h2>
       <TextField {...write._name} />
-      <CoordField {...write} {...{ index: formIndex }} />
+      {/* <CoordField {...write} {...{ index: formIndex }} /> */}
       <TextField {...write._country} />
       <TextField {...write._province} />
       <TextField {...write._district} />

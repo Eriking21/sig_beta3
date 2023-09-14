@@ -14,11 +14,9 @@
       "Rua": "Avenida_Comandante_Gika",
       "Ano": 1990,
       "Empresa": "ENDE_EP",
-      "P_in": "50MVA",
-      "P_out": "40MVA",
-      "V_in": "60kV",
-      "V_out": "15kV",
-      "Seccão (mm2)": "300 - 400"
+      "P": ["50MVA","40MVA"],
+      "V":[ "60kV", "15kV"],
+      "Seccão ": "300 - 400"
     }
   },
   {
@@ -36,11 +34,9 @@
       "Rua": "01_MARTERES_KIFANGONDO",
       "Ano": 2018,
       "Empresa": "ENDE_EP",
-      "P_in": "50MVA",
-      "P_out": "40MVA",
-      "V_in": "60kV",
-      "V_out": "15kV",
-      "Seccão (mm2)": "300 - 400"
+      "P": ["50MVA","40MVA"],
+      "V": ["60kV", "15kV"],
+      "Seccão": "300 - 400"
     }
   }
 ]

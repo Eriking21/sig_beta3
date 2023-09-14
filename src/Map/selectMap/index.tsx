@@ -2,13 +2,19 @@
 import { useState, useRef } from "react";
 import SplashButton from "../../utility/SplashButton";
 import { basemap } from "../../utility/options";
+import { map } from "../utility";
 
 interface Props {
   onRight?: Boolean;
   R?: number;
 }
 
-const SelectMap = ({ onRight = true, setMap}: Props) => {
+function setMap (index:number) {
+  if (map.view === undefined) return;
+  map.view!.map.basemap = basemap[index].title as any;
+}
+
+const SelectMap = ({ onRight = true}: Props) => {
   const index = useRef(0);
   const [toggle, setToggle] = useState(true);
   const right = onRight ? 0 : undefined;
