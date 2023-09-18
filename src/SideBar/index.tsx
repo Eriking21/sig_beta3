@@ -1,7 +1,7 @@
 "use client";
-import { SearchArea, SearchBar, SearchBox} from "@/SearchArea";
+import { SearchArea } from "@/SearchArea";
 import { CopyRight, language, Language } from "@/utility/Language";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Resizer from "./resizer";
 import AddingForm from "@/AddingForm";
 import { Data } from "../../data/types";
@@ -12,10 +12,10 @@ const Logo = ({ isLarge = true }) => (
     src="/SIG_consumo.png"
     alt="SIG Logo"
     style={{
-      height: isLarge ? "11%" : "2.5em",
-      margin: isLarge
-        ? "calc(1rem + 5%) 1em calc(1rem + 1%)"
-        : "1rem 0px 1rem 1rem",
+      alignSelf: "center",
+      width: "fit-content",
+      height: isLarge ? "calc(4rem + 5%)" : "2.5em",
+      margin: isLarge ? "calc(.5rem + 5%) 1em 1%" : "1rem 0px 1rem 1rem",
       boxSizing: "border-box",
     }}
   />
@@ -23,6 +23,7 @@ const Logo = ({ isLarge = true }) => (
 
 export default function SideBar() {
   const [write, setLanguage] = useState<Language>(language["PT"]);
+  useEffect(() => {}, []);
   return (
     <>
       <Resizer />
@@ -39,10 +40,7 @@ export default function SideBar() {
       >
         <AddingForm write={write} />
         <Logo />
-        <SearchArea>
-          <SearchBar />
-          <SearchBox />
-        </SearchArea>
+        <SearchArea />
         {<CopyRight {...write} />}
       </aside>
     </>

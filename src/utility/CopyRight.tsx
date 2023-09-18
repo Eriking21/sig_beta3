@@ -8,10 +8,10 @@ import { Language } from "./Language";
 export const CopyRight = ({ DEV: _DEV }: Language) => {
   const divStyle: CSSProperties = {
     alignSelf: "stretch",
-    padding: "1rem 5% .7rem",
+    padding: "1rem 5% .5rem",
     alignItems: "center",
     textAlign: "center",
-    fontSize: ".8em",
+    fontSize: ".7em",
   };
 
   const style: CSSProperties = {
@@ -25,7 +25,7 @@ export const CopyRight = ({ DEV: _DEV }: Language) => {
     <div style={divStyle}>
       <p {...{ style }}>{`Copyright 2023.`}</p>
       <p {...{ style }}>{`${_DEV[0]}`}</p>
-      <p {...{ style }}>{`${_DEV[1]} ErimCompany`}</p>
+      <p {...{ style }}>{`${_DEV[1]} ErimCompany.`}</p>
     </div>
   );
 };

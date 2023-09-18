@@ -1,3 +1,6 @@
+#searchBar:focus{
+    outline: none
+}
 .SearchItem {
   margin: 0 1rem;
   border-bottom: 3px inset #8cc0d099;

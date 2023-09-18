@@ -88,7 +88,8 @@ export default function Resizer() {
       resizer[0].restore();
       resizer.pop();
     };
-  }, [resizer]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   if (isNumber) {
     resizer.at(0)?.restore();
   }

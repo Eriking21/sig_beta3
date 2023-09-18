@@ -1,8 +1,8 @@
 "use client"
 import { useState, useRef } from "react";
-import SplashButton from "../../utility/SplashButton";
-import { basemap } from "../../utility/options";
-import { map } from "../utility";
+import SplashButton from "../utility/SplashButton";
+import { basemap } from "../utility/options";
+import { map } from "./utility";
 
 interface Props {
   onRight?: Boolean;

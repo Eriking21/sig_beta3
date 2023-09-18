@@ -1,10 +1,10 @@
 export interface SUB {
   geometry: { type: "point"; latitude: number; longitude: number };
   attributes: {
-    Object_type: 0|1|2;
+    Object_type: 0 | 1 | 2;
     FID: number;
     identificação: string;
-    H?: number;
+    H: number;
     País: string;
     Província: string;
     Municipio: string;
@@ -12,10 +12,12 @@ export interface SUB {
     Bairro: string;
     Rua: string;
     Empresa: string;
-    Ano: string;
-    P: [string, string];
-    U: [string, string];
-    Seccão?: [string, string] | string;
+    Ano: number;
+    P1: string;
+    P2: string;
+    U1: string;
+    U2: string;
+    Secção?: string;
   };
 }
 
@@ -25,9 +27,8 @@ export interface TRAFO {
     Object_type: 0 | 1 | 2;
     FID: number;
     OBJECTID: 51;
-    parent_id: number;
     identificação: string;
-    H?: number;
+    H: number;
     País: string;
     Província: string;
     Municipio: string;
@@ -40,9 +41,10 @@ export interface TRAFO {
     Potência: string;
     Frequência: string;
     Ligação: string;
-    U: [string, string];
-    Tipo: [string, string];
-    secção: [string, string] | string;
+    U1: string;
+    U2: string;
+    Tipo: string;
+    Secção: string;
   };
 }
 

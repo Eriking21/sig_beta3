@@ -1,7 +1,7 @@
-import { CSSProperties, ReactNode } from "react";
-export { SearchBar } from "./SearchBar";
-export { SearchBox } from "./SearchBox";
-
+import { CSSProperties, ReactNode, useRef } from "react";
+import { SearchBar } from "./SearchBar";
+import { SearchBox } from "./searchBox";
+import "./styles.css";
 interface _ {
   children?: ReactNode;
 }
@@ -15,7 +15,10 @@ export const SearchArea = ({ children }: _) => {
     alignItems: "center",
     overflow: "hidden",
   };
-  return <div {...{style}}>
-    {children}
-  </div>;
+  return (
+    <div {...{ style }}>
+      <SearchBar />
+      <SearchBox />
+    </div>
+  );
 };
