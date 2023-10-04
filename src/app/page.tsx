@@ -1,21 +1,22 @@
 import SideBar from "../SideBar";
 import ArcGISMap from "@/Map";
 import AddMenu from "@/AddMenu";
-import { Data } from "../../data/types";
+import { erimServerData } from "./api/data/types";
 
 export default async function HomePage() {
-  const val:Data = await (
+  const val: Promise<erimServerData> = (
     await fetch("http://localhost:3000/api/data", {
       method: "GET",
-      next: { revalidate: 3, },
+      next: { tags: ["update_features"] },
+      cache:"no-store"
     })
   ).json();
-  
+
   return (
     <>
-      <ArcGISMap data={val}></ArcGISMap>
-      <SideBar ></SideBar>
-      <AddMenu />
+      <ArcGISMap information={val}></ArcGISMap>
+      <SideBar></SideBar>
+      <AddMenu id="add-menu" />
     </>
   );
 }

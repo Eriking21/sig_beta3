@@ -1,12 +1,19 @@
-import { CSSProperties, ReactNode, useRef } from "react";
+import { CSSProperties } from "react";
 import { SearchBar } from "./SearchBar";
-import { SearchBox } from "./searchBox";
+import  SearchBox from "./searchBox";
 import "./styles.css";
-interface _ {
-  children?: ReactNode;
-}
+import {map} from "../Map/utility";
 
-export const SearchArea = ({ children }: _) => {
+export default function SearchArea () {
+
+  return (
+    <div {...{ style }}>
+      <SearchBar />
+      <SearchBox />
+    </div>
+  );
+};
+
   const style: CSSProperties = {
     flex: 1,
     display: "flex",
@@ -15,10 +22,3 @@ export const SearchArea = ({ children }: _) => {
     alignItems: "center",
     overflow: "hidden",
   };
-  return (
-    <div {...{ style }}>
-      <SearchBar />
-      <SearchBox />
-    </div>
-  );
-};

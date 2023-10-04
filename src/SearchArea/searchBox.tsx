@@ -1,25 +1,24 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, use, useMemo, useCallback } from "react";
 import SearchItem from "./SearchItem";
 import { map } from "../Map/utility";
 
-export const SearchBox = () => {
-  const [toogle, setToogle] = useState(false);
+export default function SearchBox() {
   map.search.item = useRef<HTMLDivElement | null>(null);
-
+  const [, setToogle] = useState(false);
   useEffect(() => {
-    const setter = () => setToogle(!toogle);
-    map.search.listeners.push(setter);
+    map.updateListeners.add(setToogle);
     return () => {
-      const id = map.search.listeners.findLastIndex(setter);
-      map.search.listeners.splice(id, 1);
+      map.updateListeners.delete(setToogle);
     };
-  }, [toogle]);
+  }, []);
 
   const items = map.objects
     .flat()
     ?.filter((point) =>
-      point.attributes.identificação.toLowerCase().includes(map.search.getValue())
+      point.attributes.identificação
+        .toLowerCase()
+        .includes(map.search.getValue())
     )
     .map((point, index) => {
       return (
@@ -30,9 +29,10 @@ export const SearchBox = () => {
       );
     });
 
+  // console.log("rebuild",map.objects,items);
   return (
     <div className="scrollable" style={{ padding: "0 1.25rem 0 1.75rem" }}>
       <div>{items}</div>
     </div>
   );
-};
+}

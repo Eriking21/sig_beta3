@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { ChangeEvent, useState, ReactNode, CSSProperties } from "react";
 import { _S_, showSelections, _T_, Language } from "../utility/Language";
 import { TbDelta } from "react-icons/tb";
@@ -49,6 +49,16 @@ export const Selection = ({ next, error, previous, ...input }: _S_) => (
       {showSelections(next, input.name, SelectionBox)}
     </div>
     {/*span error */}
+  </div>
+);
+export const ColorField = ({ lineColor }: { lineColor: string }) => (
+  <div className="TextField">
+    <label htmlFor={lineColor}>{lineColor}</label>
+    <div {...Flexible_with_border}>
+      <input type={"color"} name={lineColor} />
+    </div>
+    {/*span error */}
+    <span className="input-error" style={{ display: "none" }}></span>
   </div>
 );
 

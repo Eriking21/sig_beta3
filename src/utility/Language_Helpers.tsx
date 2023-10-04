@@ -59,15 +59,17 @@ export interface Language {
   local_name: string;
   select_map: StrVec<ERIM_BASEMAP_NUMBER>;
   Map_object: StrVec<ERIM_OBJECT_NUMBER>;
-  Power_names: StrVec<ERIM_OBJECT_NUMBER>;
+  Power_names: StrVec<5>;
   trafo_type: [StrVec<3>, StrVec<2>];
   End_trafo: StrVec<2>;
   voltage: string;
   frequency: string;
   Phase_Type: string;
   type: string;
+  year: string;
+  lineColor: string;
   Phase_denomination: StrVec<3>;
-  _name: Input_Helper<"text">;
+  _identificação: Input_Helper<"text">;
   _country: Input_Helper<"text">;
   _province: Input_Helper<"text">;
   _district: Input_Helper<"text">;
@@ -76,6 +78,11 @@ export interface Language {
   _company: Input_Helper<"text">;
   _manufacturer: Input_Helper<"text">;
   _owner: Input_Helper<"text">;
+  _secção: Input_Helper<"text">;
   DEV: StrVec<2>;
+  connections:string;
+  input:string;
+  output:string;
+  height:string;
 }
 export default Language;

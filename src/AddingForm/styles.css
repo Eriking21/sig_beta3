@@ -97,6 +97,9 @@ form.addingForm {
   flex: 1;
   display: block;
 }
+form.addingForm input[type="submit"]:hover {
+  background-color: #93cbdd;
+}
 .addingForm div.Flexible_Wrapper input[type="number"] {
   text-align: end;
 }

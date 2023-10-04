@@ -46,7 +46,7 @@ const SelectMap = ({ onRight = true}: Props) => {
     });
 
   return (
-    <div style={{ right: right, maxHeight: "calc(100% - 250px)",position:"absolute" }}>
+    <div style={{top:0, right: right, maxHeight: "calc(100% - 250px)",position:"absolute" }}>
       {childs()}
       <SplashButton
         key={basemap.length}

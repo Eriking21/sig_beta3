@@ -1,24 +1,20 @@
-"use client"
+"use client";
 import { FaCircle } from "react-icons/fa";
 import { MutableRefObject, useRef } from "react";
 import { PowerItem } from "../utility/options";
-import { TRAFO, SUB } from "../../data/types";
+import { Trafo_Info, Sub_Info } from "../app/api/data/types";
 import { map } from "@/Map/utility";
 import Point_ from "@arcgis/core/geometry/Point";
+import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 
 interface _ {
   activeNode: MutableRefObject<HTMLDivElement | null>;
   index: number;
-  attributes: TRAFO["attributes"] | SUB["attributes"];
-  geometry: Point_;
+  attributes: Trafo_Info["attributes"] | Sub_Info["attributes"];
+  geometry: Trafo_Info["geometry"];
 }
 
-const SearchItem = ({
-  activeNode,
-  index,
-  attributes,
-  geometry,
-}: _) => {
+const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
   const imgStyle = {
     alignSelf: "center",
     margin: ".5rem",
@@ -39,21 +35,26 @@ const SearchItem = ({
       map.view?.popup.close();
     } else {
       event.currentTarget.classList.add("active");
-      map.layers!.forEach((fl) => {
-        fl.queryFeatures({
-          where: `identificação = '${attributes.identificação}'`,
-        }).then((found) => {
-          found.features.forEach((feature) => {
-            map.view?.popup.open({
-              features: [feature],
-              location: geometry,
-            });
-          });
-        }).catch((error)=>{});
+      activeNode.current = event.currentTarget;
+      console.log(attributes.FID);
+      const i = Promise.all(
+        map.layers!.map((fl) =>
+          (fl as FeatureLayer).queryFeatures({
+            where: `identificação = '${attributes.identificação}'`,
+            //geometry: geometry,
+          })
+        )
+      );
+      i.catch((err) => console.log(err));
+      i.then((R) => {
+        const features = [...R.map((K) => K.features)].flat().reverse();
+        console.log(features);
+        map.view?.popup.open({
+          features: features,
+          location: geometry as __esri.Point,
+        });
       });
     }
-
-    activeNode.current = event.currentTarget;
   }
 
   return (
@@ -73,7 +74,7 @@ const SearchItem = ({
       <img
         style={imgStyle}
         alt={index.toString()}
-        src={PowerItem[attributes.Object_type].src}
+        src={PowerItem[attributes.ObjectType_id].src}
       />
       <span
         style={{
@@ -81,12 +82,32 @@ const SearchItem = ({
           textAlign: "start",
           alignSelf: "center",
           overflow: "hidden",
+          display: "block",
+          whiteSpace: "nowrap",
         }}
       >
         {attributes.identificação}
       </span>
-      <FaCircle style={imgStyle} color="#80ed80" />
+      <FaCircle
+        style={imgStyle}
+        color={
+          stateColor[
+            attributes.estado as
+              | "funcional"
+              | "defeituoso"
+              | "avariado"
+              | "inactivo"
+          ]
+        }
+      />
     </div>
   );
+};
+
+export const stateColor = {
+  funcional: "#80ed80",
+  defeituoso: "yellow",
+  avariado: "red",
+  inactivo: "gray",
 };
 export default SearchItem;

@@ -9,13 +9,20 @@ interface Language_type {
 
 export const language: Language_type = {
   PT: {
+    year: "Ano",
     short_name: "PT",
     local_name: "Português",
     select_map: ["padrão", "topografica", "satelite"],
     Map_object: ["Substação", "Tranformador", "Consumidor"],
-    Power_names: ["Capacidade", "Potência", "Contracto"],
+    Power_names: [
+      "Potência de entrada",
+      "Potência de saida",
+      "Capacidade",
+      "Potência",
+      "Contracto",
+    ],
     register: "Registrar",
-    _name: {
+    _identificação: {
       name: "Identificação",
       placeholder: "Insira a identificação",
       type: "text",
@@ -72,17 +79,28 @@ export const language: Language_type = {
     ],
     End_trafo: ["Primário", "Secundário"],
     DEV: ["Todos os direitos reservados.", "Desenvolvido por"],
-    coordinates: "Coordenadas"
+    coordinates: "Coordenadas",
+    _secção: {
+      type: "text",
+      name: "Secção",
+      placeholder: "Insira a secção ou -",
+    },
+    lineColor: "Cor da Linha",
+    connections: "Connecções",
+    input: "entrada",
+    output: "saida",
+    height: ""
   },
 
   EN: {
+    year: "Year",
     short_name: "ENG",
     local_name: "English",
     select_map: ["Default", "Topografic", "satelite"],
     Map_object: ["Substation", "Transformer", "Consumer"],
-    Power_names: ["Power", "Power", "Consume"],
+    Power_names: ["Power", "Power", "Consume", "", ""],
     register: "Register",
-    _name: {
+    _identificação: {
       name: "Name",
       placeholder: "Insert a Name",
       type: "text",
@@ -137,7 +155,15 @@ export const language: Language_type = {
     End_trafo: ["", ""],
     Phase_denomination: ["", "", ""],
     DEV: ["All Rights Reserved", "Developed By"],
-    coordinates: ""
+    coordinates: "",
+    _secção: {
+      type: "text",
+      name: "",
+    },
+    lineColor: "Color",
+    connections: "",
+    input: "",
+    output: "",
+    height: "Altura"
   },
 };
-

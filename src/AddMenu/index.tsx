@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { HTMLAttributes, useEffect, useMemo, useState } from "react";
 import SplashButton from "../utility/SplashButton";
 import { PowerItem } from "../utility/options";
 import { FaPlus, FaTimes } from "react-icons/fa";
@@ -12,29 +12,35 @@ interface AddMenuButton {
   action: () => void;
 }
 
-interface Props {
+type Props = HTMLAttributes<HTMLDivElement> & {
   onRight?: Boolean;
   R?: number;
   buttons?: AddMenuButton[];
-}
-type FormIndex = number | undefined;
+};
+export type FormIndex = number | undefined;
 
 export const setForm = {
-  _list: [(i: FormIndex | null) => {}],
-  to: (i: FormIndex | null) => setForm._list.forEach((setTo) => setTo(i)),
+  watchers: new Set<(i: FormIndex | null) => void>(),
+  viewers: new Set<(i: FormIndex) => void>(),
+  monitors: new Set<(i: boolean) => void>(),
+  to: (i: FormIndex | null) => {
+    setForm.watchers.forEach((setTo) => setTo(i));
+    setForm.viewers.forEach((setTo) => setTo(i ?? undefined));
+    setForm.monitors.forEach((setTo) => setTo(typeof i === "number"));
+  },
   useInit: () => {
     const [formIndex, setFormIndex] = useState<FormIndex | null>(undefined);
     useEffect(() => {
-      setForm._list[0] = setFormIndex;
+      setForm.watchers.add(setFormIndex);
     }, []);
     return formIndex;
   },
   useListener: () => {
     const [formIndex, setFormIndex] = useState<FormIndex>(undefined);
     useEffect(() => {
-      const elem = setForm._list.push((i) => setFormIndex(i ?? undefined)) - 1;
+      setForm.viewers.add(setFormIndex);
       return () => {
-        setForm._list.splice(elem, 1);
+        setForm.viewers.delete(setFormIndex);
       };
     }, []);
     return formIndex;
@@ -42,17 +48,16 @@ export const setForm = {
   useNumber: () => {
     const [isNumber, setIsNumber] = useState<boolean>(false);
     useEffect(() => {
-      const elem =
-        setForm._list.push((i) => setIsNumber(typeof i === "number")) - 1;
+      setForm.monitors.add(setIsNumber);
       return () => {
-        setForm._list.splice(elem, 1);
+        setForm.monitors.delete(setIsNumber);
       };
     }, []);
     return isNumber;
   },
 };
 
-const AddMenu = ({ onRight = true, R = 90 }: Props) => {
+const AddMenu = ({ onRight = true, R = 90, style, ...rest }: Props) => {
   const formIndex = setForm.useInit();
 
   const is_adding = () => typeof formIndex === "number";
@@ -97,10 +102,12 @@ const AddMenu = ({ onRight = true, R = 90 }: Props) => {
   );
   return (
     <div
+      {...rest}
       style={{
         right: right,
         bottom: 0,
         position: "absolute",
+        ...style,
       }}
     >
       {childs}

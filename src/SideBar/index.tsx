@@ -1,10 +1,9 @@
 "use client";
-import { SearchArea } from "@/SearchArea";
-import { CopyRight, language, Language } from "@/utility/Language";
+import SearchArea from "@/SearchArea";
+import {CopyRight, language, Language } from "@/utility/Language";
 import { useEffect, useState } from "react";
 import Resizer from "./resizer";
 import AddingForm from "@/AddingForm";
-import { Data } from "../../data/types";
 
 const Logo = ({ isLarge = true }) => (
   // eslint-disable-next-line @next/next/no-img-element

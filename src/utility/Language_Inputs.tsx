@@ -10,14 +10,22 @@ export interface get_Input {
   frequency: getListedInput;
   trafo_type: getSelection;
   instalation_type: getSelection;
-  year: getFreeInput;
+  year: getInput;
+  height: getInput
 }
 
 export const Input: get_Input = {
-  year: function (): _T_  {
+  height: function (lang: Language): _T_ {
     return {
       type: "number",
-      name: "Ano",
+      name: lang.height,
+      placeholder: "0",
+    };
+  },
+  year: function (lang: Language): _T_ {
+    return {
+      type: "number",
+      name: lang.year,
       placeholder: new Date().getFullYear().toString(),
       min: 1900,
       max: new Date().getFullYear(),
@@ -28,7 +36,7 @@ export const Input: get_Input = {
       min: 0,
       type: "number",
       name: lang.Power_names[index],
-      placeholder: index === 2 ? "25" : "400",
+      placeholder: index === 4 ? "25" : "400",
       next: [[1, ["VA", "kVA", "MVA", "GVA"]]],
     };
   },
