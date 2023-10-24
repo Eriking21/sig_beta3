@@ -1,5 +1,4 @@
 import { _T_, Language, _S_ } from "./Language_Helpers";
-type getFreeInput = () => _T_;
 type getInput = (lang: Language) => _T_;
 type getSelection = (lang: Language) => _S_;
 type getListedInput = (lang: Language, index: number) => _T_;

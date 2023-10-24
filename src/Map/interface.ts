@@ -52,7 +52,6 @@ const mapInterface: {
       }
       return FID;
     }
-    //map.view?.map.layers.destroy()
     const loadFeatures = async ([
       FeatureLayer,
       Point,
@@ -197,13 +196,16 @@ const mapInterface: {
           ];
         }),
       ];
+      //replace old layers
     };
     mapInterface.promises["FeaturesLoad"] = loadModules<FeaturesT>(
       FeaturesUrl,
       {
         css: true,
       }
-    ).then(loadFeatures);
+    )
+      .then(loadFeatures)
+      .catch((err) => console.error("Erro no carregamento de info", err));
 
     mapInterface.promises["firstFeaturesLoad"] ??=
       mapInterface.promises["FeaturesLoad"];
@@ -213,7 +215,11 @@ const mapInterface: {
         listener((toogle) => !toogle);
       });
       Object.keys(mapInterface.promises).includes("firstBuild") &&
-        mapInterface.promises["firstBuild"].then(mapInterface.buildPopPup);
+        mapInterface.promises["firstBuild"].then(() => {
+          map.view!.map.layers.removeAll();
+          map.view!.map.layers.addMany(map.layers!);
+          mapInterface.buildPopPup();
+        });
     });
     return mapInterface.promises["FeaturesLoad"];
   },
@@ -232,7 +238,7 @@ const mapInterface: {
         fl.popupTemplate.title = "{identificação}";
       });
     map.view?.popup.watch(["visible", "selectedFeature"], updateSelection);
-    mapInterface.promises["firstBuild"] = Promise.resolve();
+    mapInterface.promises["firstBuild"] ??= Promise.resolve();
   },
   buildMap: async ([Map, MapView]: [
     typeof Map_,
@@ -266,6 +272,9 @@ const mapInterface: {
         .then(mapInterface.afterLoad)
         .catch((err: any) => console.error("Erro no Map", err));
       //map.update();;
+      return ()=>{
+        mapInterface.promises = {};
+      }
     }, []);
   },
 };

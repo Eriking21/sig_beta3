@@ -62,12 +62,21 @@ export const ColorField = ({ lineColor }: { lineColor: string }) => (
   </div>
 );
 
-export const TextField = ({ next, error, previous, ...input }: _T_) => (
+export const TextField = ({
+  next,
+  error,
+  previous,
+  required,
+  ...input
+}: _T_) => (
   <div className="TextField">
     {input.name && <label htmlFor={input.name}>{input.name}</label>}
     <div {...Flexible_with_border}>
       {showSelections(previous, input.name + " Prev", SelectionBox)}
-      <input {...input} required={input.type !== "number"} />
+      <input
+        {...input}
+        required={required === false ? undefined : input.type !== "number"}
+      />
       {showSelections(next, input.name + " next", SelectionBox)}
     </div>
     {/*span error */}

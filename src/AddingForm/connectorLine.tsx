@@ -52,12 +52,12 @@ export const ConnectorLine = ({ activeNode, index, attributes, check }: _) => {
         fontSize: "1rem",
         width: "100%",
         boxSizing: "border-box",
-        margin: "0 .15rem"
+        margin: "0 .15rem",
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img
-        style={{ ...imgStyle, width: "1.35rem", height:"1.35rem" }}
+        style={{ ...imgStyle, width: "1.35rem", height: "1.35rem" }}
         alt={index.toString()}
         src={PowerItem[attributes.ObjectType_id].src}
       />

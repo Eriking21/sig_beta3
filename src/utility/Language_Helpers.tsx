@@ -16,6 +16,7 @@ export interface _T_  extends  Input_Helper<HTMLInputTypeAttribute> {
   max?: number;
   defaultValue?: string;
   key?: number | string;
+  required?:boolean;
 };
 
 export interface _S_ {
@@ -68,21 +69,24 @@ export interface Language {
   type: string;
   year: string;
   lineColor: string;
+
+  TrafoConnection: StrVec<2>;
   Phase_denomination: StrVec<3>;
   _identificação: Input_Helper<"text">;
   _country: Input_Helper<"text">;
   _province: Input_Helper<"text">;
+  _municipio: Input_Helper<"text">;
   _district: Input_Helper<"text">;
   _city: Input_Helper<"text">;
   _street: Input_Helper<"text">;
   _company: Input_Helper<"text">;
   _manufacturer: Input_Helper<"text">;
   _owner: Input_Helper<"text">;
-  _secção: Input_Helper<"text">;
+  _secção: Input_Helper<"text"> & { required: false };
   DEV: StrVec<2>;
-  connections:string;
-  input:string;
-  output:string;
-  height:string;
+  connections: string;
+  input: string;
+  output: string;
+  height: string;
 }
 export default Language;

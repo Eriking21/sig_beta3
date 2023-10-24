@@ -37,9 +37,14 @@ export const language: Language_type = {
       placeholder: "Insira a Província",
       type: "text",
     },
+    _municipio: {
+      name: "Municipio",
+      placeholder: "Insira o Municipio",
+      type: "text",
+    },
     _district: {
-      name: "Município",
-      placeholder: "Insira o Município",
+      name: "Distrito",
+      placeholder: "Insira o Distrito",
       type: "text",
     },
     _city: {
@@ -73,6 +78,7 @@ export const language: Language_type = {
     Phase_denomination: ["Monofásica", "Bifásica", "Trifásica"],
 
     type: "Tipo",
+    TrafoConnection : ["estrela","triângulo"],
     trafo_type: [
       ["Monofásico", "Bifásico", "Trifásico"],
       ["Monobloco", "Alvenaria"],
@@ -81,6 +87,7 @@ export const language: Language_type = {
     DEV: ["Todos os direitos reservados.", "Desenvolvido por"],
     coordinates: "Coordenadas",
     _secção: {
+      required: false,
       type: "text",
       name: "Secção",
       placeholder: "Insira a secção ou -",
@@ -89,7 +96,7 @@ export const language: Language_type = {
     connections: "Connecções",
     input: "entrada",
     output: "saida",
-    height: ""
+    height: "",
   },
 
   EN: {
@@ -157,6 +164,7 @@ export const language: Language_type = {
     DEV: ["All Rights Reserved", "Developed By"],
     coordinates: "",
     _secção: {
+      required: false,
       type: "text",
       name: "",
     },
@@ -164,6 +172,12 @@ export const language: Language_type = {
     connections: "",
     input: "",
     output: "",
-    height: "Altura"
+    height: "Altura",
+    _municipio: {
+      name: "",
+      placeholder: "",
+      type: "text",
+    },
+    TrafoConnection: ["star","triangle"]
   },
 };

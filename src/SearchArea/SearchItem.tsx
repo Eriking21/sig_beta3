@@ -1,8 +1,8 @@
 "use client";
 import { FaCircle } from "react-icons/fa";
-import { MutableRefObject, useRef } from "react";
+import { CSSProperties, MutableRefObject, useRef } from "react";
 import { PowerItem } from "../utility/options";
-import { Trafo_Info, Sub_Info } from "../app/api/data/types";
+import { Trafo_Info, Sub_Info, Consumer_Info } from "../app/api/data/types";
 import { map } from "@/Map/utility";
 import Point_ from "@arcgis/core/geometry/Point";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
@@ -10,19 +10,22 @@ import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 interface _ {
   activeNode: MutableRefObject<HTMLDivElement | null>;
   index: number;
-  attributes: Trafo_Info["attributes"] | Sub_Info["attributes"];
+  attributes:
+    | Trafo_Info["attributes"]
+    | Sub_Info["attributes"]
+    | Consumer_Info["attributes"];
   geometry: Trafo_Info["geometry"];
 }
 
 const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
-  const imgStyle = {
+  const imgStyle: CSSProperties = {
     alignSelf: "center",
     margin: ".5rem",
     height: "60%",
     width: "1.35rem",
   };
 
-  function ag(event: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
+  function alternate(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (
       activeNode?.current !== event.currentTarget &&
       activeNode?.current?.classList.contains("active")
@@ -57,6 +60,12 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
     }
   }
 
+  async function personalize(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    
+  }
+
   return (
     <div
       ref={activeNode.current === null && index === 0 ? activeNode : undefined}
@@ -68,7 +77,8 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
         alignItems: "flex-start",
         fontSize: "1rem",
       }}
-      onClick={ag}
+      onClick={alternate}
+      onDoubleClick={personalize}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img

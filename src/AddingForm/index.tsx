@@ -3,7 +3,7 @@ import "./styles.css";
 export * from "./Inputs";
 import { setForm } from "@/AddMenu";
 import { CoordField } from "./coordfield";
-import { Input, Language } from "../utility/Language";
+import { Input, Language, language } from "../utility/Language";
 import { TextField, VoltField, Selection, ColorField } from "./Inputs";
 import {
   Consumer_Info,
@@ -47,6 +47,10 @@ const AddingForm = ({ write }: _) => {
               event.currentTarget[name].placeholder;
           }
         });
+
+        if (event.currentTarget[write._secção.name].value === "") {
+          event.currentTarget[write._secção.name].value = "-";
+        }
         const formDataAsObj = formDataToObj(formData, write, formIndex);
 
         const info = getInfo(formData, write, formIndex!);
@@ -85,6 +89,7 @@ const AddingForm = ({ write }: _) => {
       <TextField {...Input.height(write)} />
       <TextField {...write._country} />
       <TextField {...write._province} />
+      <TextField {...write._municipio} />
       <TextField {...write._district} />
       <TextField {...write._city} />
       <TextField {...write._street} />
@@ -92,7 +97,9 @@ const AddingForm = ({ write }: _) => {
 
       {formIndex! === 0 && (
         <>
+          <VoltField {...{ ...write, index: 0 }} />
           <VoltField {...{ ...write, index: 1 }} />
+          <TextField {...Input.year(write)} />
           <TextField {...Input.power(write, 0)} />
           <TextField {...Input.power(write, 1)} />
         </>
@@ -116,10 +123,9 @@ const AddingForm = ({ write }: _) => {
           <TextField {...Input.power(write, 4)} />
         </>
       )}
-
       <TextField {...Input.frequency(write, formIndex!)} />
       <TextField {...write._secção} />
-      <Connector {...write} />
+      {(typeof formIndex == "number") && <Connector {...write} {...{ formIndex }} />}
       <input
         type="submit"
         value={write.register}
@@ -194,9 +200,9 @@ function getInfo(
       estado: "funcional", // Replace with appropriate value
       País: form[write._country.name],
       Província: form[write._province.name],
-      Municipio: form[write._district.name],
-      Distrito: form[write._city.name],
-      Bairro: form[write._street.name],
+      Municipio: form[write._municipio.name],
+      Distrito: form[write._district.name],
+      Bairro: form[write._city.name],
       Rua: form[write._street.name],
       H: form[write.height],
       Secção: form[write._secção.name],
@@ -208,11 +214,12 @@ function getInfo(
     (info as Sub_Info).attributes.cor_da_linha = form[write.lineColor]; // Replace with appropriate value
     (info as Sub_Info).attributes.Empresa = form[write._company.name];
     (info as Sub_Info).attributes.Ano = parseInt(form[write.year]);
-    (info as Sub_Info).attributes.P1 = form[write.Power_names[0]]; // Replace with appropriate value
-    (info as Sub_Info).attributes.P2 = form[write.Power_names[1]]; // Replace with appropriate value
+    (info as Sub_Info).attributes.P1 =
+      form[write.Power_names[0]] + form[write.Power_names[0] + " next 0"]; // Replace with appropriate value
+    (info as Sub_Info).attributes.P2 =
+      form[write.Power_names[1]] + form[write.Power_names[1] + " next 0"]; // Replace with appropriate value
     (info as Sub_Info).attributes.U1 =
       form[write.End_trafo[0]] + form[write.End_trafo[0] + " next 0"];
-    (info as Sub_Info).attributes.Secção = form[write._secção.name]; // Replace with appropriate value
   } else if (formIndex === 1) {
     (info as Trafo_Info).attributes.Empresa = form[write._manufacturer.name];
     (info as Trafo_Info).attributes.Fabricante = form[write._manufacturer.name];
@@ -232,17 +239,16 @@ function getInfo(
       ],
     });
     (info as Trafo_Info).attributes.Ligação = `${
-      ["estrela", "triângulo"][parseInt(form[write.End_trafo[0] + " mode"])]
-    }-${
-      ["estrela", "triângulo"][parseInt(form[write.End_trafo[1] + " mode"])]
+      write.TrafoConnection[parseInt(form[write.End_trafo[0] + " mode"])]
+    }-${write.TrafoConnection[parseInt(form[write.End_trafo[1] + " mode"])]}`;
+
+    (info as Trafo_Info).attributes.Tipo = `${form[write.type]} ${
+      form[write.type + " 0"]
     }`;
     (info as Trafo_Info).attributes.U1 = form[write.End_trafo[0]];
     form[write.End_trafo[0] + " next 0"];
     (info as Trafo_Info).attributes.U2 = form[write.End_trafo[1]];
-    form[write.End_trafo[1] + " next 0"]; // Replace with appropriate value
-    (info as Trafo_Info).attributes.Tipo = `${form[write.type]} ${
-      form[write.type + " 0"]
-    }`;
+    form[write.End_trafo[1] + " next 0"];
     // Replace with appropriate value
   } else if (formIndex === 2) {
     (info as Consumer_Info).attributes.Tipo = form[write.type];
@@ -272,4 +278,145 @@ export function get_Aproveitamento({ MaxPower, power }: MP) {
     ((parseFloat(power[0]) * 3 ** ["VA,kVA,MVA,GVA"].indexOf(power[1])) /
       (parseFloat(MaxPower[0]) * 3 ** ["VA,kVA,MVA,GVA"].indexOf(MaxPower[1])))
   }%`;
+}
+
+function reverseGetInfo(
+  info: newPostType["info"],
+  write: Language,
+  formData = new FormData()
+): FormData {
+  const regex = "/(d+)([a-zA-Z]+)/";
+
+  formData.set("latitude", info.geometry.latitude.toString());
+  formData.set("longitude", info.geometry.longitude.toString());
+
+  formData.set(write._identificação.name, info.attributes.identificação);
+  formData.set(write._country.name, info.attributes.País);
+  formData.set(write._province.name, info.attributes.Província);
+  formData.set(write._municipio.name, info.attributes.Municipio);
+  formData.set(write._district.name, info.attributes.Distrito);
+  formData.set(write._city.name, info.attributes.Bairro);
+  formData.set(write._street.name, info.attributes.Rua);
+  formData.set(write.height, info.attributes.H.toString());
+
+  formData.set(write._secção.name, info.attributes.Secção);
+
+  formData.set(
+    write.End_trafo[1],
+    (info.attributes.U2.match(regex) ?? ["0"])[0]
+  );
+  formData.set(
+    write.End_trafo[1] + " next 0",
+    (info.attributes.U2.match(regex) ?? ["", "V"])[1]
+  );
+
+  formData.set(
+    write.frequency,
+    (info.attributes.Frequência.match(regex) ?? ["0"])[0]
+  );
+  formData.set(
+    write.frequency[1] + " next 0",
+    (info.attributes.Frequência.match(regex) ?? ["", "Hz"])[1]
+  );
+
+  if (info.attributes.ObjectType_id === 0) {
+    formData.set(write.lineColor, (info as Sub_Info).attributes.cor_da_linha);
+    formData.set(write._company.name, (info as Sub_Info).attributes.Empresa);
+    formData.set(write.year, (info as Sub_Info).attributes.Ano.toString());
+    formData.set(
+      write.Power_names[0],
+      ((info as Sub_Info).attributes.P1.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.Power_names[0] + " next 0",
+      ((info as Sub_Info).attributes.P1.match(regex) ?? ["", "MVA"])[1]
+    );
+
+    formData.set(
+      write.Power_names[1],
+      ((info as Sub_Info).attributes.P2.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.Power_names[1] + " next 0",
+      ((info as Sub_Info).attributes.P2.match(regex) ?? ["", "MVA"])[1]
+    );
+
+    formData.set(
+      write.End_trafo[0],
+      ((info as Trafo_Info).attributes.U1.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.End_trafo[0] + " next 0",
+      ((info as Trafo_Info).attributes.U1.match(regex) ?? ["", "V"])[1]
+    );
+  } else if (info.attributes.ObjectType_id === 1) {
+    formData.set(
+      write._manufacturer.name,
+      (info as Trafo_Info).attributes.Fabricante
+    );
+    formData.set(write.year, (info as Trafo_Info).attributes.Ano.toString());
+    formData.set(
+      write.Power_names[2],
+      ((info as Trafo_Info).attributes.Capacidade.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.Power_names[2] + " next 0",
+      ((info as Trafo_Info).attributes.Capacidade.match(regex) ?? [
+        "",
+        "KVA",
+      ])[1]
+    );
+
+    formData.set(
+      write.Power_names[3],
+      ((info as Trafo_Info).attributes.Potência.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.Power_names[3] + " next 0",
+      ((info as Trafo_Info).attributes.Potência.match(regex) ?? ["", "KVA"])[1]
+    );
+
+    formData.set(
+      write.End_trafo[0],
+      ((info as Trafo_Info).attributes.U1.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.End_trafo[0] + " next 0",
+      ((info as Trafo_Info).attributes.U1.match(regex) ?? ["", "V"])[1]
+    );
+    formData.set(
+      write.type,
+      (info as Trafo_Info).attributes.Tipo.split(" ")[0]
+    );
+    formData.set(
+      write.type + " 0",
+      (info as Trafo_Info).attributes.Tipo.split(" ")[1]
+    );
+
+    formData.set(
+      write.End_trafo[0] + " mode",
+      (info as Trafo_Info).attributes.Ligação.split("-")[0]
+    );
+
+    formData.set(
+      write.End_trafo[1] + " mode",
+      (info as Trafo_Info).attributes.Ligação.split("-")[1]
+    );
+  } else if (info.attributes.ObjectType_id === 2) {
+    formData.set(write.type, (info as Consumer_Info).attributes.Tipo);
+
+    formData.set(
+      write.Power_names[4],
+      ((info as Consumer_Info).attributes.Potência.match(regex) ?? ["0"])[0]
+    );
+    formData.set(
+      write.Power_names[4] + " next 0",
+      ((info as Consumer_Info).attributes.Potência.match(regex) ?? [
+        "",
+        "KVA",
+      ])[1]
+    );
+  }
+
+  return formData;
 }

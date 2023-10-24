@@ -7,10 +7,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 0,
+      "FID":1000,
       "identificação": "PT_509S_R17",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -40,11 +39,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1,
-
+      "FID":1001,
       "identificação": "PT_LB_ENGENHARIA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -74,11 +71,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 2,
-
+      "FID":1002,
       "identificação": "PT_BLCASSENDA_R02",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -108,11 +103,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 3,
-
+      "FID":1003,
       "identificação": "PT_CASSENDA_R8",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -142,11 +135,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 4,
-
+      "FID":1004,
       "identificação": "PT_ADM_CASSENDA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -177,11 +168,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 5,
-
+      "FID":1005,
       "identificação": "PT_761S_NOTARIO_EFACEC",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -211,11 +200,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 6,
-
+      "FID":1006,
       "identificação": "PT_HOTEL_PALANCA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -245,11 +232,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 7,
-
+      "FID":1007,
       "identificação": "PT_SUITE_HOTEL_MAIANGA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -279,11 +264,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 8,
-
+      "FID":1008,
       "identificação": "PT_CENTRO_MEDICO_MAIANGA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -313,10 +296,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 9,
+      "FID":1009,
       "identificação": "PT_764S_RIO_SECO",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -346,11 +328,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 10,
-
+      "FID": 1010,
       "identificação": "PT_CODEM",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -380,11 +360,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 11,
-
+      "FID": 1011,
       "identificação": "PT_LARGO_JOAO_SECA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -414,11 +392,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 12,
-
+      "FID": 1012,
       "identificação": "PT188S_HOTEL_FLAMINGO",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -448,11 +424,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 13,
-
+      "FID": 1013,
       "identificação": "PT_28_DE_MAIO",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -482,11 +456,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 14,
-
+      "FID": 1014,
       "identificação": "PT_ZONA_VERDE",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -516,11 +488,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 15,
-
+      "FID": 1015,
       "identificação": "PT_BIG_ONE_ZONAVERDE",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -550,11 +520,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 16,
-
+      "FID": 1016,
       "identificação": "PT_RODEL_ALVALADE",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -584,11 +552,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 17,
-
+      "FID": 1017,
       "identificação": "PT_PREDIO_ENSA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -618,11 +584,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 18,
-
+      "FID": 1018,
       "identificação": "PT098S PREDIO_BELAVISTA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -652,11 +616,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 19,
-
+      "FID": 1019,
       "identificação": "PT_CASSENDA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -687,11 +649,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 20,
-
+      "FID": 1020,
       "identificação": "PT_BAIRRO_DA_MADEIRA_01",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -722,11 +682,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 21,
-
+      "FID": 1021,
       "identificação": "PT_BAIRRO_DA_MADEIRA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -757,11 +715,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 22,
-
+      "FID": 1022,
       "identificação": "PT_IMEL_BFA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -791,11 +747,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 23,
-
+      "FID": 1023,
       "identificação": "PT528S_BAIRO_MILITAR",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -825,11 +779,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 24,
-
+      "FID": 1024,
       "identificação": "PT_BANCO_PINTO_SOTTO_MAIOR",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -860,11 +812,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 25,
-
+      "FID": 1025,
       "identificação": "PT_LOTE03",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -894,11 +844,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 26,
-
+      "FID": 1026,
       "identificação": "PT_LOTE09",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -928,11 +876,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 27,
-
+      "FID": 1027,
       "identificação": "PT_LOTE22",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -962,11 +908,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 28,
-
+      "FID": 1028,
       "identificação": "PT_LOTE05",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -996,11 +940,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 29,
-
+      "FID": 1029,
       "identificação": "PT_LOTE06",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1030,11 +972,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 30,
-
+      "FID": 1030,
       "identificação": "PT_582S",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1064,11 +1004,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 31,
-
+      "FID": 1031,
       "identificação": "PT_UP",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1098,11 +1036,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 32,
-
+      "FID": 1032,
       "identificação": "PT_PRENDA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1132,11 +1068,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 33,
-
+      "FID": 1033,
       "identificação": "PT_LB_ENGENHARIA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1166,11 +1100,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 34,
-
+      "FID": 1034,
       "identificação": "PT_SAGRADA_ESPERANCA",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1200,11 +1132,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 35,
-
+      "FID": 1035,
       "identificação": "PT_FILICIO_01",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1234,11 +1164,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 36,
-
+      "FID": 1036,
       "identificação": "PT_FILICIO_02",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
@@ -1268,11 +1196,9 @@
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 37,
-
+      "FID": 1037,
       "identificação": "PT_RUA_13",
       "estado": "funcional",
-
       "País": "Angola",
       "Província": "Luanda",
       "Municipio": "Luanda",
