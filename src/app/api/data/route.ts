@@ -91,17 +91,17 @@ export async function POST(request: NextRequest) {
     ]);
 
   a.connections.forEach((conn) => {
-    if (conn > 1000) {
+    if (a.info.attributes.FID > 1000) {
       CON_TRAFO.push({
-        "0": [Math.floor(conn / 1000), conn % 1000],
-        "1": [
+        "0": [
           Math.floor(a.info.attributes.FID / 1000),
           a.info.attributes.FID % 1000,
         ],
+        "1": [Math.floor(conn / 1000), conn % 1000],
         power: "0W",
       });
     } else {
-      CON_SE.push({ "0": conn, "1": a.info.attributes.FID, power: "0W" });
+      CON_SE.push({ "0": a.info.attributes.FID, "1": conn, power: "0W" });
     }
   });
 
