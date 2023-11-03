@@ -1,6 +1,6 @@
 @echo off
 
-git pull -f origin main 
+git pull origin main 
 pnpm run dev
 
 @echo server closed
