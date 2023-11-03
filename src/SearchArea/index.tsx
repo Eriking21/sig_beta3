@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import { SearchBar } from "./SearchBar";
 import  SearchBox from "./searchBox";
 import "./styles.css";
-import {map} from "../Map/utility";
+import {mapInterface} from "../Map/interface";
 
 export default function SearchArea () {
 

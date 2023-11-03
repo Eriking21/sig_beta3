@@ -5,31 +5,73 @@ import Point_ from "@arcgis/core/geometry/Point";
 import Polyline_ from "@arcgis/core/geometry/Polyline";
 import FeatureLayer_ from "@arcgis/core/layers/FeatureLayer";
 import SimpleRenderer_ from "@arcgis/core/renderers/SimpleRenderer";
-import UniqueValueRenderer_ from "@arcgis/core/renderers/UniqueValueRenderer";
+//import UniqueValueRenderer_ from "@arcgis/core/renderers/UniqueValueRenderer";
 import PictureMarkerSymbol_ from "@arcgis/core/symbols/PictureMarkerSymbol";
 import SimpleMarkerSymbol_ from "@arcgis/core/symbols/SimpleMarkerSymbol";
 import SimpleLineSymbol_ from "@arcgis/core/symbols/SimpleLineSymbol";
-import CIMSymbol_ from "@arcgis/core/symbols/CIMSymbol";
+//import CIMSymbol_ from "@arcgis/core/symbols/CIMSymbol";
 import Graphic_ from "@arcgis/core/Graphic";
 import ColorVariable_ from "@arcgis/core/renderers/visualVariables/ColorVariable";
 import { loadModules } from "esri-loader";
-import { getFields, getLineFields, map, updateSelection } from "./utility";
 import { PowerItem, basemap } from "../utility/options";
-import { erimServerData, erimClientData } from "@/app/api/data/types";
-import { useEffect } from "react";
+import { erimServerData, erimClientData, Info } from "@/app/api/data/types";
 
-const mapInterface: {
+import { MutableRefObject, useEffect } from "react";
+import Collection_ from "@arcgis/core/core/Collection";
+//import Layer_ from "@arcgis/core/layers/Layer";
+//import Collection from "@arcgis/core/core/Collection";
+
+type MapInterface = {
+  Point: typeof Point_ | undefined;
+  Graphic: typeof Graphic_ | undefined;
+  Polyline: typeof Polyline_ | undefined;
+  objects: Info[][];
+  view: MapView_ | undefined;
+  layers: Collection_<FeatureLayer_> | undefined;
   afterLoad?: () => void | Promise<void>;
-  promises: { [key: number | string]: Promise<void> };
+  promises: {
+    [key: number | string]: Promise<void>;
+  };
   updateFeatures: (response: erimServerData) => Promise<void>;
-  buildMap: ([Map, MapView]: [typeof Map_, typeof MapView_]) => Promise<void>;
-  useMap: (dataProps: Promise<erimServerData>) => void;
+  loadMap: ([Map, MapView]: [typeof Map_, typeof MapView_]) => Promise<void>;
+  useMap: () => void;
   buildPopPup: () => void;
-} = {
+  search: {
+    watcher: __esri.WatchHandle | undefined;
+    input: HTMLInputElement | undefined;
+    item: MutableRefObject<HTMLDivElement | null> | undefined;
+    listeners: Set<(setToogle: (toogle: boolean) => boolean) => void>;
+    getValue: () => string;
+    clear: () => void;
+    update: () => void;
+  };
+};
+
+const mapInterface: MapInterface = {
+  Point: undefined,
+  Graphic: undefined,
+  Polyline: undefined,
+  objects: [],
+  view: undefined,
+  layers: undefined,
+  search: {
+    watcher: undefined as __esri.WatchHandle | undefined,
+    input: undefined as HTMLInputElement | undefined,
+    item: undefined as MutableRefObject<HTMLDivElement | null> | undefined,
+    listeners: new Set<(setToogle: (toogle: boolean) => boolean) => void>(),
+    getValue: () => mapInterface.search?.input?.value ?? "",
+    clear: () => {
+      if (mapInterface.search?.input || false) {
+        mapInterface.search!.input!.value = "";
+        mapInterface.search.update();
+      }
+    },
+    update: () => mapInterface.search.listeners.forEach((f) => f((i) => !i)),
+  },
   promises: {},
-  updateFeatures: (response) => {
+  updateFeatures: async (response) => {
     const data = new erimClientData(response);
-    map.objects = [data.subs, data.trafos.flat()];
+    mapInterface.objects = [data.subs, data.trafos.flat()];
     const lineColors: { value: number; color: number[] | string }[] = [];
     function addColor({
       FID,
@@ -52,24 +94,24 @@ const mapInterface: {
       }
       return FID;
     }
-    const loadFeatures = async ([
+    const loadFeatures = ([
       FeatureLayer,
       Point,
       Polyline,
       SimpleRenderer,
-      UniqueValueRenderer,
+      //UniqueValueRenderer,
       PictureMarkerSymbol,
       SimpleMarkerSymbol,
       SimpleLineSymbol,
-      CIMSymbol,
+      //CIMSymbol,
       Graphic,
       ColorVariable,
-    ]: FeaturesT): Promise<void> => {
-      map.Point = Point;
-      map.Graphic = Graphic;
-      map.Polyline = Polyline;
+    ]: FeaturesT): FeatureLayer_[] => {
+      mapInterface.Point = Point;
+      mapInterface.Graphic = Graphic;
+      mapInterface.Polyline = Polyline;
       //if (!data.trafos || !data.trafos[0]) return;
-      map.layers = [
+      return [
         new FeatureLayer({
           title: "lines",
           objectIdField: "FID",
@@ -77,7 +119,8 @@ const mapInterface: {
           source: [
             ...data.subs.flatMap((sub) => {
               addColor(sub.attributes);
-              return data.trafos[sub.attributes.FID].map(
+              console.log(data.trafos);
+              return data.trafos[sub.attributes.FID]?.map(
                 ({ attributes: trafo, geometry: trafo_geometry }) => ({
                   geometry: new Polyline({
                     paths: [
@@ -155,7 +198,7 @@ const mapInterface: {
             ],
           }),
         }),
-        ...map.objects.flatMap((vec) => {
+        ...mapInterface.objects.flatMap((vec) => {
           const fields = getFields(vec[0].attributes);
           const type = vec[0].attributes.ObjectType_id;
           return [
@@ -196,85 +239,102 @@ const mapInterface: {
           ];
         }),
       ];
-      //replace old layers
     };
-    mapInterface.promises["FeaturesLoad"] = loadModules<FeaturesT>(
-      FeaturesUrl,
-      {
-        css: true,
-      }
-    )
+
+    return loadModules<FeaturesT>(FeaturesUrl, {
+      css: true,
+    })
       .then(loadFeatures)
-      .catch((err) => console.error("Erro no carregamento de info", err));
-
-    mapInterface.promises["firstFeaturesLoad"] ??=
-      mapInterface.promises["FeaturesLoad"];
-
-    mapInterface.promises["FeaturesLoad"].then(() => {
-      map.updateListeners.forEach((listener) => {
-        listener((toogle) => !toogle);
-      });
-      Object.keys(mapInterface.promises).includes("firstBuild") &&
-        mapInterface.promises["firstBuild"].then(() => {
-          map.view!.map.layers.removeAll();
-          map.view!.map.layers.addMany(map.layers!);
+      .catch((err) => {
+        console.error("Erro ao carregar features", err);
+        return [] as ReturnType<typeof loadFeatures>;
+      })
+      .then(async (featuresLayers) => {
+        if (
+          featuresLayers.length != 0 &&
+          Object.keys(mapInterface.promises).includes("loadMap")
+        ) {
+          await mapInterface.promises["loadMap"];
+          mapInterface.layers?.removeAll();
+          mapInterface.layers?.addMany(featuresLayers);
+          mapInterface.search.update();
+          await mapInterface.promises["ready"];
           mapInterface.buildPopPup();
-        });
-    });
-    return mapInterface.promises["FeaturesLoad"];
+        }
+      });
   },
+
   buildPopPup: () => {
-    map.layers
+    mapInterface.layers
       ?.filter((fl) => fl.fields !== undefined)
       .forEach((fl) => {
         fl.popupTemplate = fl.createPopupTemplate({
           ignoreFieldTypes: ["global-id", "guid", "oid"],
         });
       });
-    map.layers
-      ?.filter((fl) => fl.popupTemplate ?? false)
-      .forEach((fl) => {
-        //console.log(fl.fields);
-        fl.popupTemplate.title = "{identificação}";
-      });
-    map.view?.popup.watch(["visible", "selectedFeature"], updateSelection);
+    mapInterface.layers?.forEach((fl) => {
+      //console.log(fl.fields);
+      fl.popupTemplate.title = "{identificação}";
+    });
+    mapInterface.view?.popup.watch(
+      ["visible", "selectedFeature"],
+      updateSelection
+    );
     mapInterface.promises["firstBuild"] ??= Promise.resolve();
   },
-  buildMap: async ([Map, MapView]: [
+  loadMap: async ([Map, MapView]: [
     typeof Map_,
     typeof MapView_
   ]): Promise<void> => {
-    //console.log("buildMap");
-    await mapInterface.promises["firstFeaturesLoad"]; //it will thrown an error if called first
+    //console.log("buildMap"); //it will thrown an error if called first
     const view = new MapView({
       container: "map",
-      map: new Map({
-        basemap: basemap[0].title,
-        layers: map.layers,
-      }),
+      map: new Map({ basemap: basemap[0].title, layers: mapInterface.layers }),
       center: [13.234444, -8.838333],
       zoom: 13,
     });
-
-    map.view = view;
-    return view.when(mapInterface.buildPopPup);
+    mapInterface.view = view;
+    mapInterface.layers = view.map.layers as any;
+    mapInterface.promises["ready"] = view?.when();
+    mapInterface.promises["ready"].then(mapInterface.afterLoad);
+    return;
   },
-  useMap: (dataProps) => {
-    //console.log("usemap");
+  useMap: () => {
     useEffect(() => {
-      dataProps.then(mapInterface.updateFeatures, (err) =>
-        console.error("Erro no carregamento de info", err)
+      const updateFeatures = () =>
+        (mapInterface.promises["updateFeatures"] = fetch(
+          document.location.origin + "/api/data",
+          {
+            method: "GET",
+            next: { tags: ["update_features"] },
+            cache: "no-store",
+          }
+        )
+          .then((response) => response.json() as Promise<erimServerData>)
+          .then(mapInterface.updateFeatures));
+
+      Promise.all([
+        (mapInterface.promises["loadMap"] = loadModules<
+          [typeof Map_, typeof MapView_]
+        >(ArcGisMapPath, { css: true })
+          .then(mapInterface.loadMap)
+          .catch((err: any) => console.error("Erro no Map", err))),
+        updateFeatures(),
+      ]);
+
+      const event = new ErimEvent(
+        document.location.origin + "/api/data/refresh",
+        {
+          update: function (msg) {
+            console.log("update", msg);
+            updateFeatures();
+          },
+        }
       );
-    }, [dataProps]);
-    useEffect(() => {
-      loadModules<[typeof Map_, typeof MapView_]>(ArcGisMapPath, { css: true })
-        .then(mapInterface.buildMap)
-        .then(mapInterface.afterLoad)
-        .catch((err: any) => console.error("Erro no Map", err));
-      //map.update();;
-      return ()=>{
+      return () => {
+        event.clean();
         mapInterface.promises = {};
-      }
+      };
     }, []);
   },
 };
@@ -285,11 +345,11 @@ type FeaturesT = [
   typeof Point_,
   typeof Polyline_,
   typeof SimpleRenderer_,
-  typeof UniqueValueRenderer_,
+  //typeof UniqueValueRenderer_,
   typeof PictureMarkerSymbol_,
   typeof SimpleMarkerSymbol_,
   typeof SimpleLineSymbol_,
-  typeof CIMSymbol_,
+  //typeof CIMSymbol_,
   typeof Graphic_,
   typeof ColorVariable_
 ];
@@ -299,13 +359,163 @@ const FeaturesUrl = [
   "esri/geometry/Point",
   "esri/geometry/Polyline",
   "esri/renderers/SimpleRenderer",
-  "esri/renderers/UniqueValueRenderer",
+  //"esri/renderers/UniqueValueRenderer",
   "esri/symbols/PictureMarkerSymbol",
   "esri/symbols/SimpleMarkerSymbol",
   "esri/symbols/SimpleLineSymbol",
-  "esri/symbols/CIMSymbol",
+  //"esri/symbols/CIMSymbol",
   "esri/Graphic",
   "esri/renderers/visualVariables/ColorVariable",
 ];
 export default mapInterface.useMap;
 export { mapInterface };
+
+export function getLineFields(): __esri.FieldProperties[] | undefined {
+  return [
+    {
+      name: "lineColor",
+      type: "guid",
+    },
+    {
+      name: "FID",
+      type: "string",
+    },
+    {
+      name: "power",
+      alias: "potência",
+      type: "string",
+    },
+    {
+      name: "identificação",
+      type: "global-id",
+    },
+  ];
+}
+export function getFields<T extends {}>(
+  attributes: T
+): __esri.FieldProperties[] | undefined {
+  return Object.entries(attributes).map(([key, value]) => ({
+    name: key,
+    alias: key,
+    type: typeof value === "number" ? "integer" : "string",
+  }));
+}
+
+export function updateSelection(some: any) {
+  "use client";
+  if (some === null) return;
+  const id: string =
+    mapInterface.view?.popup.selectedFeature?.attributes?.identificação ?? "";
+  mapInterface.search.clear();
+  if (
+    some === false ||
+    (mapInterface.search.item?.current?.classList.contains("active") &&
+      (mapInterface.search.item?.current?.childNodes.item(1) as HTMLSpanElement)
+        .innerText !== id)
+  ) {
+    mapInterface.search.item?.current?.classList.remove("active");
+  }
+
+  mapInterface.search.item?.current?.parentNode?.childNodes.forEach((child) => {
+    if (
+      (child.childNodes.item(1) as HTMLSpanElement).innerText === id &&
+      !(child as HTMLDivElement).classList.contains("active") &&
+      some !== false
+    ) {
+      (child as HTMLDivElement).classList.add("active");
+      mapInterface.search.item!.current = child as HTMLDivElement;
+      mapInterface.search.item!.current!.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+  });
+}
+type EventListeners = {
+  [key: string]: (this: EventSource, ev: MessageEvent) => any;
+};
+
+class ErimEvent {
+  source: EventSource;
+  listeners: EventListeners;
+  retries = 0;
+  readonly maxRetries = 3;
+  clean() {
+    this.source.close();
+  }
+  constructor(url: EventSource["url"], listeners: EventListeners = {}) {
+    const self = this;
+    this.source = new EventSource(url);
+    this.listeners = {
+      ...listeners,
+      open: function (this: EventSource, ev: MessageEvent<any>) {
+        listeners["open"]?.call(self.source, ev);
+        Object.entries(self.listeners).forEach(([key, value]) => {
+          self.source.addEventListener(key, value);
+        });
+      },
+      close: function (this: EventSource, ev: MessageEvent<any>) {
+        listeners["close"]?.call(self.source, ev);
+        Object.entries(self.listeners).forEach(([key, value]) => {
+          self.source.removeEventListener(key, value);
+        });
+      },
+      retry: function (this: EventSource, ev: MessageEvent<any>) {
+        listeners["retry"]?.call(self.source, ev);
+        if (self.retries == self.maxRetries) self.retries = 0;
+        self.listeners["close"]!.call(self.source, ev);
+        self.source = new EventSource(self.source.url);
+        self.listeners["open"]!.call(self.source, ev);
+      },
+      error: function (this: EventSource, ev: MessageEvent<any>) {
+        listeners["error"]?.call(self.source, ev);
+        if (self.retries++ < self.maxRetries) {
+          setTimeout(() => {
+            self.listeners["reset"]!.call(self.source, ev);
+          }, 3000);
+        } else {
+          listeners["fail"]?.call(self.source, ev);
+          // it will call self.listeners["close"]!.call(self.source, ev)?
+          self.source.close();
+        }
+      },
+    };
+    Object.entries(self.listeners).forEach(([key, value]) => {
+      self.source.addEventListener(key, value);
+    });
+  }
+}
+/*
+const event: {
+  source: EventSource;
+  listeners: { [key: string]: (this: EventSource, ev: MessageEvent) => any };
+  clean: () => void;
+} = {
+  source: new EventSource(document.location.origin + "/api/data/refresh"),
+  clean: () => {
+    Object.entries(event.listeners).forEach(([key, value]) => {
+      event.source.removeEventListener(key, value);
+    });
+    event.source.close();
+  },
+  listeners: {
+    open: function (this: EventSource, ev: MessageEvent<any>) {
+      Object.entries(event.listeners).forEach(([key, value]) => {
+        this.addEventListener(key, value);
+      });
+    },
+    update: function (this: EventSource, ev: MessageEvent<any>) {
+      console.log("update", this.url, ev);
+    },
+    close: function (this: EventSource, ev: MessageEvent<any>) {
+      event.clean();
+    },
+    reset: function (this: EventSource, ev: MessageEvent<any>) {
+      event.listeners["close"]!.call(this, ev);
+      event.source = new EventSource(event.source.url);
+      event.listeners["open"]!.call(this, ev);
+    },
+    error: function (this: EventSource, ev: MessageEvent<any>) {
+      event.listeners["reset"]!.call(this, ev);
+    },
+  },
+};
+*/

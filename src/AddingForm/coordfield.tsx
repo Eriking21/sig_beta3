@@ -2,7 +2,7 @@
 import { MutableRefObject, useEffect } from "react";
 import { Language } from "../utility/Language";
 import { FlexWrapper, Flexible_with_border } from "./Inputs";
-import { map } from "../Map/utility";
+import { mapInterface } from "../Map/interface";
 
 import Graphic_ from "@arcgis/core/Graphic";
 import {
@@ -19,8 +19,8 @@ interface _C_ extends Language {
 const newLocal: ["latitude", "longitude"] = ["latitude", "longitude"];
 export const CoordField = ({ coordinates, index: form }: _C_) => {
   useEffect(() => {
-    if (map.view === undefined || form === undefined) return;
-    const mapview = map.view!;
+    if (mapInterface.view === undefined || form === undefined) return;
+    const mapview = mapInterface.view!;
     //const graphics = map.getGraphics();
 
     const outerSymbol:
@@ -70,8 +70,8 @@ export const CoordField = ({ coordinates, index: form }: _C_) => {
     //   }),
     // ]});
 
-    const point = new map.Graphic!({
-      geometry: map.view!.center,
+    const point = new mapInterface.Graphic!({
+      geometry: mapInterface.view!.center,
       symbol: outerSymbol as any,
       attributes: {
         id: "addingPoint", // Assign a unique ID
@@ -115,10 +115,10 @@ export const CoordField = ({ coordinates, index: form }: _C_) => {
               type="number"
               name={coordName}
               step={0.001}
-              defaultValue={map.view?.center[coordName] ?? 0}
+              defaultValue={mapInterface.view?.center[coordName] ?? 0}
               onChange={(event) => {
-                if (map.view === undefined) return;
-                const mapview = map.view!;
+                if (mapInterface.view === undefined) return;
+                const mapview = mapInterface.view!;
                 // Find the graphic using its ID
                 const graphic = mapview.graphics.find(
                   (graphic) => graphic.attributes.id === "addingPoint"

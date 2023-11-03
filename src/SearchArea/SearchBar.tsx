@@ -1,4 +1,4 @@
-import { map } from "@/Map/utility";
+import { mapInterface } from "@/Map/interface";
 import { CSSProperties, ChangeEvent } from "react";
 
 import { FaSearch } from "react-icons/fa";
@@ -27,13 +27,20 @@ export const SearchBar = ({ isLarge = true }: _) => {
   };
 
   function handleChange(event: ChangeEvent<HTMLInputElement>): void {
-    map.search.input = event.currentTarget;
-    map.view?.popup.close();
-    map.search.update();
+    mapInterface.search.input = event.currentTarget;
+    mapInterface.view?.popup.close();
+    mapInterface.search.update();
+  }
+  
+  function handleChange2(event: React.MouseEvent<HTMLButtonElement>): void {
+    mapInterface.search.input = event.currentTarget
+      .previousElementSibling! as any;
+    mapInterface.view?.popup.close();
+    mapInterface.search.update();
   }
 
   return (
-    <div
+    <form
       style={{
         margin: `.7em ${isLarge ? "1.15em" : "1rem"}`,
         alignSelf: "stretch",
@@ -51,9 +58,9 @@ export const SearchBar = ({ isLarge = true }: _) => {
         id="searchBar"
         onChange={handleChange}
       />
-      <button style={buttonStyle}>
+      <button style={buttonStyle} onClick={handleChange2}>
         <FaSearch />
       </button>
-    </div>
+    </form>
   );
 };

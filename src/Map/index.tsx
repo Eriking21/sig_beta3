@@ -7,12 +7,13 @@ import LoadingScreen from "./loading";
 import { CSSProperties } from "react";
 
 interface _ {
-  information: Promise<erimServerData>;
+  
 }
-export default function ArcGISMap({ information }: _) {
+export default function ArcGISMap() {
   "use client";
   //console.log("build main");
-  useMap(information);
+  useMap();
+
   return (
     <main style={mainMapStyle}>
       <div id="map" style={{ minWidth: "100%", minHeight: "100%" }}></div>
@@ -23,11 +24,10 @@ export default function ArcGISMap({ information }: _) {
 }
 mapInterface.afterLoad = () => {
   //console.log("fully loaded");
-
   setTimeout(() => {
     document.getElementById("map_is_loading")?.remove();
     document.getElementById("add-menu")!.style.opacity = "1";
-  }, 10000);
+  }, 8000);
 };
 
 const mainMapStyle: CSSProperties = {

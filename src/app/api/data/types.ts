@@ -29,6 +29,7 @@ export type Sub_Info = Info_type<0> & {
     U1: string;
   };
 };
+
 export type Trafo_Info = Info_type<0> & {
   attributes: {
     Empresa: string;
@@ -48,6 +49,8 @@ export type Consumer_Info = Info_type<0> & {
     Tipo: string;
   };
 };
+export type Info = Trafo_Info | Sub_Info | Consumer_Info;
+
 export type CON_SE_Info = link_line<number>;
 export type CON_TRAFO_Info = link_line<[number, number]>;
 type link_line<T> = {

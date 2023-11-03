@@ -3,9 +3,7 @@ import { FaCircle } from "react-icons/fa";
 import { CSSProperties, MutableRefObject, useRef } from "react";
 import { PowerItem } from "../utility/options";
 import { Trafo_Info, Sub_Info, Consumer_Info } from "../app/api/data/types";
-import { map } from "@/Map/utility";
-import Point_ from "@arcgis/core/geometry/Point";
-import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
+import { mapInterface } from "@/Map/interface";
 
 interface _ {
   activeNode: MutableRefObject<HTMLDivElement | null>;
@@ -35,14 +33,14 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
 
     if (event.currentTarget.classList.contains("active")) {
       event.currentTarget.classList.remove("active");
-      map.view?.popup.close();
+      mapInterface.view?.popup.close();
     } else {
       event.currentTarget.classList.add("active");
       activeNode.current = event.currentTarget;
       console.log(attributes.FID);
       const i = Promise.all(
-        map.layers!.map((fl) =>
-          (fl as FeatureLayer).queryFeatures({
+        mapInterface.layers!.map((fl) =>
+          (fl ).queryFeatures({
             where: `identificação = '${attributes.identificação}'`,
             //geometry: geometry,
           })
@@ -52,7 +50,7 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
       i.then((R) => {
         const features = [...R.map((K) => K.features)].flat().reverse();
         console.log(features);
-        map.view?.popup.open({
+        mapInterface.view?.popup.open({
           features: features,
           location: geometry as __esri.Point,
         });

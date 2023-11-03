@@ -21,7 +21,7 @@ interface _ {
 const AddingForm = ({ write }: _) => {
   const formIndex = setForm.useListener();
   return (
-    <form
+    <form id="adding-form"
       style={{
         width: "inherit",
         height: "inherit",

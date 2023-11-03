@@ -1,30 +1,31 @@
 "use client";
 import { useState, useRef, useEffect, use, useMemo, useCallback } from "react";
 import SearchItem from "./SearchItem";
-import { map } from "../Map/utility";
+import { mapInterface } from "@/Map/interface";
 
 export default function SearchBox() {
-  map.search.item = useRef<HTMLDivElement | null>(null);
+  mapInterface.search.item = useRef<HTMLDivElement | null>(null);
   const [, setToogle] = useState(false);
+
   useEffect(() => {
-    map.updateListeners.add(setToogle);
+    mapInterface.search.listeners.add(setToogle);
     return () => {
-      map.updateListeners.delete(setToogle);
+      mapInterface.search.listeners.delete(setToogle);
     };
   }, []);
 
-  const items = map.objects
+  const items = mapInterface.objects
     .flat()
     ?.filter((point) =>
       point.attributes.identificação
         .toLowerCase()
-        .includes(map.search.getValue())
+        .includes(mapInterface.search.getValue())
     )
     .map((point, index) => {
       return (
         <SearchItem
           key={index}
-          {...{ ...point, activeNode: map.search.item!, index }}
+          {...{ ...point, activeNode: mapInterface.search.item!, index }}
         />
       );
     });

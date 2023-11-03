@@ -1,18 +1,15 @@
 "use client";
 import { FaCircle } from "react-icons/fa";
-import { MutableRefObject, useRef } from "react";
+import { MutableRefObject} from "react";
 import { PowerItem } from "../utility/options";
-import { Trafo_Info, Sub_Info } from "../app/api/data/types";
-import { map } from "@/Map/utility";
-import Point_ from "@arcgis/core/geometry/Point";
-import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
+import { Info } from "../app/api/data/types";
 import { stateColor } from "@/SearchArea/SearchItem";
 
 interface _ {
   activeNode: MutableRefObject<HTMLInputElement | null>;
   index: number;
-  attributes: Trafo_Info["attributes"] | Sub_Info["attributes"];
-  geometry: Trafo_Info["geometry"];
+  attributes: Info["attributes"];
+  geometry: Info["geometry"];
   check: [boolean | null, boolean | null];
 }
 

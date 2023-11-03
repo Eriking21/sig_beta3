@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import SplashButton from "../utility/SplashButton";
 import { basemap } from "../utility/options";
-import { map } from "./utility";
+import { mapInterface } from "./interface";
 
 interface Props {
   onRight?: Boolean;
@@ -10,8 +10,8 @@ interface Props {
 }
 
 function setMap (index:number) {
-  if (map.view === undefined) return;
-  map.view!.map.basemap = basemap[index].title as any;
+  if (mapInterface.view === undefined) return;
+  mapInterface.view!.map.basemap = basemap[index].title as any;
 }
 
 const SelectMap = ({ onRight = true}: Props) => {

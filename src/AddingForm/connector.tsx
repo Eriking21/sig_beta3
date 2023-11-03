@@ -1,6 +1,6 @@
 "use client";
-import { map } from "@/Map/utility";
-import { useRef, useState, useEffect } from "react";
+import { mapInterface } from "@/Map/interface";
+import { useRef } from "react";
 import { FlexWrapper, Flexible_with_border } from ".";
 import { ConnectorLine } from "./connectorLine";
 import { FormIndex, setForm } from "@/AddMenu";
@@ -27,12 +27,12 @@ export function Connector({
           overflow: "scroll",
         }}
       >
-        {map.objects
+        {mapInterface.objects
           .flat()
           ?.filter((point) =>
             point.attributes.identificação
               .toLowerCase()
-              .includes(map.search.getValue())
+              .includes(mapInterface.search.getValue())
           )
           .map((point, index) => {
             const check: [boolean | null, boolean | null] = [
