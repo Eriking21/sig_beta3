@@ -1,4 +1,5 @@
 "use server";
+import lockfile from "proper-lockfile";
 import fs, { promises as fs2 } from "fs";
 import { revalidateTag } from "next/cache";
 import { newPostType } from "@/AddingForm";
@@ -64,6 +65,10 @@ export async function POST(request: NextRequest) {
     file += Math.floor(num / 1000) + "PT" + (num % 1000);
   }
 
+  await lockfile.lock("./data/index.json").catch((err) => {
+    console.log("locking Error");
+  });
+
   const max: { [key: string]: number } = JSON.parse(
     await fs2.readFile("./data/index.json", encoding)
   );
@@ -100,6 +105,8 @@ export async function POST(request: NextRequest) {
     fs2.writeFile("./data/CON_SE.json", JSON.stringify(CON_SE)),
     fs2.writeFile("./data/CON_TRAFO.json", JSON.stringify(CON_TRAFO)),
   ]);
+
+  await lockfile.unlock("./data/index.json");
   revalidateTag("update_features");
   triggerRefresh();
   return new NextResponse("ok");
