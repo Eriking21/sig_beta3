@@ -2,18 +2,13 @@
 import { FaCircle } from "react-icons/fa";
 import { CSSProperties, MutableRefObject, useRef } from "react";
 import { PowerItem } from "../utility/options";
-import { Trafo_Info, Sub_Info, Consumer_Info } from "../app/api/data/types";
+import { Info } from "../app/api/data/types";
 import { mapInterface } from "@/Map/interface";
 
-interface _ {
+type _ = Info & {
   activeNode: MutableRefObject<HTMLDivElement | null>;
   index: number;
-  attributes:
-    | Trafo_Info["attributes"]
-    | Sub_Info["attributes"]
-    | Consumer_Info["attributes"];
-  geometry: Trafo_Info["geometry"];
-}
+};
 
 const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
   const imgStyle: CSSProperties = {
@@ -40,7 +35,7 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
       console.log(attributes.FID);
       const i = Promise.all(
         mapInterface.layers!.map((fl) =>
-          (fl ).queryFeatures({
+          fl.queryFeatures({
             where: `identificação = '${attributes.identificação}'`,
             //geometry: geometry,
           })
@@ -60,9 +55,7 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
 
   async function personalize(
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) {
-    
-  }
+  ) {}
 
   return (
     <div

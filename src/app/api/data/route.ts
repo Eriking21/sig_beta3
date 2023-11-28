@@ -4,42 +4,28 @@ import fs, { promises as fs2 } from "fs";
 import { revalidateTag } from "next/cache";
 import { newPostType } from "@/AddingForm";
 import { NextRequest, NextResponse } from "next/server";
-import {
-  CON_SE_Info,
-  CON_TRAFO_Info,
-  Trafo_Info,
-  erimServerData,
-  erim_vec,
-} from "./types";
+import { Pils_Info, Pils_Source_Info, erimServerData, erim_vec } from "./types";
 import { triggerRefresh } from "./refresh/route";
 
 export async function getData(): Promise<erimServerData> {
   "use server";
-  let subs: erimServerData["subs"] = JSON.parse(
-    await fs2.readFile("./data/SE_info.json", { encoding: "utf8" })
+  let sources: erimServerData["sources"] = JSON.parse(
+    `./data/Pils_Sources.json`
   );
-  const [CON_SE, CON_TRAFO, ...trafos] = [
-    JSON.parse(
-      await fs2.readFile("./data/CON_SE.json", { encoding: "utf8" })
-    ) as erimServerData["CON_SE"],
-    JSON.parse(
-      await fs2.readFile("./data/CON_TRAFO.json", { encoding: "utf8" })
-    ) as erimServerData["CON_TRAFO"],
-    ...Object.keys(subs).map((k) => {
-      const file = `./data/SE${k}.json`;
+  const pils = [
+    ...Object.keys(sources).map((k) => {
+      const file = `./data/pils${sources[parseInt(k)].attributes.FID}.json`;
       return fs.existsSync(file)
         ? fs2
             .readFile(file, { encoding: "utf8" })
-            .then((file) => JSON.parse(file) as erim_vec<Trafo_Info>)
-        : Promise.resolve({} as erim_vec<Trafo_Info>);
+            .then((file) => JSON.parse(file) as erim_vec<Pils_Info>)
+        : Promise.resolve({} as erim_vec<Pils_Info>);
     }),
   ];
 
   return {
-    subs: subs,
-    trafos: await Promise.all([...trafos]),
-    CON_SE: CON_SE,
-    CON_TRAFO: CON_TRAFO,
+    sources: sources,
+    pils: await Promise.all([...pils]),
   };
 }
 
@@ -50,19 +36,19 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   const a: newPostType = await request.json();
-  let num = a.mainLine;
-  let file = "SE";
+  let source = a.source;
+  let file = "Pils";
   const encoding = { encoding: "utf8" as BufferEncoding };
 
-  if (num === undefined) {
+  if (source === undefined) {
     a.info.attributes.FID = 0;
-    file += "_info";
-  } else if (num < 1000) {
+    file += "_Source";
+  } else if (source < 1000) {
     a.info.attributes.FID = 1000;
-    file += num;
-  } else {
-    a.info.attributes.FID = 1000000;
-    file += Math.floor(num / 1000) + "PT" + (num % 1000);
+    file += source;
+  } else{
+    console.log("invalid data")
+    return ;
   }
 
   await lockfile.lock("./data/index.json").catch((err) => {
@@ -74,7 +60,7 @@ export async function POST(request: NextRequest) {
   );
 
   max[file] ??= 0;
-  a.info.attributes.FID += (num ?? 0) * 1000 + max[file]++;
+  a.info.attributes.FID += (source ?? 0) * 1000 + max[file]++;
 
   let list: newPostType["info"][] = fs.existsSync(`./data/${file}.json`)
     ? JSON.parse(await fs2.readFile(`./data/${file}.json`, encoding))
@@ -82,28 +68,9 @@ export async function POST(request: NextRequest) {
 
   list.push(a.info);
 
-  const [CON_SE, CON_TRAFO]: [CON_SE_Info[], CON_TRAFO_Info[]] = [
-    JSON.parse(await fs2.readFile("./data/CON_SE.json", encoding)),
-    JSON.parse(await fs2.readFile("./data/CON_TRAFO.json", encoding)),
-  ];
-  a.connections.forEach((conn) => {
-    let target = a.info.attributes.FID;
-    if (target < 1000) {
-      CON_SE.push({ "0": target, "1": conn, power: "0W" });
-    } else {
-      target -= 1000;
-      CON_TRAFO.push({
-        "0": [Math.floor(target / 1000), target % 1000],
-        "1": [Math.floor(conn / 1000), conn % 1000],
-        power: "0W",
-      });
-    }
-  });
   await Promise.all([
     fs2.writeFile("./data/index.json", JSON.stringify(max)),
     fs2.writeFile(`./data/${file}.json`, JSON.stringify(list)),
-    fs2.writeFile("./data/CON_SE.json", JSON.stringify(CON_SE)),
-    fs2.writeFile("./data/CON_TRAFO.json", JSON.stringify(CON_TRAFO)),
   ]);
 
   await lockfile.unlock("./data/index.json");

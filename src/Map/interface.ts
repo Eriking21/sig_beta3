@@ -71,7 +71,7 @@ const mapInterface: MapInterface = {
   promises: {},
   updateFeatures: async (response) => {
     const data = new erimClientData(response);
-    mapInterface.objects = [data.subs, data.trafos.flat()];
+    mapInterface.objects = [data.sources, data.pils.flat()];
     const lineColors: { value: number; color: number[] | string }[] = [];
     function addColor({
       FID,
@@ -110,22 +110,22 @@ const mapInterface: MapInterface = {
       mapInterface.Point = Point;
       mapInterface.Graphic = Graphic;
       mapInterface.Polyline = Polyline;
-      //if (!data.trafos || !data.trafos[0]) return;
+      //if (!data.pils || !data.pils[0]) return;
       return [
         new FeatureLayer({
           title: "lines",
           objectIdField: "FID",
           fields: getLineFields(),
           source: [
-            ...data.subs.flatMap((sub) => {
-              addColor(sub.attributes);
-              console.log(data.trafos);
-              return data.trafos[sub.attributes.FID]?.map(
+            ...data.sources.flatMap((source) => {
+              addColor(source.attributes);
+              console.log(data.pils);
+              return data.pils[source.attributes.FID]?.map(
                 ({ attributes: trafo, geometry: trafo_geometry }) => ({
                   geometry: new Polyline({
                     paths: [
                       [
-                        [sub.geometry.longitude, sub.geometry.latitude],
+                        [source.geometry.longitude, source.geometry.latitude],
                         [trafo_geometry.longitude, trafo_geometry.latitude],
                       ],
                     ],
@@ -134,56 +134,10 @@ const mapInterface: MapInterface = {
                     identificação: "alimentação " + trafo.identificação,
                     FID: `${trafo.FID}`,
                     power: trafo.Potência,
-                    lineColor: sub.attributes.FID,
+                    lineColor: source.attributes.FID,
                   },
                 })
               );
-            }),
-            ...data.CON_SE.map(({ 0: sub_0, 1: sub_1, power }) => {
-              const s0 = data.subs.at(sub_0)!;
-              const s1 = data.subs.at(sub_1)!;
-              return {
-                geometry: new Polyline({
-                  paths: [
-                    [
-                      [s0.geometry.longitude, s0.geometry.latitude],
-                      [s1.geometry.longitude, s1.geometry.latitude],
-                    ],
-                  ],
-                }),
-                attributes: {
-                  identificação: `de ${s0.attributes.identificação} para ${s1.attributes.identificação}`,
-                  FID: `${s0.attributes.FID} to ${s1.attributes.FID}`,
-                  power: power,
-                  lineColor: addColor({
-                    FID: 2 * 21,
-                    cor_da_linha: [255, 0, 0],
-                  }),
-                },
-              };
-            }),
-            ...data.CON_TRAFO.map(({ 0: trafo_0, 1: trafo_1, power }) => {
-              const T0 = data.trafos.at(trafo_0[0])!.at(trafo_0[1])!;
-              const T1 = data.trafos.at(trafo_1[0])!.at(trafo_1[1])!;
-              return {
-                geometry: new Polyline({
-                  paths: [
-                    [
-                      [T0.geometry.longitude, T0.geometry.latitude],
-                      [T1.geometry.longitude, T1.geometry.latitude],
-                    ],
-                  ],
-                }),
-                attributes: {
-                  identificação: `de ${T0.attributes.identificação} para ${T1.attributes.identificação}`,
-                  FID: `${T0.attributes.FID} to ${T1.attributes.FID}`,
-                  power: power,
-                  lineColor: addColor({
-                    FID: 2 * 42,
-                    cor_da_linha: [255, 0, 255],
-                  }),
-                },
-              };
             }),
           ],
           renderer: new SimpleRenderer({

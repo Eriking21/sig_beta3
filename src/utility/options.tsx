@@ -6,12 +6,11 @@ export type TuppleOf<
 
 export type StrVec<N extends number> = TuppleOf<string, N>;
 export type ERIM_BASEMAP_NUMBER = 3;
-export type ERIM_OBJECT_NUMBER = 3;
+export type ERIM_OBJECT_NUMBER = 2;
 
 export const PowerItem: TuppleOf<{ src: string }, ERIM_OBJECT_NUMBER> = [
-  { src: "/Power/Substation.png" },
-  { src: "/Power/Transformer.png" },
-  { src: "/Power/Home.png" },
+  { src: "/Power/PIL_Source_Green" },
+  { src: "/Power/PIL" },
 ];
 
 export const basemap: TuppleOf<{ title: string; image: string }, ERIM_BASEMAP_NUMBER> =

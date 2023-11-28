@@ -88,5 +88,9 @@ export interface Language {
   input: string;
   output: string;
   height: string;
+
+  ref: Input_Helper<"text">;
+  base: Input_Helper<"text">;
+  brand: Input_Helper<"text">;
 }
 export default Language;

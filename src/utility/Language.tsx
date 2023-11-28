@@ -13,7 +13,7 @@ export const language: Language_type = {
     short_name: "PT",
     local_name: "Português",
     select_map: ["padrão", "topografica", "satelite"],
-    Map_object: ["Substação", "Tranformador", "Consumidor"],
+    Map_object: ["Fonte", "Luminária"],
     Power_names: [
       "Potência de entrada",
       "Potência de saida",
@@ -78,7 +78,7 @@ export const language: Language_type = {
     Phase_denomination: ["Monofásica", "Bifásica", "Trifásica"],
 
     type: "Tipo",
-    TrafoConnection : ["estrela","triângulo"],
+    TrafoConnection: ["estrela", "triângulo"],
     trafo_type: [
       ["Monofásico", "Bifásico", "Trifásico"],
       ["Monobloco", "Alvenaria"],
@@ -97,6 +97,21 @@ export const language: Language_type = {
     input: "entrada",
     output: "saida",
     height: "",
+    ref: {
+      type: "text",
+      name: "Referência",
+      placeholder: "Insira o Proprietário",
+    },
+    base: {
+      type: "text",
+      name: "Base",
+      placeholder: "Insira o Proprietário",
+    },
+    brand: {
+      type: "text",
+      name: "Marca",
+      placeholder: "Insira o Proprietário",
+    },
   },
 
   EN: {
@@ -104,7 +119,7 @@ export const language: Language_type = {
     short_name: "ENG",
     local_name: "English",
     select_map: ["Default", "Topografic", "satelite"],
-    Map_object: ["Substation", "Transformer", "Consumer"],
+    Map_object: ["Source", "Light"],
     Power_names: ["Power", "Power", "Consume", "", ""],
     register: "Register",
     _identificação: {
@@ -178,6 +193,21 @@ export const language: Language_type = {
       placeholder: "",
       type: "text",
     },
-    TrafoConnection: ["star","triangle"]
+    TrafoConnection: ["star", "triangle"],
+    ref: {
+      type: "text",
+      name: "Reference",
+      placeholder: "Insira o Proprietário",
+    },
+    base: {
+      type: "text",
+      name: "Base",
+      placeholder: "Insira o Proprietário",
+    },
+    brand: {
+      type: "text",
+      name: "Brand",
+      placeholder: "Insira o Proprietário",
+    },
   },
 };

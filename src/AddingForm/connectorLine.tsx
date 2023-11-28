@@ -1,6 +1,6 @@
 "use client";
 import { FaCircle } from "react-icons/fa";
-import { MutableRefObject} from "react";
+import { MutableRefObject } from "react";
 import { PowerItem } from "../utility/options";
 import { Info } from "../app/api/data/types";
 import { stateColor } from "@/SearchArea/SearchItem";
@@ -10,7 +10,6 @@ interface _ {
   index: number;
   attributes: Info["attributes"];
   geometry: Info["geometry"];
-  check: [boolean | null, boolean | null];
 }
 
 const imgStyle = {
@@ -22,7 +21,7 @@ const imgStyle = {
   flex: "0 0 auto",
 };
 
-export const ConnectorLine = ({ activeNode, index, attributes, check }: _) => {
+export const ConnectorLine = ({ activeNode, index, attributes }: _) => {
   function ag(event: React.ChangeEvent<HTMLInputElement>): void {
     if (event.target.checked) {
       if (activeNode.current) {
@@ -36,6 +35,12 @@ export const ConnectorLine = ({ activeNode, index, attributes, check }: _) => {
       ).value = `${attributes.FID}`;
     }
   }
+
+  const defaultvalue = !activeNode.current &&
+    index == 0 && {
+      checked: true,
+      ref: activeNode,
+    };
 
   return (
     <div
@@ -58,22 +63,9 @@ export const ConnectorLine = ({ activeNode, index, attributes, check }: _) => {
         alt={index.toString()}
         src={PowerItem[attributes.ObjectType_id].src}
       />
-      {check[0] !== false && (
-        <input
-          type="checkbox"
-          style={imgStyle}
-          onChange={ag}
-          disabled={check[0] === null}
-        />
-      )}
-      {check[1] !== false && (
-        <input
-          style={imgStyle}
-          name={"__E_" + attributes.FID}
-          type="checkbox"
-          disabled={check[1] === null}
-        />
-      )}
+
+      <input type="checkbox" style={imgStyle} onChange={ag} {...defaultvalue} />
+
       <FaCircle
         style={{ ...imgStyle, alignSelf: "center" }}
         color={
