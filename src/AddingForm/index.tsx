@@ -98,7 +98,7 @@ const AddingForm = ({ write }: _) => {
           <TextField {...Input.temp(write)} />
           <TextField {...Input.vida(write)} />
           <Selection
-            name="Nº de Luminárias"
+            name="Nº_de_Luminárias"
             prefered={0}
             options={["1", "2", "3", "4", "5", "6", "7", "8"]}
           />
@@ -192,7 +192,7 @@ function getInfo(
     (info.info as Pils_Source_Info).attributes.cor_da_linha =
       form[write.lineColor];
   } else if (formIndex === 1) {
-    (info.info as Pils_Info).attributes["Marca da Lampâda"] =
+    (info.info as Pils_Info).attributes["Marca_da_Lampâda"] =
       form[write.brand.name];
     (info.info as Pils_Info).attributes.Referência = form[write.ref.name];
     (info.info as Pils_Info).attributes.Base = form[write.base.name];
@@ -200,15 +200,15 @@ function getInfo(
     form[write.Power_names[4] + " next 0"];
     (info.info as Pils_Info).attributes.Tensão = form[write.voltage];
     form[write.voltage + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Vida Média"];
-    form["Vida Média" + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Temperatura da Cor"];
-    form["Temperatura da Cor" + " next 0"];
+    (info.info as Pils_Info).attributes.Tensão = form["Vida_Média"];
+    form["Vida_Média" + " next 0"];
+    (info.info as Pils_Info).attributes.Tensão = form["Temperatura_da_Cor"];
+    form["Temperatura_da_Cor" + " next 0"];
     (info.info as Pils_Info).attributes.Tensão = form["Fluxo Luminárias"];
     form["Fluxo Luminárias" + " next 0"];
 
-    (info.info as Pils_Info).attributes["Nº de Luminárias"] = parseInt(
-      form["Nº de Luminárias"]
+    (info.info as Pils_Info).attributes["Nº_de_Luminárias"] = parseInt(
+      form["Nº_de_Luminárias"]
     );
     info.source = form["source"] !== "" ? parseInt(form["source"]) : undefined;
   }

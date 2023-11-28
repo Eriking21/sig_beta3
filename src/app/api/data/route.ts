@@ -6,26 +6,26 @@ import { newPostType } from "@/AddingForm";
 import { NextRequest, NextResponse } from "next/server";
 import { Pils_Info, Pils_Source_Info, erimServerData, erim_vec } from "./types";
 import { triggerRefresh } from "./refresh/route";
+import { json } from "stream/consumers";
 
 export async function getData(): Promise<erimServerData> {
   "use server";
   let sources: erimServerData["sources"] = JSON.parse(
-    `./data/Pils_Sources.json`
+    await fs2.readFile(`./data/Pils_Sources.json`, { encoding: "utf8" })
   );
-  const pils = [
-    ...Object.keys(sources).map((k) => {
-      const file = `./data/pils${sources[parseInt(k)].attributes.FID}.json`;
-      return fs.existsSync(file)
-        ? fs2
-            .readFile(file, { encoding: "utf8" })
-            .then((file) => JSON.parse(file) as erim_vec<Pils_Info>)
-        : Promise.resolve({} as erim_vec<Pils_Info>);
+  console.log;
+  const pils: Promise<erim_vec<Pils_Info>>[] = [
+    ...Object.keys(sources).map(async (k) => {
+      const file = `./data/Pils${sources[parseInt(k)].attributes.FID}.json`;
+      if (fs.existsSync(file)) {
+        return JSON.parse(await fs2.readFile(file, { encoding: "utf8" }));
+      } else return Promise.resolve({});
     }),
   ];
 
   return {
     sources: sources,
-    pils: await Promise.all([...pils]),
+    pils: await Promise.all(pils),
   };
 }
 
@@ -42,13 +42,13 @@ export async function POST(request: NextRequest) {
 
   if (source === undefined) {
     a.info.attributes.FID = 0;
-    file += "_Source";
+    file += "_Sources";
   } else if (source < 1000) {
     a.info.attributes.FID = 1000;
     file += source;
-  } else{
-    console.log("invalid data")
-    return ;
+  } else {
+    console.log("invalid data");
+    return;
   }
 
   await lockfile.lock("./data/index.json").catch((err) => {

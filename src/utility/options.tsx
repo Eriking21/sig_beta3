@@ -9,8 +9,8 @@ export type ERIM_BASEMAP_NUMBER = 3;
 export type ERIM_OBJECT_NUMBER = 2;
 
 export const PowerItem: TuppleOf<{ src: string }, ERIM_OBJECT_NUMBER> = [
-  { src: "/Power/PIL_Source_Green" },
-  { src: "/Power/PIL" },
+  { src: "/Power/PIL_Source_Green.png" },
+  { src: "/Power/PIL.png" },
 ];
 
 export const basemap: TuppleOf<{ title: string; image: string }, ERIM_BASEMAP_NUMBER> =

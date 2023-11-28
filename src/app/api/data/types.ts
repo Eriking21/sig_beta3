@@ -22,13 +22,13 @@ export type Pils_Source_Info = Info_type<0> & {
 
 export type Pils_Info = Info_type<1> & {
   attributes: {
-    "Fluxo das Luminárias": string,
+    "Fluxo_das_Luminárias": string,
     Potência: string,
-   "Nº de Luminárias": number,
+   "Nº_de_Luminárias": number,
     "Tipo_Lampâda": string,
-    "Marca da Lampâda": string,
-    "Vida Média": string,
-    "Temperatura da Cor": string,
+    "Marca_da_Lampâda": string,
+    "Vida_Média": string,
+    "Temperatura_da_Cor": string,
     Base: string,
     Referência: string,
     Tensão: string

@@ -65,7 +65,7 @@ export const Input: get_Input = {
     return {
       min: 0,
       type: "number",
-      name: "Vida Média",
+      name: "Vida_Média",
       placeholder: "48000",
       next: [[0, ["h"]]],
     };
@@ -74,7 +74,7 @@ export const Input: get_Input = {
     return {
       min: 0,
       type: "number",
-      name: "Temperatura da Cor",
+      name: "Temperatura_da_Cor",
       placeholder: "48000",
       next: [[0, ["Lumens"]]],
     };
