@@ -72,7 +72,7 @@ const AddMenu = ({ onRight = true, R = 90, style, ...rest }: Props) => {
 
       return (
         <SplashButton
-          backgroundColor={filterForm(formIndex, ["#93cbdd", "#ff0000e3"])}
+          backgroundColor={filterForm(formIndex, ["#d5d8b3a7", "#ff0000a3"])}
           imgPadding={["16%", "13%"]}
           key={"M" + index}
           bottom={0}

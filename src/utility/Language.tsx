@@ -96,21 +96,26 @@ export const language: Language_type = {
     connections: "Connecções",
     input: "entrada",
     output: "saida",
-    height: "",
+    height: "Z",
     ref: {
       type: "text",
       name: "Referência",
-      placeholder: "Insira o Proprietário",
+      placeholder: "Insira a referência ",
     },
     base: {
       type: "text",
       name: "Base",
-      placeholder: "Insira o Proprietário",
+      placeholder: "Insira o tipo de base",
     },
     brand: {
       type: "text",
       name: "Marca",
-      placeholder: "Insira o Proprietário",
+      placeholder: "Insira a marca",
+    },
+    temp: {
+      type: "text",
+      name: "Temperatura da Cor",
+      placeholder: "Insira o Temperatura da Cor",
     },
   },
 
@@ -208,6 +213,10 @@ export const language: Language_type = {
       type: "text",
       name: "Brand",
       placeholder: "Insira o Proprietário",
+    },
+    temp: {
+      type: "text",
+      name: "Brand",
     },
   },
 };

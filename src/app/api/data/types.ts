@@ -16,19 +16,19 @@ export interface Info_type<T extends 0 | 1 | any> {
 }
 export type Pils_Source_Info = Info_type<0> & {
   attributes: {
-    cor_da_linha:string;
+    ["Cor da Linha"]:string;
   };
 };
 
 export type Pils_Info = Info_type<1> & {
   attributes: {
-    "Fluxo_das_Luminárias": string,
+    "Fluxo das Luminárias": string,
     Potência: string,
-   "Nº_de_Luminárias": number,
-    "Tipo_Lampâda": string,
-    "Marca_da_Lampâda": string,
-    "Vida_Média": string,
-    "Temperatura_da_Cor": string,
+   "Nº de Luminárias": number,
+    "Tipo de Lâmpada": string,
+    "Marca da Lâmpada": string,
+    "Vida Média": string,
+    "Temperatura da Cor": string,
     Base: string,
     Referência: string,
     Tensão: string

@@ -13,15 +13,15 @@ export function Connector() {
       <input
         name="source"
         style={{ display: "none" }}
-        defaultValue={mapInterface.objects[0][0].attributes.FID}
+        defaultValue={mapInterface.objects[0][0].attributes.FID ?? 0}
       />
       <div
         {...Flexible_with_border}
         style={{
           paddingRight: ".2rem",
           display: "inline-flex",
-          height: "20rem",
-          overflow: "scroll",
+    maxHeight: "20rem",
+    overflow: "auto"
         }}
       >
         {mapInterface.objects[0]

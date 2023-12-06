@@ -75,21 +75,21 @@ const mapInterface: MapInterface = {
     const lineColors: { value: number; color: number[] | string }[] = [];
     function addColor({
       FID,
-      cor_da_linha,
+      "Cor da Linha" : Cor_da_Linha
     }: {
       FID: number;
-      cor_da_linha: number[] | string;
+      "Cor da Linha": number[] | string;
     }) {
       const index = lineColors.findIndex(({ value }) => value == FID);
       if (index != -1) {
         lineColors[index] = {
           value: FID,
-          color: cor_da_linha,
+          color: Cor_da_Linha,
         };
       } else {
         lineColors.push({
           value: FID,
-          color: cor_da_linha,
+          color: Cor_da_Linha,
         });
       }
       return FID;

@@ -40,13 +40,20 @@ const SelectMap = ({ onRight = true}: Props) => {
           content={src}
           action={work}
           borderRadius={"15%"}
-          border={{ width: "4px", color: ["#DDDDDD", "#93cbdd"] }}
+          border={{ width: "4px", color: ["#c5b55b55", "#d5d8b355"] }}
         />
       );
     });
 
   return (
-    <div style={{top:0, right: right, maxHeight: "calc(100% - 250px)",position:"absolute" }}>
+    <div
+      style={{
+        top: 0,
+        right: right,
+        maxHeight: "calc(100% - 250px)",
+        position: "absolute",
+      }}
+    >
       {childs()}
       <SplashButton
         key={basemap.length}
@@ -54,7 +61,7 @@ const SelectMap = ({ onRight = true}: Props) => {
         action={() => setToggle(!toggle)}
         content={basemap.at(index.current)!.image}
         borderRadius={"15%"}
-        border={{ width: "4px", color: ["#cffcff", "#93cbdd"] }}
+        border={{ width: "4px", color: ["#d5d8b355", "#d5d8b3"] }}
       />
     </div>
   );

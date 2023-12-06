@@ -3,10 +3,14 @@
 }
 .SearchItem {
   margin: 0 1rem;
-  border-bottom: 3px inset #8cc0d099;
+  border-bottom: 3px inset #d0c18c99;
   height: 2.5rem;
   background-color: #ffffff12;
   border-radius: .3rem;
+}
+::placeholder {
+  color: #b9b8a976;
+  opacity: 1; /* Firefox */
 }
 .SearchItem:active,
 .SearchItem.active,
@@ -15,7 +19,7 @@
   padding:0 .30rem;
   border-width: 4px;
   border-style: solid;
-  border-color: #93cbdd;
-  background-color: #d8f7f5;
+  border-color: #e4d3a5;
+  background-color: #f4f2b9d3;
   border-radius: 0.75rem;
 }

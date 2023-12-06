@@ -10,7 +10,7 @@ form.addingForm {
 }
 
 .addingForm h2.title {
-  color: #93cbdd;
+  color: #c5b55b;
   word-spacing: 0.15em;
   text-align: start;
   font-size: 2rem;
@@ -22,7 +22,7 @@ form.addingForm {
 .addingForm label {
   font-size: 1.4rem;
   padding-bottom: 0.2em;
-  color: rgba(44, 51, 53, 0.707);
+  color: rgba(53, 53, 44, 0.707);
   font-weight: 600;
   width: 100%;
 }
@@ -42,7 +42,7 @@ form.addingForm {
 }
 
 .addingForm div.Flexible_Wrapper button {
-  color: #93cbdd;
+  color: #ddd493;
   background-color: #dcdddd77;
 }
 .addingForm .Flexible_Wrapper button:hover {
@@ -51,7 +51,7 @@ form.addingForm {
 
 .addingForm div.Flexible_Wrapper button.selected,
 .addingForm input[type="submit"] {
-  background-color: #93cbdd;
+  background-color: #d5d8b3a7;
   color: rgb(255, 255, 255);
 }
 
@@ -81,15 +81,15 @@ form.addingForm {
 }
 
 .addingForm div div.Flexible_Wrapper:hover {
-  background-color: #effaff;
-  border-color: #5776818b;
+  background-color: #d5d8b321;
+  border-color: #c5b55b;
 }
 
 .addingForm div.Flexible_Wrapper div.Flexible_Wrapper:focus-within,
 .addingForm div.Selection div.Flexible_Wrapper:focus-within,
 .addingForm div.TextField div.Flexible_Wrapper:focus-within {
-  background-color: #effaff;
-  border-color: #93cbdd;
+  background-color: #d5d8b321;
+  border-color: #d5d8b3a7;
 }
 
 .addingForm div.Selection div.Flexible_Wrapper select,
@@ -98,7 +98,7 @@ form.addingForm {
   display: block;
 }
 form.addingForm input[type="submit"]:hover {
-  background-color: #93cbdd;
+  background-color: #d5d8b3a7;
 }
 .addingForm div.Flexible_Wrapper input[type="number"] {
   text-align: end;
@@ -122,7 +122,12 @@ form.addingForm input[type="submit"]:hover {
 }
 .InputBorder {
   border-radius: 0.4rem;
-  border-color: rgba(95, 135, 143, 0.384);
+  border-color: rgba(143, 137, 95, 0.384);
   border-style: solid;
   border-width: 2px;
+}
+
+
+.addingForm div.Flexible_Wrapper select option:hover {
+  background-color:  #d5d8b3 !important;
 }

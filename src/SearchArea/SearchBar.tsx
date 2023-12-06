@@ -16,13 +16,16 @@ export const SearchBar = ({ isLarge = true }: _) => {
     overflow: "hidden",
     flex: 1,
     padding: 0,
+    color: "#61554dcf"
+
   };
 
   const buttonStyle: CSSProperties = {
     fontSize: " 1.15rem",
     border: "none",
     backgroundColor: "transparent",
-    color: "#2277EE",
+    color: "#c5b55b",
+    
     padding: 0,
   };
 
@@ -44,7 +47,7 @@ export const SearchBar = ({ isLarge = true }: _) => {
       style={{
         margin: `.7em ${isLarge ? "1.15em" : "1rem"}`,
         alignSelf: "stretch",
-        backgroundColor: "white",
+        backgroundColor: "#eeeea0a0",
         fontSize: " 1.5rem",
         padding: `0.4rem 1.5rem`,
         borderRadius: "1.5em",

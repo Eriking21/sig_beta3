@@ -21,7 +21,7 @@ const AddingForm = ({ write }: _) => {
         height: "inherit",
         position: "absolute",
         transform: formIndex === undefined ? "translateX(-100%)" : "",
-        background: "white",
+        background: "#f6f5e1",
       }}
       className="addingForm scrollable absolute w-full h-full bg-white block text-black"
       onSubmit={async (event) => {
@@ -42,9 +42,9 @@ const AddingForm = ({ write }: _) => {
           }
         });
 
-        if (event.currentTarget[write._secção.name].value === "") {
-          event.currentTarget[write._secção.name].value = "-";
-        }
+        // if (event.currentTarget[write._secção.name].value === "") {
+        //   event.currentTarget[write._secção.name].value = "-";
+        // }
         const formDataAsObj = formDataToObj(formData, write, formIndex);
 
         const info = getInfo(formData, write, formIndex!);
@@ -92,13 +92,13 @@ const AddingForm = ({ write }: _) => {
           <TextField {...write.brand} />
           <TextField {...write.ref} />
           <TextField {...write.base} />
+          <TextField {...write.temp} />
           <TextField {...Input.activePower(write, 4)} />
           <TextField {...Input.voltage(write)} />
           <TextField {...Input.fluxo(write)} />
-          <TextField {...Input.temp(write)} />
           <TextField {...Input.vida(write)} />
           <Selection
-            name="Nº_de_Luminárias"
+            name="Nº de Luminárias"
             prefered={0}
             options={["1", "2", "3", "4", "5", "6", "7", "8"]}
           />
@@ -189,30 +189,30 @@ function getInfo(
   };
 
   if (formIndex === 0) {
-    (info.info as Pils_Source_Info).attributes.cor_da_linha =
+    (info.info as Pils_Source_Info).attributes["Cor da Linha"] =
       form[write.lineColor];
   } else if (formIndex === 1) {
-    (info.info as Pils_Info).attributes["Marca_da_Lampâda"] =
+    (info.info as Pils_Info).attributes["Marca da Lâmpada"] =
       form[write.brand.name];
     (info.info as Pils_Info).attributes.Referência = form[write.ref.name];
     (info.info as Pils_Info).attributes.Base = form[write.base.name];
-    (info.info as Pils_Info).attributes.Potência = form[write.Power_names[4]];
+    (info.info as Pils_Info).attributes.Potência = form[write.Power_names[4]]+
     form[write.Power_names[4] + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form[write.voltage];
+    (info.info as Pils_Info).attributes.Tensão = form[write.voltage]+
     form[write.voltage + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Vida_Média"];
-    form["Vida_Média" + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Temperatura_da_Cor"];
-    form["Temperatura_da_Cor" + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Fluxo Luminárias"];
+    (info.info as Pils_Info).attributes.Tensão = form["Vida Média"]+
+    form["Vida Média" + " next 0"];
+    (info.info as Pils_Info).attributes.Tensão = form["Temperatura da Cor"]+
+    form["Temperatura da Cor" + " next 0"];
+    (info.info as Pils_Info).attributes.Tensão = form["Fluxo Luminárias"]+
     form["Fluxo Luminárias" + " next 0"];
 
-    (info.info as Pils_Info).attributes["Nº_de_Luminárias"] = parseInt(
-      form["Nº_de_Luminárias"]
+    (info.info as Pils_Info).attributes["Nº de Luminárias"] = parseInt(
+      form["Nº de Luminárias"]
     );
     info.source = form["source"] !== "" ? parseInt(form["source"]) : undefined;
   }
-
+  console.log(form,info.info)
   return info;
 }
 
@@ -269,7 +269,7 @@ function getInfo(
 //   );
 
 //   if (info.attributes.ObjectType_id === 0) {
-//     formData.set(write.lineColor, (info as Sub_Info).attributes.cor_da_linha);
+//     formData.set(write.lineColor, (info as Sub_Info).attributes.Cor da Linha);
 //     formData.set(write._company.name, (info as Sub_Info).attributes.Empresa);
 //     formData.set(write.year, (info as Sub_Info).attributes.Ano.toString());
 //     formData.set(

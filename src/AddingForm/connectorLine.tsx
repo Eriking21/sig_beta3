@@ -55,6 +55,7 @@ export const ConnectorLine = ({ activeNode, index, attributes }: _) => {
         width: "100%",
         boxSizing: "border-box",
         margin: "0 .15rem",
+        height: "1.5rem"
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}

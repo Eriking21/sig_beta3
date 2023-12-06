@@ -1,5 +1,12 @@
 "use client";
-import React, { ChangeEvent, useState, ReactNode, CSSProperties } from "react";
+import React, {
+  ChangeEvent,
+  useState,
+  ReactNode,
+  CSSProperties,
+  useRef,
+  useEffect,
+} from "react";
 import { _S_, showSelections, _T_, Language } from "../utility/Language";
 import { TbDelta } from "react-icons/tb";
 import { FaY } from "react-icons/fa6";

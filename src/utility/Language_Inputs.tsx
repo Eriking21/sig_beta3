@@ -65,7 +65,7 @@ export const Input: get_Input = {
     return {
       min: 0,
       type: "number",
-      name: "Vida_Média",
+      name: "Vida Média",
       placeholder: "48000",
       next: [[0, ["h"]]],
     };
@@ -74,9 +74,9 @@ export const Input: get_Input = {
     return {
       min: 0,
       type: "number",
-      name: "Temperatura_da_Cor",
+      name: lang.temp.name,
       placeholder: "48000",
-      next: [[0, ["Lumens"]]],
+      next: [[0, ["K"]]],
     };
   },
   fluxo: function (lang: Language, index?: number): _T_ {

@@ -8,7 +8,7 @@ import AddingForm from "@/AddingForm";
 const Logo = ({ isLarge = true }) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img
-    src="/SIG_consumo.png"
+    src="/SIG_PIL.png"
     alt="SIG Logo"
     style={{
       alignSelf: "center",

@@ -6,7 +6,7 @@
   height: 100%;
   width:100%;
   top:0;
-  background-color: #ffffffDD;
+  background-color: #d1ceb577;
   color: #999999;
   font-weight: 500;
 }
@@ -18,7 +18,7 @@
 }
 
 .antispin {
-  color: #80aabb;
+  color: #ceceb0ff;
   animation: reverse-spin 3s linear infinite, softblink 4s linear infinite;
 }
 
@@ -73,13 +73,13 @@
 
 @keyframes blink {
   0% {
-    border-color: #8cbede transparent;
+    border-color: #b79a3190 transparent;
   }
   50% {
-    border-color: #8cbede02 transparent;
+    border-color: #eeeea002 transparent;
   }
   100% {
-    border-color: #8cbede transparent;
+    border-color: #b79a3190 transparent;
   }
 }
 

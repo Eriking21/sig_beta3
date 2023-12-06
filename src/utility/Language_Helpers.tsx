@@ -92,5 +92,6 @@ export interface Language {
   ref: Input_Helper<"text">;
   base: Input_Helper<"text">;
   brand: Input_Helper<"text">;
+  temp: Input_Helper<"text">;
 }
 export default Language;

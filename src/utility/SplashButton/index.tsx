@@ -41,7 +41,7 @@ const SplashButton = ({
   height = "56px",
   borderRadius = "50%",
   splashAnimation = "splashAnimation",
-  backgroundColor = ["#93cbdd", "#d3eef7"],
+  backgroundColor = ["#d5d8b3bb", "#c5b55bbb"],
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -55,7 +55,7 @@ const SplashButton = ({
       : "";
 
   const buttonStyle: CSSProperties = {
-    display:"flex",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     padding:

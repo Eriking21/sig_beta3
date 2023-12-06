@@ -6,7 +6,6 @@ import { newPostType } from "@/AddingForm";
 import { NextRequest, NextResponse } from "next/server";
 import { Pils_Info, Pils_Source_Info, erimServerData, erim_vec } from "./types";
 import { triggerRefresh } from "./refresh/route";
-import { json } from "stream/consumers";
 
 export async function getData(): Promise<erimServerData> {
   "use server";
@@ -14,12 +13,15 @@ export async function getData(): Promise<erimServerData> {
     await fs2.readFile(`./data/Pils_Sources.json`, { encoding: "utf8" })
   );
   console.log;
-  const pils: Promise<erim_vec<Pils_Info>>[] = [
-    ...Object.keys(sources).map(async (k) => {
+  const pils = [
+    ...Object.keys(sources).map((k) => {
       const file = `./data/Pils${sources[parseInt(k)].attributes.FID}.json`;
-      if (fs.existsSync(file)) {
-        return JSON.parse(await fs2.readFile(file, { encoding: "utf8" }));
-      } else return Promise.resolve({});
+      console.log(file);
+      return fs.existsSync(file)
+        ? fs2
+            .readFile(file, { encoding: "utf8" })
+            .then((content) => JSON.parse(content) as erim_vec<Pils_Info>)
+        : Promise.resolve({} as erim_vec<Pils_Info>);
     }),
   ];
 

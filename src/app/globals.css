@@ -20,16 +20,7 @@ main {
   flex: 1;
 }
 .bg-grad-erim {
-  background: linear-gradient(
-    119deg,
-    #1cb5e778,
-    #c2d5d361,
-    #c8e8e9,
-    #77d2c438,
-    #a0ff7f30,
-    #ffffff38,
-    transparent
-  );
+  background: radial-gradient(circle at 10% 20%, rgba(253, 255, 165, 0.814) 0%, rgba(255, 232, 182, 0.759) 90%);
 }
 body {
   margin: 0;
