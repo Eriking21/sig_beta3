@@ -5,7 +5,12 @@ import { setForm } from "@/AddMenu";
 import { CoordField } from "./coordfield";
 import { Input, Language } from "../utility/Language";
 import { TextField, Selection, ColorField } from "./Inputs";
-import { Pils_Info, Info, Pils_Source_Info, Info_type } from "@/app/api/data/types";
+import {
+  Pils_Info,
+  Info,
+  Pils_Source_Info,
+  Info_type,
+} from "@/app/api/data/types";
 import { Connector } from "./connector";
 
 interface _ {
@@ -184,7 +189,7 @@ function getInfo(
         Distrito: form[write._district.name],
         Rua: form[write._street.name],
         Z: parseInt(form[write.height]),
-      }
+      },
     },
   };
 
@@ -194,25 +199,27 @@ function getInfo(
   } else if (formIndex === 1) {
     (info.info as Pils_Info).attributes["Marca da Lâmpada"] =
       form[write.brand.name];
+
+    (info.info as Pils_Info).attributes.Z = parseFloat(form[write.height]);
     (info.info as Pils_Info).attributes.Referência = form[write.ref.name];
     (info.info as Pils_Info).attributes.Base = form[write.base.name];
-    (info.info as Pils_Info).attributes.Potência = form[write.Power_names[4]]+
-    form[write.Power_names[4] + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form[write.voltage]+
-    form[write.voltage + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Vida Média"]+
-    form["Vida Média" + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Temperatura da Cor"]+
-    form["Temperatura da Cor" + " next 0"];
-    (info.info as Pils_Info).attributes.Tensão = form["Fluxo Luminárias"]+
-    form["Fluxo Luminárias" + " next 0"];
+    (info.info as Pils_Info).attributes.Potência =
+      form[write.Power_names[4]] + form[write.Power_names[4] + " next 0"];
+    (info.info as Pils_Info).attributes.Tensão =
+      form[write.voltage] + form[write.voltage + " next 0"];
+    (info.info as Pils_Info).attributes["Vida Média"] =
+      form["Vida Média"] + form["Vida Média" + " next 0"];
+    (info.info as Pils_Info).attributes["Temperatura da Cor"] =
+      form["Temperatura da Cor"] + form["Temperatura da Cor" + " next 0"];
+    (info.info as Pils_Info).attributes["Fluxo das Luminárias"] =
+      form["Fluxo Luminárias"] + form["Fluxo Luminárias" + " next 0"];
 
     (info.info as Pils_Info).attributes["Nº de Luminárias"] = parseInt(
       form["Nº de Luminárias"]
     );
     info.source = form["source"] !== "" ? parseInt(form["source"]) : undefined;
   }
-  console.log(form,info.info)
+  console.log(form, info.info);
   return info;
 }
 
