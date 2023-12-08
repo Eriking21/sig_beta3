@@ -199,7 +199,6 @@ function getInfo(
   } else if (formIndex === 1) {
     (info.info as Pils_Info).attributes["Marca da Lâmpada"] =
       form[write.brand.name];
-
     (info.info as Pils_Info).attributes.Z = parseFloat(form[write.height]);
     (info.info as Pils_Info).attributes.Referência = form[write.ref.name];
     (info.info as Pils_Info).attributes.Base = form[write.base.name];
