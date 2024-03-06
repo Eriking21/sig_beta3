@@ -24,12 +24,14 @@ export const input_number_wrapper = {
 type bool = 0 | 1;
 interface _V_ extends Language {
   index: bool;
+  key?: React.Key;
 }
 
 interface _F_ {
   children: ReactNode;
   label?: string;
   style?: CSSProperties;
+  key?: React.Key;
 }
 
 export const SelectionBox = ({ prefered, options, name, key }: _S_) => {
@@ -47,8 +49,8 @@ export const SelectionBox = ({ prefered, options, name, key }: _S_) => {
   );
 };
 
-export const Selection = ({ next, error, previous, ...input }: _S_) => (
-  <div className="Selection">
+export const Selection = ({ key, next, error, previous, ...input }: _S_) => (
+  <div className="Selection" key={key}>
     {input.name && <label htmlFor={input.name}>{input.name}</label>}
     <div {...Flexible_with_border}>
       {showSelections(previous, input.name, SelectionBox)}
@@ -58,8 +60,14 @@ export const Selection = ({ next, error, previous, ...input }: _S_) => (
     {/*span error */}
   </div>
 );
-export const ColorField = ({ lineColor }: { lineColor: string }) => (
-  <div className="TextField">
+export const ColorField = ({
+  key,
+  lineColor,
+}: {
+  key?: React.Key;
+  lineColor: string;
+}) => (
+  <div className="TextField" key={key}>
     <label htmlFor={lineColor}>{lineColor}</label>
     <div {...Flexible_with_border}>
       <input type={"color"} name={lineColor} />
@@ -70,13 +78,14 @@ export const ColorField = ({ lineColor }: { lineColor: string }) => (
 );
 
 export const TextField = ({
+  key,
   next,
   error,
   previous,
   required,
   ...input
 }: _T_) => (
-  <div className="TextField">
+  <div className="TextField" key={key}>
     {input.name && <label htmlFor={input.name}>{input.name}</label>}
     <div {...Flexible_with_border}>
       {showSelections(previous, input.name + " Prev", SelectionBox)}
@@ -91,8 +100,9 @@ export const TextField = ({
   </div>
 );
 
-export const FlexWrapper = ({ children, label, style }: _F_) => (
+export const FlexWrapper = ({ key, children, label, style }: _F_) => (
   <div
+    key={key}
     className="Flexible_Wrapper"
     style={{ paddingBottom: "1.5rem", ...style }}
   >
@@ -130,8 +140,8 @@ const prop = (ord: bool, cond: boolean, button: "button" = "button") => {
   };
 };
 
-export const VoltField = ({ End_trafo, index }: _V_) => (
-  <FlexWrapper label={End_trafo[index]} style={{ gap: ".25rem" }}>
+export const VoltField = ({ key, End_trafo, index }: _V_) => (
+  <FlexWrapper label={End_trafo[index]} style={{ gap: ".25rem" }} key={key}>
     <input
       style={{ display: "none" }}
       name={End_trafo[index] + " mode"}

@@ -8,34 +8,15 @@ interface _ {
 }
 
 export const SearchBar = ({ isLarge = true }: _) => {
-  const inputStyle: CSSProperties = {
-    //margin: "0.5rem 0 0.5rem 1.5rem",
-    backgroundColor: "transparent",
-    fontSize: " 1.15rem",
-    border: "none",
-    overflow: "hidden",
-    flex: 1,
-    padding: 0,
-    color: "#61554dcf"
-
-  };
-
-  const buttonStyle: CSSProperties = {
-    fontSize: " 1.15rem",
-    border: "none",
-    backgroundColor: "transparent",
-    color: "#c5b55b",
-    
-    padding: 0,
-  };
-
   function handleChange(event: ChangeEvent<HTMLInputElement>): void {
+    event.preventDefault();
     mapInterface.search.input = event.currentTarget;
     mapInterface.view?.popup.close();
     mapInterface.search.update();
   }
-  
+
   function handleChange2(event: React.MouseEvent<HTMLButtonElement>): void {
+    event.preventDefault();
     mapInterface.search.input = event.currentTarget
       .previousElementSibling! as any;
     mapInterface.view?.popup.close();
@@ -66,4 +47,22 @@ export const SearchBar = ({ isLarge = true }: _) => {
       </button>
     </form>
   );
+};
+const inputStyle: CSSProperties = {
+  //margin: "0.5rem 0 0.5rem 1.5rem",
+  backgroundColor: "transparent",
+  fontSize: " 1.15rem",
+  border: "none",
+  overflow: "hidden",
+  flex: 1,
+  padding: 0,
+  color: "#61554dcf",
+};
+const buttonStyle: CSSProperties = {
+  fontSize: " 1.15rem",
+  border: "none",
+  backgroundColor: "transparent",
+  color: "#c5b55b",
+
+  padding: 0,
 };

@@ -1,12 +1,12 @@
-#searchBar:focus{
-    outline: none
+#searchBar:focus {
+  outline: none;
 }
 .SearchItem {
   margin: 0 1rem;
   border-bottom: 3px inset #d0c18c99;
   height: 2.5rem;
   background-color: #ffffff12;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 ::placeholder {
   color: #b9b8a976;
@@ -15,11 +15,20 @@
 .SearchItem:active,
 .SearchItem.active,
 .SearchItem:hover {
-  margin: 0 .45rem;
-  padding:0 .30rem;
+  margin: 0 0.45rem;
+  padding: 0 0.3rem;
   border-width: 4px;
   border-style: solid;
   border-color: #e4d3a5;
   background-color: #f4f2b9d3;
   border-radius: 0.75rem;
+}
+
+
+:hover > .hidden-content{
+  visibility: visible;
+}
+
+.hidden-content{
+  visibility: hidden;
 }

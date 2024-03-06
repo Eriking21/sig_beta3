@@ -3,6 +3,7 @@
   padding: 0 2.25rem 0 2.75rem;
   flex: 1;
   align-self: stretch;
+  scroll-behavior:"smooth";
 }
 
 .scrollable::-webkit-scrollbar {

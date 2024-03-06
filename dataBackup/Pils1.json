@@ -1,0 +1,699 @@
+[
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83725868,
+      "longitude": 13.23587776
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2000,
+      "identificação": "PIL_HCM_01",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83711514,
+      "longitude": 13.23611478
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2001,
+      "identificação": "PIL_HCM_02",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83690848,
+      "longitude": 13.23638846
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2002,
+      "identificação": "PIL_HCM_03",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83671056,
+      "longitude": 13.23659846
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2003,
+      "identificação": "PIL_HCM_04",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83649457,
+      "longitude": 13.23680856
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2004,
+      "identificação": "PIL_HCM_05",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83623345,
+      "longitude": 13.23703705
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2005,
+      "identificação": "PIL_HCM_06",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83599016,
+      "longitude": 13.23721091
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2006,
+      "identificação": "PIL_HCM_07",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83567463,
+      "longitude": 13.23740329
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2007,
+      "identificação": "PIL_HCM_08",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83719411,
+      "longitude": 13.23560537
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2008,
+      "identificação": "PIL_HCM_09",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83707803,
+      "longitude": 13.23591498
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2009,
+      "identificação": "PIL_HCM_10",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83691645,
+      "longitude": 13.23616117
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2010,
+      "identificação": "PIL_HCM_11",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83665564,
+      "longitude": 13.23645329
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2011,
+      "identificação": "PIL_HCM_12",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83644868,
+      "longitude": 13.23666334
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2012,
+      "identificação": "PIL_HCM_13",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8362146,
+      "longitude": 13.23687352
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2013,
+      "identificação": "PIL_HCM_14",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83595331,
+      "longitude": 13.23706565
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2014,
+      "identificação": "PIL_HCM_15",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83567394,
+      "longitude": 13.23725786
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2015,
+      "identificação": "PIL_HCM_16",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83732333,
+      "longitude": 13.23616833
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2016,
+      "identificação": "PIL_HCM_17",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83713437,
+      "longitude": 13.23636011
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2017,
+      "identificação": "PIL_HCM_18",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83693637,
+      "longitude": 13.23655194
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2018,
+      "identificação": "PIL_HCM_19",
+      "Z": 11,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8367834,
+      "longitude": 13.2367072
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2019,
+      "identificação": "PIL_HCM_20",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83662144,
+      "longitude": 13.23687158
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2020,
+      "identificação": "PIL_HCM_21",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83643231,
+      "longitude": 13.23702701
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2021,
+      "identificação": "PIL_HCM_22",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83615307,
+      "longitude": 13.23724649
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2022,
+      "identificação": "PIL_HCM_23",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83591873,
+      "longitude": 13.23740213
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 2023,
+      "identificação": "PIL_HCM_24",
+      "Z": 10,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Ho Chi Minh",
+      "Fluxo das Luminárias": "15300Lumens",
+      "Potência": "150W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012898",
+      "Tensão": "220V"
+    }
+  }
+]

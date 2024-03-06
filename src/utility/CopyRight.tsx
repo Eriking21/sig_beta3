@@ -5,7 +5,7 @@
 import { CSSProperties } from "react";
 import { Language } from "./Language";
 
-export const CopyRight = ({ DEV: _DEV }: Language) => {
+export const CopyRight = (_DEV : Language["DEV"]) => {
   const divStyle: CSSProperties = {
     alignSelf: "stretch",
     padding: "1rem 5% .5rem",

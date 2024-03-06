@@ -83,7 +83,7 @@ export const Input: get_Input = {
     return {
       min: 0,
       type: "number",
-      name: "Fluxo Luminárias",
+      name: "Fluxo das Luminárias",
       placeholder: "48000",
       next: [[0, ["Lumens"]]],
     };

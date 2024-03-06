@@ -12,7 +12,6 @@ const Logo = ({ isLarge = true }) => (
     alt="SIG Logo"
     style={{
       alignSelf: "center",
-      width: "fit-content",
       height: isLarge ? "calc(4rem + 5%)" : "2.5em",
       margin: isLarge ? "calc(.5rem + 5%) 1em 1%" : "1rem 0px 1rem 1rem",
       boxSizing: "border-box",
@@ -40,7 +39,7 @@ export default function SideBar() {
         <AddingForm write={write} />
         <Logo />
         <SearchArea />
-        {<CopyRight {...write} />}
+        {<CopyRight {...write.DEV} />}
       </aside>
     </>
   );

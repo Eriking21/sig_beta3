@@ -17,21 +17,36 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   R?: number;
   buttons?: AddMenuButton[];
 };
-export type FormIndex = number | undefined;
+export type FormIndex = (number & (0 | 1)) | undefined;
 
 export const setForm = {
+  isEditing: false,
   watchers: new Set<(i: FormIndex | null) => void>(),
   viewers: new Set<(i: FormIndex) => void>(),
+  viewChange: new Set<(i: number) => void>(),
   monitors: new Set<(i: boolean) => void>(),
   to: (i: FormIndex | null) => {
-    setForm.watchers.forEach((setTo) => setTo(i));
-    setForm.viewers.forEach((setTo) => setTo(i ?? undefined));
-    setForm.monitors.forEach((setTo) => setTo(typeof i === "number"));
+    try {
+      if (i == undefined || i == null) {
+        setForm.isEditing = false;
+      }
+      setForm.watchers.forEach((setTo) => setTo(i));
+      setForm.viewers.forEach((setTo) => setTo(i ?? undefined));
+      setForm.monitors.forEach((setTo) => setTo(typeof i === "number"));
+      if (typeof i === "number") {
+        setForm.viewChange.forEach((setTo) => setTo(i));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   },
   useInit: () => {
     const [formIndex, setFormIndex] = useState<FormIndex | null>(undefined);
     useEffect(() => {
       setForm.watchers.add(setFormIndex);
+      return () => {
+        setForm.watchers.delete(setFormIndex);
+      };
     }, []);
     return formIndex;
   },
@@ -55,10 +70,36 @@ export const setForm = {
     }, []);
     return isNumber;
   },
+  useNumeric: (initial:number = 0) => {
+    const [number, setNumber] = useState<number>(initial);
+    useEffect(() => {
+      setForm.viewChange.add(setNumber);
+      return () => {
+        setForm.viewChange.delete(setNumber);
+      };
+    }, []);
+    return number;
+  },
 };
 
 const AddMenu = ({ onRight = true, R = 90, style, ...rest }: Props) => {
   const formIndex = setForm.useInit();
+
+  useEffect(() => {
+    // Function to handle errors
+    const handleError = (error:any) => {
+      // Handle the error, e.g., log it or set an error state
+      console.error("Caught an error:", error);
+    };
+
+    // Add the event listener for errors
+    window.addEventListener("error", handleError);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("error", handleError);
+    };
+  }, []); // The empty array ensures the effect runs once after the initial render
 
   const is_adding = () => typeof formIndex === "number";
   const right = onRight ? 0 : undefined;
@@ -79,7 +120,7 @@ const AddMenu = ({ onRight = true, R = 90, style, ...rest }: Props) => {
           right={right}
           translate={t}
           content={src}
-          action={() => setTimeout(() => setForm.to(index), 300)}
+          action={() => setTimeout(() => setForm.to(index as 0 | 1), 300)}
         />
       );
     });

@@ -1,15 +1,13 @@
 "use client";
 import { FaCircle } from "react-icons/fa";
-import { MutableRefObject } from "react";
+import { MutableRefObject, useEffect } from "react";
 import { PowerItem } from "../utility/options";
-import { Info } from "../app/api/data/types";
-import { stateColor } from "@/SearchArea/SearchItem";
+import { Info, stateColors } from "../app/api/data/types";
 
 interface _ {
   activeNode: MutableRefObject<HTMLInputElement | null>;
   index: number;
   attributes: Info["attributes"];
-  geometry: Info["geometry"];
 }
 
 const imgStyle = {
@@ -23,24 +21,20 @@ const imgStyle = {
 
 export const ConnectorLine = ({ activeNode, index, attributes }: _) => {
   function ag(event: React.ChangeEvent<HTMLInputElement>): void {
-    if (event.target.checked) {
-      if (activeNode.current) {
-        activeNode.current!.checked = false;
-      }
-      activeNode.current! = event.target;
+    const master = event.target!.parentNode!.parentNode!
+      .previousSibling as HTMLInputElement;
 
-      (
-        event.target!.parentNode!.parentNode!
-          .previousSibling as HTMLInputElement
-      ).value = `${attributes.FID}`;
+    if (event.target.checked) {
+      if (event.target !== activeNode.current) {
+        console.log(attributes.FID, event.target.checked);
+        activeNode.current!.checked = false;
+        activeNode.current = event.target;
+        master.value = `${attributes.FID}`;
+      }
+    } else if (event.target === activeNode.current) {
+      activeNode.current!.checked = true;
     }
   }
-
-  const defaultvalue = !activeNode.current &&
-    index == 0 && {
-      checked: true,
-      ref: activeNode,
-    };
 
   return (
     <div
@@ -55,7 +49,7 @@ export const ConnectorLine = ({ activeNode, index, attributes }: _) => {
         width: "100%",
         boxSizing: "border-box",
         margin: "0 .15rem",
-        height: "1.5rem"
+        height: "1.5rem",
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}
@@ -65,19 +59,11 @@ export const ConnectorLine = ({ activeNode, index, attributes }: _) => {
         src={PowerItem[attributes.ObjectType_id].src}
       />
 
-      <input type="checkbox" style={imgStyle} onChange={ag} {...defaultvalue} />
+      <input type="checkbox" style={imgStyle} onChange={ag} />
 
       <FaCircle
         style={{ ...imgStyle, alignSelf: "center" }}
-        color={
-          stateColor[
-            attributes.estado as
-              | "funcional"
-              | "defeituoso"
-              | "avariado"
-              | "inactivo"
-          ]
-        }
+        color={stateColors[attributes.estado]}
       />
       <span
         style={{

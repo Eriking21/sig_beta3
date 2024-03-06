@@ -54,6 +54,7 @@ export const showSelections = (
   );
 
 export interface Language {
+  modify: string;
   coordinates: string;
   register: string;
   short_name: string;
@@ -88,7 +89,7 @@ export interface Language {
   input: string;
   output: string;
   height: string;
-
+  lampType: Input_Helper<"text">;
   ref: Input_Helper<"text">;
   base: Input_Helper<"text">;
   brand: Input_Helper<"text">;

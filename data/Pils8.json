@@ -2,20 +2,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83313257,
-      "longitude": 13.24672332
+      "latitude": -8.83712791,
+      "longitude": 13.23498757
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1000,
-      "identificação": "PIL_JP-II_01",
-      "Z": 86,
+      "FID": 9000,
+      "identificação": "PIL_T-HCM_01",
+      "Z": 81,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -31,20 +31,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83301419,
-      "longitude": 13.24654208
+      "latitude": -8.83691033,
+      "longitude": 13.23486135
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1001,
-      "identificação": "PIL_JP-II_02",
-      "Z": 85,
+      "FID": 9001,
+      "identificação": "PIL_T-HCM_02",
+      "Z": 80,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -60,20 +60,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83288672,
-      "longitude": 13.2463518
+      "latitude": -8.8366928,
+      "longitude": 13.23474422
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1002,
-      "identificação": "PIL_JP-II_03",
-      "Z": 86,
+      "FID": 9002,
+      "identificação": "PIL_T-HCM_03",
+      "Z": 80,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -89,20 +89,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83275013,
-      "longitude": 13.24614338
+      "latitude": -8.83648421,
+      "longitude": 13.23460887
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1003,
-      "identificação": "PIL_JP-II_04",
-      "Z": 86,
+      "FID": 9003,
+      "identificação": "PIL_T-HCM_04",
+      "Z": 80,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -118,20 +118,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83260433,
-      "longitude": 13.24589864
+      "latitude": -8.83627568,
+      "longitude": 13.2344826
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1004,
-      "identificação": "PIL_JP-II_05",
-      "Z": 86,
+      "FID": 9004,
+      "identificação": "PIL_T-HCM_05",
+      "Z": 80,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -147,20 +147,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83338189,
-      "longitude": 13.24590406
+      "latitude": -8.8360853,
+      "longitude": 13.23437443
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1005,
-      "identificação": "PIL_JP-II_06",
-      "Z": 87,
+      "FID": 9005,
+      "identificação": "PIL_T-HCM_06",
+      "Z": 79,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -176,20 +176,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83244957,
-      "longitude": 13.24567213
+      "latitude": -8.83589489,
+      "longitude": 13.23425717
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1006,
-      "identificação": "PIL_JP-II_07",
-      "Z": 87,
+      "FID": 9006,
+      "identificação": "PIL_T-HCM_07",
+      "Z": 79,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,
@@ -205,20 +205,20 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83213076,
-      "longitude": 13.24516461
+      "latitude": -8.83569548,
+      "longitude": 13.23414904
     },
     "attributes": {
       "ObjectType_id": 1,
-      "FID": 1007,
-      "identificação": "PIL_JP-II_08",
-      "Z": 86,
+      "FID": 9007,
+      "identificação": "PIL_T-HCM_08",
+      "Z": 78,
       "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
       "Município": "Luanda",
       "Distrito": "Maianga",
-      "Rua": "João Paulo - II",
+      "Rua": "Travessa Ho Chi Minh",
       "Fluxo das Luminárias": "48000Lumens",
       "Potência": "400W",
       "Nº de Luminárias": 1,

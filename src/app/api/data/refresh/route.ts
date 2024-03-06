@@ -20,6 +20,7 @@ export async function GET(request: NextRequest) {
     console.log("connection stop");
     return stream.readable.cancel(r);
   };
+  console.log("new refresh")
   return new NextResponse(stream.readable, {
     headers: {
       "Content-Type": "text/event-stream; charset=utf-8",

@@ -3,17 +3,11 @@ import { MutableRefObject, useEffect } from "react";
 import { Language } from "../utility/Language";
 import { FlexWrapper, Flexible_with_border } from "./Inputs";
 import { mapInterface } from "../Map/interface";
+import { SimpleMarkerSymbol, SimpleLineSymbol } from "@arcgis/core/symbols";
 
-import Graphic_ from "@arcgis/core/Graphic";
-import {
-  SimpleMarkerSymbol,
-  SimpleLineSymbol,
-  PictureMarkerSymbol,
-} from "@arcgis/core/symbols";
-import { PowerItem } from "@/utility/options";
-
-interface _C_ extends Language {
+interface _C_ {
   index: number | undefined;
+  coordinates: Language["coordinates"];
 }
 
 const newLocal: ["latitude", "longitude"] = ["latitude", "longitude"];
@@ -114,7 +108,7 @@ export const CoordField = ({ coordinates, index: form }: _C_) => {
             <input
               type="number"
               name={coordName}
-              step={0.001}
+              step={1/8192}
               defaultValue={mapInterface.view?.center[coordName] ?? 0}
               onChange={(event) => {
                 if (mapInterface.view === undefined) return;

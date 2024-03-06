@@ -2,20 +2,172 @@
   {
     "geometry": {
       "type": "point",
-      "latitude": -8.83620644,
-      "longitude": 13.23321944
+      "latitude": -8.8333695,
+      "longitude": 13.24712215
     },
     "attributes": {
       "ObjectType_id": 0,
       "FID": 0,
-      "identificação": "pils_source",
-      "estado": "funcional",
+      "identificação": "pils_source0",
+      "estado": 0,
       "País": "Angola",
       "Província": "Luanda",
-      "Municipio": "Luanda",
+      "Município": "Luanda",
       "Distrito": "Maianga",
       "Rua": "desconhecida",
-      "Cor da Linha":"#ffc435"
+      "Cor da Linha": "#0000ff"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83740474,
+      "longitude": 13.23617703
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 1,
+      "identificação": "pils_source1",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#00ff00"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.82931625,
+      "longitude": 13.24845021
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 2,
+      "identificação": "pils_source2",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#00ff00"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83206352,
+      "longitude": 13.23661147
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 3,
+      "identificação": "pils_source3",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#0000ff"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83641247,
+      "longitude": 13.22898261
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 4,
+      "identificação": "pils_source4",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#0000ff"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84613,
+      "longitude": 13.2305633
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 5,
+      "identificação": "pils_source5",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#00ff00"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84297281,
+      "longitude": 13.24361344
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 6,
+      "identificação": "pils_source6",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#00ff00"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83415494,
+      "longitude": 13.23147489
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 7,
+      "identificação": "pils_source7",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#00ff00"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83817652,
+      "longitude": 13.23495531
+    },
+    "attributes": {
+      "ObjectType_id": 0,
+      "FID": 8,
+      "identificação": "pils_source8",
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "desconhecida",
+      "Cor da Linha": "#0000ff"
     }
   }
 ]

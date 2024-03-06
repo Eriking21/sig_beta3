@@ -32,8 +32,8 @@ export default function SearchBox() {
 
   // console.log("rebuild",map.objects,items);
   return (
-    <div className="scrollable" style={{ padding: "0 1.25rem 0 1.75rem" }}>
-      <div>{items}</div>
+    <div className="scrollable" style={{ padding: "0 1.25rem 0 1.75rem"}}>
+      {items}
     </div>
   );
 }

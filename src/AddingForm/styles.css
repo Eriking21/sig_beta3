@@ -1,15 +1,15 @@
-form.addingForm {
+form#adding-form {
   padding: 1.75em;
   font-size: 1.4rem;
   transition: transform 0.6s;
 }
 
-.addingForm label,
-.addingForm span.error {
+#adding-form label,
+#adding-form span.error {
   display: block;
 }
 
-.addingForm h2.title {
+#adding-form h2.title {
   color: #c5b55b;
   word-spacing: 0.15em;
   text-align: start;
@@ -19,7 +19,7 @@ form.addingForm {
   font-weight: bold;
 }
 
-.addingForm label {
+#adding-form label {
   font-size: 1.4rem;
   padding-bottom: 0.2em;
   color: rgba(53, 53, 44, 0.707);
@@ -27,12 +27,12 @@ form.addingForm {
   width: 100%;
 }
 
-.addingForm :focus {
+#adding-form :focus {
   outline: none;
 }
 
-.addingForm button,
-.addingForm input[type="submit"] {
+#adding-form button,
+#adding-form input[type="submit"] {
   justify-content: center;
   padding: 0.45rem 1.8rem;
   box-sizing: border-box;
@@ -41,24 +41,24 @@ form.addingForm {
   outline: none;
 }
 
-.addingForm div.Flexible_Wrapper button {
+#adding-form div.Flexible_Wrapper button {
   color: #ddd493;
   background-color: #dcdddd77;
 }
-.addingForm .Flexible_Wrapper button:hover {
+#adding-form .Flexible_Wrapper button:hover {
   background-color: #effaff;
 }
 
-.addingForm div.Flexible_Wrapper button.selected,
-.addingForm input[type="submit"] {
+#adding-form div.Flexible_Wrapper button.selected,
+#adding-form input[type="submit"] {
   background-color: #d5d8b3a7;
   color: rgb(255, 255, 255);
 }
 
-.addingForm div.Flexible_Wrapper element,
-.addingForm div.Flexible_Wrapper select,
-.addingForm div.Flexible_Wrapper span,
-.addingForm div.Flexible_Wrapper input {
+#adding-form div.Flexible_Wrapper element,
+#adding-form div.Flexible_Wrapper select,
+#adding-form div.Flexible_Wrapper span,
+#adding-form div.Flexible_Wrapper input {
   display: inline;
   color: black;
   font-size: 1.15rem;
@@ -70,51 +70,51 @@ form.addingForm {
   padding: 0;
 }
 
-.addingForm button,
-.addingForm div.Flexible_Wrapper div.Flexible_Wrapper,
-.addingForm div.Selection div.Flexible_Wrapper,
-.addingForm div.TextField div.Flexible_Wrapper {
+#adding-form button,
+#adding-form div.Flexible_Wrapper div.Flexible_Wrapper,
+#adding-form div.Selection div.Flexible_Wrapper,
+#adding-form div.TextField div.Flexible_Wrapper {
   padding: 0.45rem 0.8rem;
   max-width: 100%;
   box-sizing: border-box;
   background-color: #effaff77;
 }
 
-.addingForm div div.Flexible_Wrapper:hover {
+#adding-form div div.Flexible_Wrapper:hover {
   background-color: #d5d8b321;
   border-color: #c5b55b;
 }
 
-.addingForm div.Flexible_Wrapper div.Flexible_Wrapper:focus-within,
-.addingForm div.Selection div.Flexible_Wrapper:focus-within,
-.addingForm div.TextField div.Flexible_Wrapper:focus-within {
+#adding-form div.Flexible_Wrapper div.Flexible_Wrapper:focus-within,
+#adding-form div.Selection div.Flexible_Wrapper:focus-within,
+#adding-form div.TextField div.Flexible_Wrapper:focus-within {
   background-color: #d5d8b321;
   border-color: #d5d8b3a7;
 }
 
-.addingForm div.Selection div.Flexible_Wrapper select,
-.addingForm div.Flexible_Wrapper input {
+#adding-form div.Selection div.Flexible_Wrapper select,
+#adding-form div.Flexible_Wrapper input {
   flex: 1;
   display: block;
 }
-form.addingForm input[type="submit"]:hover {
+form#adding-form input[type="submit"]:hover {
   background-color: #d5d8b3a7;
 }
-.addingForm div.Flexible_Wrapper input[type="number"] {
+#adding-form div.Flexible_Wrapper input[type="number"] {
   text-align: end;
 }
-.addingForm div.Flexible_Wrapper select {
+#adding-form div.Flexible_Wrapper select {
   text-align: center;
 }
 
-.addingForm div.Selection,
-.addingForm div.TextField {
+#adding-form div.Selection,
+#adding-form div.TextField {
   padding-bottom: 1.5rem;
 }
-.addingForm button {
+#adding-form button {
   height: 2.5rem;
 }
-.addingForm .Flexible_Wrapper {
+#adding-form .Flexible_Wrapper {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -128,6 +128,6 @@ form.addingForm input[type="submit"]:hover {
 }
 
 
-.addingForm div.Flexible_Wrapper select option:hover {
+#adding-form div.Flexible_Wrapper select option:hover {
   background-color:  #d5d8b3 !important;
 }

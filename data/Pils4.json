@@ -1,0 +1,466 @@
+[
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83801241,
+      "longitude": 13.2308293
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 5000,
+      "identificação": "PIL_RO_01",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8376039,
+      "longitude": 13.23047674
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 6000,
+      "identificação": "PIL_RO_02",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83734956,
+      "longitude": 13.23022344
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7000,
+      "identificação": "PIL_RO_03",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83674103,
+      "longitude": 13.22963551
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 8000,
+      "identificação": "PIL_RO_04",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83657748,
+      "longitude": 13.22946358
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 9000,
+      "identificação": "PIL_RO_05",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83800191,
+      "longitude": 13.23052029
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 10000,
+      "identificação": "PIL_RO_06",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83688504,
+      "longitude": 13.22949847
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 11000,
+      "identificação": "PIL_RO_07",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83670332,
+      "longitude": 13.22930845
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 12000,
+      "identificação": "PIL_RO_08",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83726652,
+      "longitude": 13.22986933
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 13000,
+      "identificação": "PIL_RO_09",
+      "Z": 94,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83706667,
+      "longitude": 13.22967031
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 14000,
+      "identificação": "PIL_RO_10",
+      "Z": 94,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83746636,
+      "longitude": 13.23006836
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 15000,
+      "identificação": "PIL_RO_11",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8377297,
+      "longitude": 13.23031252
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 16000,
+      "identificação": "PIL_RO_12",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83818337,
+      "longitude": 13.23065577
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 17000,
+      "identificação": "PIL_RO_13",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83692275,
+      "longitude": 13.22982552
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 18000,
+      "identificação": "PIL_RO_14",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83712259,
+      "longitude": 13.23002455
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 19000,
+      "identificação": "PIL_RO_15",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.83782178,
+      "longitude": 13.23066659
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 20000,
+      "identificação": "PIL_RO_16",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "Avenida Revolução de Outubro",
+      "Fluxo das Luminárias": "27570Lumens",
+      "Potência": "250W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012899",
+      "Tensão": "220V"
+    }
+  }
+]

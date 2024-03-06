@@ -14,10 +14,16 @@ import Graphic_ from "@arcgis/core/Graphic";
 import ColorVariable_ from "@arcgis/core/renderers/visualVariables/ColorVariable";
 import { loadModules } from "esri-loader";
 import { PowerItem, basemap } from "../utility/options";
-import { erimServerData, erimClientData, Info } from "@/app/api/data/types";
+import {
+  erimServerData,
+  erimClientData,
+  Info,
+  stateColorStops,
+} from "@/app/api/data/types";
 
 import { MutableRefObject, useEffect } from "react";
 import Collection_ from "@arcgis/core/core/Collection";
+import FieldInfo from "@arcgis/core/popup/FieldInfo.js";
 //import Layer_ from "@arcgis/core/layers/Layer";
 //import Collection from "@arcgis/core/core/Collection";
 
@@ -73,9 +79,10 @@ const mapInterface: MapInterface = {
     const data = new erimClientData(response);
     mapInterface.objects = [data.sources, data.pils.flat()];
     const lineColors: { value: number; color: number[] | string }[] = [];
+
     function addColor({
       FID,
-      "Cor da Linha" : Cor_da_Linha
+      "Cor da Linha": Cor_da_Linha,
     }: {
       FID: number;
       "Cor da Linha": number[] | string;
@@ -168,9 +175,15 @@ const mapInterface: MapInterface = {
               }),
               renderer: new SimpleRenderer({
                 symbol: new SimpleMarkerSymbol({
-                  color: [255, 255, 255],
+                  //color: [255, 255, 255],
                   size: 16,
                 }),
+                visualVariables: [
+                  new ColorVariable({
+                    field: "estado",
+                    stops: stateColorStops,
+                  }),
+                ],
               }),
             }),
             new FeatureLayer({
@@ -229,6 +242,12 @@ const mapInterface: MapInterface = {
     mapInterface.layers?.forEach((fl) => {
       //console.log(fl.fields);
       fl.popupTemplate.title = "{identificação}";
+
+      fl.popupTemplate.fieldInfos.push(new FieldInfo({fieldName:"Estado",label:"Estado",format:{
+
+      }
+
+      }))
     });
     mapInterface.view?.popup.watch(
       ["visible", "selectedFeature"],
@@ -305,7 +324,8 @@ type FeaturesT = [
   typeof SimpleLineSymbol_,
   //typeof CIMSymbol_,
   typeof Graphic_,
-  typeof ColorVariable_
+  typeof ColorVariable_,
+  typeof FieldInfo
 ];
 
 const FeaturesUrl = [
@@ -320,6 +340,7 @@ const FeaturesUrl = [
   //"esri/symbols/CIMSymbol",
   "esri/Graphic",
   "esri/renderers/visualVariables/ColorVariable",
+  "esri/popup/FieldInfo",
 ];
 export default mapInterface.useMap;
 export { mapInterface };
@@ -369,20 +390,29 @@ export function updateSelection(some: any) {
   ) {
     mapInterface.search.item?.current?.classList.remove("active");
   }
+  const childList = mapInterface.search.item?.current?.parentNode as
+    | HTMLElement
+    | undefined;
 
-  mapInterface.search.item?.current?.parentNode?.childNodes.forEach((child) => {
+  for (var i = 0; i < (childList?.childElementCount ?? 0); i++) {
+    const child = childList!.children.item(i)! as HTMLDivElement;
     if (
       (child.childNodes.item(1) as HTMLSpanElement).innerText === id &&
       !(child as HTMLDivElement).classList.contains("active") &&
       some !== false
     ) {
-      (child as HTMLDivElement).classList.add("active");
-      mapInterface.search.item!.current = child as HTMLDivElement;
-      mapInterface.search.item!.current!.scrollIntoView({ behavior: "smooth" });
-      return;
+      childList!.scrollTop = child.offsetTop - childList!.offsetTop;
+      mapInterface.search.item!.current = child;
+      console.log(child.offsetTop);
+      //child.scrollIntoView(autoScrollSettings);
+      child.classList.add("active");
     }
-  });
+  }
 }
+
+const autoScrollSettings: ScrollIntoViewOptions = {
+  behavior: "smooth",
+};
 type EventListeners = {
   [key: string]: (this: EventSource, ev: MessageEvent) => any;
 };
@@ -390,14 +420,15 @@ type EventListeners = {
 class ErimEvent {
   source: EventSource;
   listeners: EventListeners;
-  retries = 0;
-  readonly maxRetries = 3;
+  errors: number;
+  readonly maxErrors = 3;
   clean() {
     this.source.close();
   }
   constructor(url: EventSource["url"], listeners: EventListeners = {}) {
     const self = this;
     this.source = new EventSource(url);
+    this.errors = 0;
     this.listeners = {
       ...listeners,
       open: function (this: EventSource, ev: MessageEvent<any>) {
@@ -414,16 +445,24 @@ class ErimEvent {
       },
       retry: function (this: EventSource, ev: MessageEvent<any>) {
         listeners["retry"]?.call(self.source, ev);
-        if (self.retries == self.maxRetries) self.retries = 0;
+        if (self.errors == self.maxErrors) self.errors = 0;
         self.listeners["close"]!.call(self.source, ev);
         self.source = new EventSource(self.source.url);
         self.listeners["open"]!.call(self.source, ev);
       },
       error: function (this: EventSource, ev: MessageEvent<any>) {
+        self.errors++;
+        console.log(
+          `erro no SSE, error count:${self.errors} ${
+            self.errors > self.maxErrors ? ", please reload the WebApp " : ""
+          }`,
+          this,
+          ev
+        );
         listeners["error"]?.call(self.source, ev);
-        if (self.retries++ < self.maxRetries) {
+        if (self.errors <= self.maxErrors) {
           setTimeout(() => {
-            self.listeners["reset"]!.call(self.source, ev);
+            self.listeners["retry"]!.call(self.source, ev);
           }, 3000);
         } else {
           listeners["fail"]?.call(self.source, ev);
@@ -437,39 +476,3 @@ class ErimEvent {
     });
   }
 }
-/*
-const event: {
-  source: EventSource;
-  listeners: { [key: string]: (this: EventSource, ev: MessageEvent) => any };
-  clean: () => void;
-} = {
-  source: new EventSource(document.location.origin + "/api/data/refresh"),
-  clean: () => {
-    Object.entries(event.listeners).forEach(([key, value]) => {
-      event.source.removeEventListener(key, value);
-    });
-    event.source.close();
-  },
-  listeners: {
-    open: function (this: EventSource, ev: MessageEvent<any>) {
-      Object.entries(event.listeners).forEach(([key, value]) => {
-        this.addEventListener(key, value);
-      });
-    },
-    update: function (this: EventSource, ev: MessageEvent<any>) {
-      console.log("update", this.url, ev);
-    },
-    close: function (this: EventSource, ev: MessageEvent<any>) {
-      event.clean();
-    },
-    reset: function (this: EventSource, ev: MessageEvent<any>) {
-      event.listeners["close"]!.call(this, ev);
-      event.source = new EventSource(event.source.url);
-      event.listeners["open"]!.call(this, ev);
-    },
-    error: function (this: EventSource, ev: MessageEvent<any>) {
-      event.listeners["reset"]!.call(this, ev);
-    },
-  },
-};
-*/

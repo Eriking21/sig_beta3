@@ -9,6 +9,7 @@ interface Language_type {
 
 export const language: Language_type = {
   PT: {
+    modify: "Modificar",
     year: "Ano",
     short_name: "PT",
     local_name: "Português",
@@ -38,8 +39,8 @@ export const language: Language_type = {
       type: "text",
     },
     _municipio: {
-      name: "Municipio",
-      placeholder: "Insira o Municipio",
+      name: "Município",
+      placeholder: "Insira o Município",
       type: "text",
     },
     _district: {
@@ -97,6 +98,12 @@ export const language: Language_type = {
     input: "entrada",
     output: "saida",
     height: "Z",
+
+    lampType: {
+      type: "text",
+      name: "Tipo de Lâmpada",
+      placeholder: "Insira o tipo de lâmpada ",
+    },
     ref: {
       type: "text",
       name: "Referência",
@@ -120,6 +127,7 @@ export const language: Language_type = {
   },
 
   EN: {
+    modify: "submit",
     year: "Year",
     short_name: "ENG",
     local_name: "English",
@@ -218,5 +226,11 @@ export const language: Language_type = {
       type: "text",
       name: "Brand",
     },
+    lampType: {
+      type: "text",
+      name: "Tipo de Lâmpada",
+      placeholder: "Insira o tipo de lâmpada ",
+    },
+    
   },
 };

@@ -1,9 +1,17 @@
 "use client";
-import { FaCircle } from "react-icons/fa";
-import { CSSProperties, MutableRefObject, useRef } from "react";
+
+import {
+  CSSProperties,
+  MouseEventHandler,
+  MutableRefObject,
+  useRef,
+} from "react";
 import { PowerItem } from "../utility/options";
-import { Info } from "../app/api/data/types";
+import { Info, stateColors } from "../app/api/data/types";
 import { mapInterface } from "@/Map/interface";
+import "./styles.css";
+import { setForm } from "@/AddMenu";
+import { fillForm } from "@/AddingForm/getFormContent";
 
 type _ = Info & {
   activeNode: MutableRefObject<HTMLDivElement | null>;
@@ -11,13 +19,6 @@ type _ = Info & {
 };
 
 const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
-  const imgStyle: CSSProperties = {
-    alignSelf: "center",
-    margin: ".5rem",
-    height: "60%",
-    width: "1.35rem",
-  };
-
   function alternate(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (
       activeNode?.current !== event.currentTarget &&
@@ -32,7 +33,7 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
     } else {
       event.currentTarget.classList.add("active");
       activeNode.current = event.currentTarget;
-      console.log(attributes.FID);
+      //console.log(attributes.FID);
       const i = Promise.all(
         mapInterface.layers!.map((fl) =>
           fl.queryFeatures({
@@ -44,7 +45,7 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
       i.catch((err) => console.log(err));
       i.then((R) => {
         const features = [...R.map((K) => K.features)].flat().reverse();
-        console.log(features);
+        //console.log(features);
         mapInterface.view?.popup.open({
           features: features,
           location: geometry as __esri.Point,
@@ -53,62 +54,56 @@ const SearchItem = ({ activeNode, index, attributes, geometry }: _) => {
     }
   }
 
-  async function personalize(
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) {}
+  const Edit: MouseEventHandler<HTMLSpanElement> = function (event) {
+    event.preventDefault();
+    mapInterface.view?.center.set("latitude", geometry.latitude);
+    mapInterface.view?.center.set("longitude", geometry.longitude);
+    setForm.isEditing = true;
+    setForm.to(attributes.ObjectType_id);
+    setTimeout(function () {
+      fillForm("adding-form", { attributes, geometry });
+    }, 100);
+  };
 
   return (
     <div
       ref={activeNode.current === null && index === 0 ? activeNode : undefined}
-      className="SearchItem"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignSelf: "stretch",
-        alignItems: "flex-start",
-        fontSize: "1rem",
-      }}
+      className="group SearchItem flex flex-row self-stretch items-start"
+      style={{ fontSize: "1rem" }}
       onClick={alternate}
-      onDoubleClick={personalize}
     >
       {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img
-        style={imgStyle}
+        className="self-center m-2 aspect-square h-4/5 group-hover:h-full"
+        //style={imgStyle}
         alt={index.toString()}
         src={PowerItem[attributes.ObjectType_id].src}
       />
-      <span
-        style={{
-          flex: "1",
-          textAlign: "start",
-          alignSelf: "center",
-          overflow: "hidden",
-          display: "block",
-          whiteSpace: "nowrap",
-        }}
-      >
+      <span className="text-start self-center overflow-hidden block flex-nowrap flex-1 items-center">
         {attributes.identificação}
       </span>
-      <FaCircle
-        style={imgStyle}
-        color={
-          stateColor[
-            attributes.estado as
-              | "funcional"
-              | "defeituoso"
-              | "avariado"
-              | "inactivo"
-          ]
-        }
-      />
+      <span
+        className="self-center aspect-square  h-3/5 group-hover:h-4/5 rounded-full border-0  flex  items-center justify-center"
+        style={{ backgroundColor: stateColors[attributes.estado] }}
+        onClick={Edit}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element*/}
+        <img
+          className="p-1 aspect-square h-full hidden-content"
+          //style={imgStyle}
+          alt={"\\e"}
+          src={"/edit.png"}
+        />
+      </span>
     </div>
   );
 };
 
-export const stateColor = {
-  funcional: "#80ed80",
-  defeituoso: "yellow",
-  avariado: "red",
-  inactivo: "gray",
+const imgStyle: CSSProperties = {
+  alignSelf: "center",
+  margin: ".5rem",
+  height: "60%",
+  width: "1.35rem",
 };
+
 export default SearchItem;
