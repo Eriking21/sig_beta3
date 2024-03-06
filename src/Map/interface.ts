@@ -23,7 +23,7 @@ import {
 
 import { MutableRefObject, useEffect } from "react";
 import Collection_ from "@arcgis/core/core/Collection";
-import FieldInfo from "@arcgis/core/popup/FieldInfo.js";
+//import FieldInfo from "@arcgis/core/popup/FieldInfo.js";
 //import Layer_ from "@arcgis/core/layers/Layer";
 //import Collection from "@arcgis/core/core/Collection";
 
@@ -243,11 +243,6 @@ const mapInterface: MapInterface = {
       //console.log(fl.fields);
       fl.popupTemplate.title = "{identificação}";
 
-      fl.popupTemplate.fieldInfos.push(new FieldInfo({fieldName:"Estado",label:"Estado",format:{
-
-      }
-
-      }))
     });
     mapInterface.view?.popup.watch(
       ["visible", "selectedFeature"],
@@ -325,7 +320,7 @@ type FeaturesT = [
   //typeof CIMSymbol_,
   typeof Graphic_,
   typeof ColorVariable_,
-  typeof FieldInfo
+//  typeof FieldInfo
 ];
 
 const FeaturesUrl = [
@@ -340,7 +335,7 @@ const FeaturesUrl = [
   //"esri/symbols/CIMSymbol",
   "esri/Graphic",
   "esri/renderers/visualVariables/ColorVariable",
-  "esri/popup/FieldInfo",
+  //"esri/popup/FieldInfo",
 ];
 export default mapInterface.useMap;
 export { mapInterface };
