@@ -1,1 +1,234 @@
-[{"geometry":{"type":"point","latitude":-8.84297238,"longitude":13.24352254},"attributes":{"ObjectType_id":1,"FID":7000,"identificação":"PIL_CL_01","Z":95,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84292842,"longitude":13.24378636},"attributes":{"ObjectType_id":1,"FID":7001,"identificação":"PIL_CL_02","Z":93,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84294778,"longitude":13.24405897},"attributes":{"ObjectType_id":1,"FID":7002,"identificação":"PIL_CL_03","Z":93,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84300338,"longitude":13.24434959},"attributes":{"ObjectType_id":1,"FID":7003,"identificação":"PIL_CL_04","Z":93,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84307699,"longitude":13.24462194},"attributes":{"ObjectType_id":1,"FID":7004,"identificação":"PIL_CL_05","Z":93,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84315968,"longitude":13.24490334},"attributes":{"ObjectType_id":1,"FID":7005,"identificação":"PIL_CL_06","Z":92,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.8432152,"longitude":13.24517578},"attributes":{"ObjectType_id":1,"FID":7006,"identificação":"PIL_CL_07","Z":92,"estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Fluxo das Luminárias":"48000Lumens","Potência":"400W","Nº de Luminárias":1,"Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Vida Média":"24000h","Temperatura da Cor":"2000K_Amarela","Base":"E40","Referência":"7012900","Tensão":"220V"}},{"geometry":{"type":"point","latitude":-8.84329908,"longitude":13.2457117},"attributes":{"ObjectType_id":1,"FID":7007,"identificação":"PIL_CL_08","estado":0,"País":"Angola","Província":"Luanda","Município":"Luanda","Distrito":"Maianga","Rua":"17_Cassequel do Lourenço","Z":92,"Base":"E40","Referência":"7012900","Tipo de Lâmpada":"Vapor de Sódio","Marca da Lâmpada":"OSRAM","Temperatura da Cor":"2000K_Amarela","Nº de Luminárias":1,"Vida Média":"24000h","Tensão":"220V","Potência":"400W","Fluxo das Luminárias":"48000Lumens"}}]
+[
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84297238,
+      "longitude": 13.24352254
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7000,
+      "identificação": "PIL_CL_01",
+      "Z": 95,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84292842,
+      "longitude": 13.24378636
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7001,
+      "identificação": "PIL_CL_02",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84294778,
+      "longitude": 13.24405897
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7002,
+      "identificação": "PIL_CL_03",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84300338,
+      "longitude": 13.24434959
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7003,
+      "identificação": "PIL_CL_04",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84307699,
+      "longitude": 13.24462194
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7004,
+      "identificação": "PIL_CL_05",
+      "Z": 93,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84315968,
+      "longitude": 13.24490334
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7005,
+      "identificação": "PIL_CL_06",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.8432152,
+      "longitude": 13.24517578
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7006,
+      "identificação": "PIL_CL_07",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  },
+  {
+    "geometry": {
+      "type": "point",
+      "latitude": -8.84329908,
+      "longitude": 13.2457117
+    },
+    "attributes": {
+      "ObjectType_id": 1,
+      "FID": 7007,
+      "identificação": "PIL_CL_08",
+      "Z": 92,
+      "estado": 0,
+      "País": "Angola",
+      "Província": "Luanda",
+      "Município": "Luanda",
+      "Distrito": "Maianga",
+      "Rua": "17_Cassequel do Lourenço",
+      "Fluxo das Luminárias": "48000Lumens",
+      "Potência": "400W",
+      "Nº de Luminárias": 1,
+      "Tipo de Lâmpada": "Vapor de Sódio",
+      "Marca da Lâmpada": "OSRAM",
+      "Vida Média": "24000h",
+      "Temperatura da Cor": "2000K_Amarela",
+      "Base": "E40",
+      "Referência": "7012900",
+      "Tensão": "220V"
+    }
+  }
+]
