@@ -98,7 +98,7 @@ form#adding-form {
   display: block;
 }
 form#adding-form input[type="submit"]:hover {
-  background-color: #d5d8b3a7;
+  background-color: c5b55b;
 }
 #adding-form div.Flexible_Wrapper input[type="number"] {
   text-align: end;
