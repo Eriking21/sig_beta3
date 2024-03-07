@@ -6,8 +6,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SIG Consumo de Energia',
-  description: 'Software de monitoramento energético',
+  title: 'SIG Iluminação Pública,
+  description: 'Software de monitoramento energético do sistema de iluminação pública',
 }
 
 export default function RootLayout({
