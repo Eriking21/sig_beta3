@@ -17,10 +17,6 @@ function childrens(write: Language, index: number) {
   return (
     <>
       {[
-        <h2 className="title" id="form-title">
-          {setForm.isEditing ? write.modify : write.register} <br />
-          {write.Map_object[formIndex!]}
-        </h2>,
         <input name="FID" style={{ display: "none" }} />,
         <TextField {...write._identificação} />,
         formIndex == 0 && <ColorField {...write} />,
@@ -117,9 +113,13 @@ export default function AddingForm({ write }: { write: Language }) {
       }}
       className={`language-${write.short_name} scrollable absolute w-full h-full bg-white block text-black`}
     >
+      <h2 className="title" id="form-title" key={10000}>
+          {setForm.isEditing ? write.modify : write.register} <br />
+          {write.Map_object[formIndex!]}
+        </h2>
       {childrens(write, formIndex!)}
       <input
-        key="10000"
+        key={10001}
         type="submit"
         value={setForm.isEditing ? write.modify : write.register}
         className="selected"
